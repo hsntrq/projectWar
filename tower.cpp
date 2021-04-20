@@ -1,11 +1,10 @@
-#include "tower.cpp"
+#include "tower.hpp"
 
 // pigeon implementation will go here.
 
 void Tower::draw(SDL_Renderer *gRenderer, SDL_Texture *assets) //selects  the sprite of the Tower, updates it with drop function and then draws it
 {
-    srcRect = srcSprite[hatched];
-    drop(gRenderer, assets);
+    srcRect = srcSprite;
     SDL_RenderCopy(gRenderer, assets, &srcRect, &moverRect);
 }
 

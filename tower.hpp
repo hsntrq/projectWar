@@ -1,5 +1,7 @@
 #include <SDL.h>
 #include "object.hpp"
+#pragma once
+
 class Tower : public Object
 {
 protected:
@@ -11,10 +13,10 @@ public: //function declarations
     void draw(SDL_Renderer *, SDL_Texture *assets);
     Tower(); // constructors (overloaded)
     Tower(int x, int y);
-    virtual void fireProjectile()=0;
-    virtual void computeHealth()=0;
-    virtual void repairTower()=0;
-    virtual bool checkEnemyInRange()=0;
-    virtual void upgradeTower()=0;
-    virtual void destroyTower()=0;
+    virtual void fireProjectile() = 0;
+    virtual void computeHealth() = 0;
+    virtual void repairTower() = 0;
+    virtual bool checkEnemyInRange() = 0;
+    virtual void upgradeTower() = 0;
+    virtual void destroyTower() = 0;
 };
