@@ -65,13 +65,13 @@ bool Game::loadMedia()
 	bool success = true;
 	
 	assets = loadTexture("assets.png");
-    gTexture = loadTexture("hu.png");
+    gTexture = loadTexture("test_bg.jpg");
 	if(assets==NULL || gTexture==NULL)
     {
         printf("Unable to run due to error: %s\n",SDL_GetError());
         success =false;
     }
-	bgMusic = Mix_LoadMUS( "pigeon.mp3" );
+	// bgMusic = Mix_LoadMUS( "pigeon.mp3" );
 
 	if(bgMusic == NULL){
 		printf("Unable to load music: %s \n", Mix_GetError());
