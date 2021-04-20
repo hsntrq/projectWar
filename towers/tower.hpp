@@ -1,5 +1,6 @@
 #include <SDL.h>
 #include "object.hpp"
+#include <string>
 #pragma once
 
 class Tower : public Object
@@ -7,7 +8,7 @@ class Tower : public Object
 protected:
     SDL_Rect srcSprite = {228, 24, 132, 174}; //The sprite configuration for the eggs(hatched as well)
     int towerPrice, towerHealth, towerAttackDamage, towerAttackSpeed, towerReloadTime, towerAttackRange;
-    char towerName[];
+    std::string towerName;
 
 public: //function declarations
     void draw(SDL_Renderer *, SDL_Texture *assets);
