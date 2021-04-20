@@ -1,6 +1,6 @@
 #include "Bombtower.hpp"
 
-BombTower::BombTower(): BombTower(10,10){}
+BombTower::BombTower(): BombTower::BombTower(10,10){}
 BombTower::BombTower(int x, int y){
     towerPrice = 50;
     towerHealth = 100;

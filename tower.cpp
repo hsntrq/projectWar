@@ -19,7 +19,3 @@ Tower::Tower() //default constructor
     // it will display Tower on x = 30, y = 40 location, the size of pigeon is 25 width, 35 height
     moverRect = {30, 40, 25, 35};
 }
-
-void Tower::draw(SDL_Renderer *gRenderer, SDL_Texture *assets){
-    SDL_RenderCopy(gRenderer, assets, &srcRect, &moverRect);
-}

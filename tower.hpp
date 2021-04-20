@@ -11,7 +11,6 @@ protected:
     std::string towerName;
 
 public: //function declarations
-    void draw(SDL_Renderer *, SDL_Texture *assets);
     Tower(); // constructors (overloaded)
     Tower(int x, int y);
     virtual void fireProjectile() = 0;
@@ -20,5 +19,5 @@ public: //function declarations
     virtual bool checkEnemyInRange() = 0;
     virtual void upgradeTower() = 0;
     virtual void destroyTower() = 0;
-    void draw(SDL_Renderer *, SDL_Texture *assets);
+    void draw(SDL_Renderer *gRenderer, SDL_Texture *assets);
 };

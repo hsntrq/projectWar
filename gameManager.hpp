@@ -1,13 +1,13 @@
 #include <SDL.h>
 #include <list>
 #include <iostream>
-#include "towers/tower.hpp"
-#include "towers/firetower.hpp"
-#include "towers/icetower.hpp"
-#include "towers/goldtower.hpp"
-#include "towers/longbowtower.hpp"
-#include "towers/repairtower.hpp"
-#include "towers/bombtower.hpp"
+#include "tower.hpp"
+#include "firetower.hpp"
+#include "icetower.hpp"
+#include "goldtower.hpp"
+#include "longbowtower.hpp"
+#include "repairtower.hpp"
+#include "bombtower.hpp"
 #include "object.hpp"
 using namespace std;
 class gameManager
