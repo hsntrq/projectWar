@@ -20,4 +20,5 @@ public: //function declarations
     virtual bool checkEnemyInRange() = 0;
     virtual void upgradeTower() = 0;
     virtual void destroyTower() = 0;
+    void draw(SDL_Renderer *, SDL_Texture *assets);
 };

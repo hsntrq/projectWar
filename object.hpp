@@ -9,7 +9,6 @@ protected: //accessable in the child classes only
 public:
     Object();           //default constructor
     Object(SDL_Rect m); //overloaded constructors
-    Object(SDL_Rect s, SDL_Rect m);
-    virtual bool is_delete() = 0;                               //function for the child class if the object is to be deleted
+    Object(SDL_Rect s, SDL_Rect m);                              //function for the child class if the object is to be deleted
     virtual void draw(SDL_Renderer *, SDL_Texture *assets) = 0; //function for child class to draw the object
 };
