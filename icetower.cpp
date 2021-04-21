@@ -1,6 +1,6 @@
 #include "icetower.hpp"
 
-IceTower::IceTower(): IceTower(10,10){}
+IceTower::IceTower(): IceTower::IceTower(10,10){}
 IceTower::IceTower(int x, int y){
     towerPrice = 50;
     towerHealth = 100;

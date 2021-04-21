@@ -1,6 +1,6 @@
 #include "firetower.hpp"
 
-FireTower::FireTower(): FireTower(10,10){}
+FireTower::FireTower(): FireTower::FireTower(10,10){}
 FireTower::FireTower(int x, int y){
     towerPrice = 50;
     towerHealth = 100;

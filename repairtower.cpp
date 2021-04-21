@@ -1,6 +1,6 @@
 #include "repairtower.hpp"
 
-RepairTower::RepairTower(): RepairTower(10,10){}
+RepairTower::RepairTower(): RepairTower::RepairTower(10,10){}
 
 RepairTower::RepairTower(int x, int y){
     towerPrice = 50;

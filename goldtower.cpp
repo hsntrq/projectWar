@@ -1,6 +1,6 @@
 #include "goldtower.hpp"
 
-GoldTower::GoldTower(): GoldTower(10,10){}
+GoldTower::GoldTower(): GoldTower::GoldTower(10,10){}
 GoldTower::GoldTower(int x, int y){
     towerPrice = 50;
     towerHealth = 100;
