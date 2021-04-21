@@ -1,8 +1,10 @@
 #include "enemy.hpp"
 
-class HighSpeedZombie : public Enemy
+class NormalZombie : public Enemy
 {
 public:
+    NormalZombie();
+    NormalZombie(int x, int y);
     void healthCalculation();
     void death();
     void attack();
