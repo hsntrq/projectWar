@@ -9,12 +9,14 @@
 #include "repairtower.hpp"
 #include "bombtower.hpp"
 #include "object.hpp"
+#include "projectile.hpp"
 using namespace std;
 class gameManager
 {
     SDL_Renderer *gRenderer;
     SDL_Texture *assets;
     list<Object *> towers;
+    list<Projectile *> projectiles;
 
 public:
     gameManager(SDL_Renderer *, SDL_Texture *); //constructor
