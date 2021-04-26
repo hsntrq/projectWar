@@ -1,5 +1,10 @@
 #include "tower.hpp"
 
+/**
+ * \brief This class stores the attributes and methods specific to the bomb tower
+ * 
+ */
+
 class BombTower: public Tower{
 private:
     int bombDamage, bombDamageRadius;

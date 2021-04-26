@@ -1,5 +1,9 @@
 #include "tower.hpp"
 
+/**
+ * \brief This class stores the attributes and methods specific to the repair tower
+ * 
+ */
 class RepairTower: public Tower{
 private:
     int RepairEffect;

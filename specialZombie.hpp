@@ -1,5 +1,9 @@
 #include "enemy.hpp"
 
+/**
+ * \brief This class stores the attributes and functions specific to the special zombie
+ * 
+ */
 class SpecialZombie : public Enemy
 {
 public:

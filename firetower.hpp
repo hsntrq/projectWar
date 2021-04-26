@@ -1,5 +1,9 @@
 #include "tower.hpp"
 
+/**
+ * \brief This class stores the attributes and methods specific to the fire tower
+ * 
+ */
 class FireTower: public Tower{
 private:
     int fireDamage;

@@ -11,6 +11,11 @@
 #include "object.hpp"
 #include "projectile.hpp"
 using namespace std;
+
+/**
+ * This class stores the methods and attributes necessary to carry out game logic
+ */
+
 class gameManager
 {
     SDL_Renderer *gRenderer;
@@ -19,8 +24,20 @@ class gameManager
     list<Projectile *> projectiles;
 
 public:
+    /**
+     * Simple Constructor
+     */
     gameManager(SDL_Renderer *, SDL_Texture *); //constructor
+    /**
+     * Function to draw objects on screen
+     */
     void drawObjects();
+    /**
+     * Function to spawn objects as required by game
+     */
     void createObject(int, int);
+    /**
+     * Simple Destructor
+     */
     ~gameManager(); //destructor
 };
