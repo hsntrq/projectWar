@@ -7,6 +7,10 @@
 #include <stdlib.h>
 #include <time.h>
 
+/**
+ * \brief This class contains attributes and methods relevant to the Graphics Window of SDL
+ */
+
 class Game
 {
     //Screen dimension constants

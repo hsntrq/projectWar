@@ -13,7 +13,7 @@
 using namespace std;
 
 /**
- * This class stores the methods and attributes necessary to carry out game logic
+ * \brief This class stores the methods and attributes necessary to carry out game logic
  */
 
 class gameManager
