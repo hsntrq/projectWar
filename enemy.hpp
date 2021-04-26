@@ -4,7 +4,7 @@
 class Enemy : public Object
 {
 protected:
-    SDL_Rect srcSprite[11];
+    SDL_Rect srcSprite[12];
     int frame, attackDamage, attackSpeed, movementSpeed, attackRange;
     string enemyName;
 

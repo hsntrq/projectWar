@@ -42,7 +42,7 @@ bool Game::init()
 
 				//Initialize PNG loading
 				int imgFlags = IMG_INIT_PNG;
-				if (!(IMG_Init(imgFlags) & imgFlags))
+				/*if (!(IMG_Init(imgFlags) & imgFlags))
 				{
 					printf("SDL_image could not initialize! SDL_image Error: %s\n", IMG_GetError());
 					success = false;
@@ -51,7 +51,7 @@ bool Game::init()
 				{
 					printf("SDL_mixer could not initialize! SDL_mixer Error: %s\n", Mix_GetError());
 					success = false;
-				}
+				}*/
 			}
 		}
 	}
@@ -64,20 +64,20 @@ bool Game::loadMedia()
 	//Loading success flag
 	bool success = true;
 
-	assets = loadTexture("assets.png");
-	gTexture = loadTexture("test_bg.jpg");
+	assets = loadTexture("assets/assets.png");
+	gTexture = loadTexture("assets/map.png");
 	if (assets == NULL || gTexture == NULL)
 	{
 		printf("Unable to run due to error: %s\n", SDL_GetError());
 		success = false;
 	}
-	bgMusic = Mix_LoadMUS( "beat.wav" );
+	/*bgMusic = Mix_LoadMUS( "beat.wav" );
 
 	if (bgMusic == NULL)
 	{
 		printf("Unable to load music: %s \n", Mix_GetError());
 		success = false;
-	}
+	}*/
 	return success;
 }
 
