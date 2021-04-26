@@ -5,7 +5,7 @@
 class Enemy : public Object
 {
 protected:
-    SDL_Rect srcSprite[3] = {{7, 15, 155, 102}, {0, 164, 153, 83}, {2, 288, 159, 123}}; //The sprite configuration for the three pigeons
+    SDL_Rect srcSprite[11]];
     int frame, attackDamage, attackSpeed, movementSpeed, attackRange;
     char enemyName[];
 
