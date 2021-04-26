@@ -2,6 +2,7 @@
 
 IceTower::IceTower(): IceTower::IceTower(10,10){}
 IceTower::IceTower(int x, int y){
+    srcRect = {105,159,69,75};
     towerPrice = 50;
     towerHealth = 100;
     towerAttackDamage = 5;
@@ -9,7 +10,7 @@ IceTower::IceTower(int x, int y){
     towerReloadTime = 2;
     towerAttackRange = 20;
     towerName = "Ice Tower";
-    moverRect = {x, y, 25, 35};
+    moverRect = {x,y,69,75};
 }
 void IceTower::fireProjectile(){
 
