@@ -1,6 +1,6 @@
 #include "longbowtower.hpp"
 
-LongBowTower::LongBowTower(): LongBowTower(10,10){}
+LongBowTower::LongBowTower(): LongBowTower::LongBowTower(10,10){}
 LongBowTower::LongBowTower(int x, int y){
     towerPrice = 50;
     towerHealth = 100;

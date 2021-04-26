@@ -71,7 +71,7 @@ bool Game::loadMedia()
 		printf("Unable to run due to error: %s\n", SDL_GetError());
 		success = false;
 	}
-	// bgMusic = Mix_LoadMUS( "pigeon.mp3" );
+	bgMusic = Mix_LoadMUS( "beat.wav" );
 
 	if (bgMusic == NULL)
 	{
