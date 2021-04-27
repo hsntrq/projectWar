@@ -9,11 +9,11 @@ void gameManager::drawObjects() //iterating through the lists and drawing all of
     for (list<Projectile *>::iterator projectile = projectiles.begin(); projectile != projectiles.end(); ++projectile)
     {    
         (*projectile)->draw(gRenderer, assets);
-        (*projectile)->shoot(300, 290);
+        (*projectile)->shoot(640, 368);
         if ((*projectile)->reachedTarget)
         {
-            projectiles.remove(*projectile);
             delete (*projectile);
+            projectiles.erase(projectile--);
         }
     }
 }

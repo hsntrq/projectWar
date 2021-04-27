@@ -64,14 +64,14 @@ bool Game::loadMedia()
 	//Loading success flag
 	bool success = true;
 
-	assets = loadTexture("assets.png");
-	gTexture = loadTexture("test_bg.jpg");
+	assets = loadTexture("assets/assets.png");
+	gTexture = loadTexture("assets/map.png");
 	if (assets == NULL || gTexture == NULL)
 	{
 		printf("Unable to run due to error: %s\n", SDL_GetError());
 		success = false;
 	}
-	bgMusic = Mix_LoadMUS( "beat.wav" );
+	bgMusic = Mix_LoadMUS( "assets/beat.wav" );
 
 	if (bgMusic == NULL)
 	{

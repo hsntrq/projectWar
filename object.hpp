@@ -1,4 +1,7 @@
 #include <SDL.H>
+#include <iostream>
+#include <string>
+using namespace std;
 #pragma once //only include once
 
 /**

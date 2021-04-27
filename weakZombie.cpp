@@ -21,7 +21,7 @@ void WeakZombie::attack(){
 
 }
 bool WeakZombie::followPath(){
-
+    return false;
 }
 void WeakZombie::animateCharacter(){
 

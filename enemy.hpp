@@ -9,9 +9,9 @@
 class Enemy : public Object
 {
 protected:
-    SDL_Rect srcSprite[11]];
+    SDL_Rect srcSprite[12];
     int frame, attackDamage, attackSpeed, movementSpeed, attackRange;
-    char enemyName[];
+    string enemyName;
 
 public: //function declarations
     void draw(SDL_Renderer *, SDL_Texture *assets);

@@ -8,7 +8,7 @@
 class Tower : public Object
 {
 protected:
-    SDL_Rect srcSprite = {228, 24, 132, 174}; //The sprite configuration for the eggs(hatched as well)
+    //SDL_Rect srcSprite; //The sprite configuration for the eggs(hatched as well)
     int towerPrice, towerHealth, towerAttackDamage, towerAttackSpeed, towerReloadTime, towerAttackRange;
     std::string towerName;
 
