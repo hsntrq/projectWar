@@ -88,3 +88,58 @@
 // //---------------------------------------------------------------------
 
 
+// //UI Assets--------------------------------------------------------------------
+
+// //Fire Tower
+// srcRect = {15,358,113,93};
+
+// //Fire Tower Highlighted
+// srcRect = {15,463,113,93};
+
+
+
+// //Canon Tower
+// srcRect = {142,358,114,93};
+
+// //Canon Tower Highlighted
+// srcRect = {142,463,114,93};
+
+
+
+// //Repair Tower
+// srcRect = {270,358,114,93};
+
+// //Repair Tower Highlighted
+// srcRect = {270,463,114,93};
+
+
+
+// //LongBow Tower
+// srcRect = {398,358,114,93};
+
+// //LongBow Tower Highlighted
+// srcRect = {398,463,114,93};
+
+
+
+
+// //Ice Tower
+// srcRect = {526,358,114,93};
+
+// //Ice Tower Highlighted
+// srcRect = {526,463,114,93};
+
+
+
+
+// //Gold Tower
+// srcRect = {654,358,114,93};
+
+// //Gold Tower Highlighted
+// srcRect = {654,463,114,93};
+
+
+
+// //Coin Slab
+// srcRect = {15,568,105,43};s
+
