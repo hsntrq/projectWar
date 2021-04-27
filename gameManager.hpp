@@ -1,15 +1,15 @@
 #include <SDL.h>
 #include <list>
 #include <iostream>
-#include "tower.hpp"
-#include "firetower.hpp"
-#include "icetower.hpp"
-#include "goldtower.hpp"
-#include "longbowtower.hpp"
-#include "repairtower.hpp"
-#include "bombtower.hpp"
+#include "towers/tower.hpp"
+#include "towers/firetower.hpp"
+#include "towers/icetower.hpp"
+#include "towers/goldtower.hpp"
+#include "towers/longbowtower.hpp"
+#include "towers/repairtower.hpp"
+#include "towers/bombtower.hpp"
 #include "object.hpp"
-#include "projectile.hpp"
+#include "projectile/projectile.hpp"
 #include "patches.hpp"
 
 using namespace std;
