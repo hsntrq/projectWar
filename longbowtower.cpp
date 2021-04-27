@@ -23,7 +23,7 @@ void LongBowTower::repairTower(){
 
 }
 bool LongBowTower::checkEnemyInRange(){
-
+    return false;
 }
 void LongBowTower::upgradeTower(){
 

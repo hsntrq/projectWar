@@ -22,7 +22,7 @@ void IceTower::repairTower(){
 
 }
 bool IceTower::checkEnemyInRange(){
-
+    return false;
 }
 void IceTower::upgradeTower(){
 

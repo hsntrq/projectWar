@@ -24,7 +24,7 @@ void RepairTower::repairTower(){
 
 }
 bool RepairTower::checkEnemyInRange(){
-
+    return false;
 }
 void RepairTower::upgradeTower(){
 

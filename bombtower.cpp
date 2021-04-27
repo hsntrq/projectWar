@@ -1,4 +1,4 @@
-#include "Bombtower.hpp"
+#include "bombtower.hpp"
 
 BombTower::BombTower(): BombTower::BombTower(10,10){}
 BombTower::BombTower(int x, int y){
@@ -22,7 +22,7 @@ void BombTower::repairTower(){
 
 }
 bool BombTower::checkEnemyInRange(){
-
+    return false;
 }
 void BombTower::upgradeTower(){
 

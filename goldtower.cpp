@@ -23,7 +23,7 @@ void GoldTower::repairTower(){
 
 }
 bool GoldTower::checkEnemyInRange(){
-
+    return false;
 }
 void GoldTower::upgradeTower(){
 

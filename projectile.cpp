@@ -26,20 +26,20 @@ void Projectile::shoot(int targetX, int targetY)
     {
         if (moverRect.x > targetX)
         {
-            moverRect.x -= 5;
+            moverRect.x -= 1;
         }
         else
         {
-            moverRect.x += 5;
+            moverRect.x += 1;
         }
 
         if (moverRect.y > targetY)
         {
-            moverRect.y -= 5;
+            moverRect.y -= 1;
         }
         else
         {
-            moverRect.y += 5;
+            moverRect.y += 1;
         }
     }
 }

@@ -25,7 +25,7 @@ void HighHPZombie::attack(){
 }
 
 bool HighHPZombie::followPath(){
-
+    return false;
 }
 
 void HighHPZombie::animateCharacter(){

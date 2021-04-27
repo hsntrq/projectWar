@@ -21,7 +21,7 @@ void HighSpeedZombie::attack(){
 
 }
 bool HighSpeedZombie::followPath(){
-
+    return false;
 }
 void HighSpeedZombie::animateCharacter(){
 

@@ -21,7 +21,7 @@ void SpecialZombie::attack(){
 
 }
 bool SpecialZombie::followPath(){
-
+    return false;
 }
 void SpecialZombie::animateCharacter(){
 

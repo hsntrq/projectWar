@@ -23,7 +23,7 @@ void FireTower::repairTower(){
 
 }
 bool FireTower::checkEnemyInRange(){
-
+    return false;
 }
 void FireTower::upgradeTower(){
 
