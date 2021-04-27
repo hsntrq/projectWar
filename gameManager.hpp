@@ -10,6 +10,7 @@
 #include "bombtower.hpp"
 #include "object.hpp"
 #include "projectile.hpp"
+#include "patches.hpp"
 using namespace std;
 
 /**
@@ -22,6 +23,7 @@ class gameManager
     SDL_Texture *assets;
     list<Object *> towers;
     list<Projectile *> projectiles;
+    list<Patches *> patches;
 
 public:
     /**
@@ -35,7 +37,7 @@ public:
     /**
      * Function to spawn objects as required by game
      */
-    void createObject(int, int);
+    void detectClick(int, int);
     /**
      * Simple Destructor
      */

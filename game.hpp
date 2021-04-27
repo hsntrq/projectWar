@@ -1,9 +1,9 @@
 #include <SDL.h>
 #include <SDL_image.h>
-#include <SDL2/SDL_mixer.h>
+#include <SDL_mixer.h>
 #include <stdio.h>
-#include <emscripten.h>
-#include <emscripten/html5.h>
+// #include <emscripten.h>
+// #include <emscripten/html5.h>
 #include <iostream>
 #include <string>
 #include <stdlib.h>
