@@ -1,7 +1,8 @@
-#include "Bombtower.hpp"
+#include "bombtower.hpp"
 
 BombTower::BombTower(): BombTower::BombTower(10,10){}
 BombTower::BombTower(int x, int y){
+    srcRect = {185,66,77,70};
     towerPrice = 50;
     towerHealth = 100;
     towerAttackDamage = 5;
@@ -9,7 +10,7 @@ BombTower::BombTower(int x, int y){
     towerReloadTime = 2;
     towerAttackRange = 20;
     towerName = "Bomb Tower";
-    moverRect = {x, y, 25, 35};
+    moverRect = {x,y,77,70};
 }
 void BombTower::fireProjectile(){
 
@@ -21,7 +22,7 @@ void BombTower::repairTower(){
 
 }
 bool BombTower::checkEnemyInRange(){
-
+    return false;
 }
 void BombTower::upgradeTower(){
 

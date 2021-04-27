@@ -2,16 +2,22 @@
 #include <SDL_image.h>
 #include <SDL_mixer.h>
 #include <stdio.h>
+// #include <emscripten.h>
+// #include <emscripten/html5.h>
 #include <iostream>
 #include <string>
 #include <stdlib.h>
 #include <time.h>
 
+/**
+ * \brief This class contains attributes and methods relevant to the Graphics Window of SDL
+ */
+
 class Game
 {
     //Screen dimension constants
-    const int SCREEN_WIDTH = 1024;
-    const int SCREEN_HEIGHT = 720;
+    const int SCREEN_WIDTH = 1280;
+    const int SCREEN_HEIGHT = 736;
 
     //The window we'll be rendering to
     SDL_Window *gWindow = NULL;

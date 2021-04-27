@@ -64,14 +64,14 @@ bool Game::loadMedia()
 	//Loading success flag
 	bool success = true;
 
-	assets = loadTexture("assets.png");
-	gTexture = loadTexture("test_bg.jpg");
+	assets = loadTexture("assets/assets.png");
+	gTexture = loadTexture("assets/map.png");
 	if (assets == NULL || gTexture == NULL)
 	{
 		printf("Unable to run due to error: %s\n", SDL_GetError());
 		success = false;
 	}
-	bgMusic = Mix_LoadMUS( "beat.wav" );
+	bgMusic = Mix_LoadMUS( "assets/beat.wav" );
 
 	if (bgMusic == NULL)
 	{
@@ -150,7 +150,7 @@ void Game::run()
 				//this is a good location to add pigeon in linked list.
 				int xMouse, yMouse;
 				SDL_GetMouseState(&xMouse, &yMouse);
-				projectWar.createObject(xMouse, yMouse);
+				projectWar.detectClick(xMouse, yMouse);
 			}
 		}
 
@@ -168,6 +168,6 @@ void Game::run()
 		//****************************************************************
 		SDL_RenderPresent(gRenderer); //displays the updated renderer
 
-		SDL_Delay(200); //causes sdl engine to delay for specified miliseconds
+		SDL_Delay(50); //causes sdl engine to delay for specified miliseconds
 	}
 }
