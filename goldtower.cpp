@@ -10,7 +10,7 @@ GoldTower::GoldTower(int x, int y){
     towerReloadTime = 2;
     towerAttackRange = 20;
     towerName = "Gold Tower";
-    moverRect = {x,y,72,110};
+    moverRect = {x+48-72/2,y+96-110-20,72,110};
     goldMineRate = 50;
 }
 void GoldTower::fireProjectile(){

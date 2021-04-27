@@ -10,7 +10,7 @@ IceTower::IceTower(int x, int y){
     towerReloadTime = 2;
     towerAttackRange = 20;
     towerName = "Ice Tower";
-    moverRect = {x,y,69,75};
+    moverRect = {x+48-69/2,y+96-75-20,69,75};
 }
 void IceTower::fireProjectile(){
 

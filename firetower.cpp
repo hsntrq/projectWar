@@ -10,7 +10,7 @@ FireTower::FireTower(int x, int y){
     towerReloadTime = 2;
     towerAttackRange = 20;
     towerName = "Fire Tower";
-    moverRect = {x, y, 64, 95};
+    moverRect = {x-64/2+48,y+96-95-20, 64, 95};
     int fireDamage = 10;
 }
 void FireTower::fireProjectile(){

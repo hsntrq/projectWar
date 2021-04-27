@@ -26,12 +26,13 @@ void gameManager::detectClick(int x, int y)
         if ((*patch)->isAvailable)
             if ((*patch)->checkRange(x, y)){
                 int r = rand()%6;
-                if (r == 0)  {towers.push_back(new FireTower(x, y)); projectiles.push_back(new Projectile(x, y));}
-                else if (r == 1) {towers.push_back(new BombTower(x, y)); projectiles.push_back(new Projectile(x, y));}
-                else if (r == 2) {towers.push_back(new GoldTower(x, y)); projectiles.push_back(new Projectile(x, y));}
-                else if (r == 3) {towers.push_back(new IceTower(x, y)); projectiles.push_back(new Projectile(x, y));}
-                else if (r == 4) {towers.push_back(new LongBowTower(x, y)); projectiles.push_back(new Projectile(x, y));}
-                else if (r == 5) {towers.push_back(new RepairTower(x, y)); projectiles.push_back(new Projectile(x, y));}
+                auto [a,b] = (*patch)->location();
+                if (r == 0)  {towers.push_back(new FireTower(a, b)); projectiles.push_back(new Projectile(x, y));}
+                else if (r == 1) {towers.push_back(new BombTower(a, b)); projectiles.push_back(new Projectile(x, y));}
+                else if (r == 2) {towers.push_back(new GoldTower(a, b)); projectiles.push_back(new Projectile(x, y));}
+                else if (r == 3) {towers.push_back(new IceTower(a, b)); projectiles.push_back(new Projectile(x, y));}
+                else if (r == 4) {towers.push_back(new LongBowTower(a, b)); projectiles.push_back(new Projectile(x, y));}
+                else if (r == 5) {towers.push_back(new RepairTower(a, b)); projectiles.push_back(new Projectile(x, y));}
                 (*patch)->isAvailable = false;
             }
 
