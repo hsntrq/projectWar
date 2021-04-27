@@ -41,17 +41,17 @@ void gameManager::detectClick(int x, int y)
 
 gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst) : gRenderer(renderer), assets(asst) {
 
-    patches.push_back(new Patches(0,0));
-    patches.push_back(new Patches(0,0));
-    patches.push_back(new Patches(0,0));
-    patches.push_back(new Patches(0,0));
-    patches.push_back(new Patches(0,0));
-    patches.push_back(new Patches(0,0));
-    patches.push_back(new Patches(0,0));
-    patches.push_back(new Patches(0,0));
-    patches.push_back(new Patches(0,0));
-    patches.push_back(new Patches(0,0));
-    patches.push_back(new Patches(0,0));
+    patches.push_back(new Patches(64,480));
+    patches.push_back(new Patches(288,416));
+    patches.push_back(new Patches(288,256));
+    patches.push_back(new Patches(32,64));
+    patches.push_back(new Patches(672,160));
+    patches.push_back(new Patches(480,352));
+    patches.push_back(new Patches(544,544));
+    patches.push_back(new Patches(768,320));
+    patches.push_back(new Patches(992,512));
+    patches.push_back(new Patches(1152,416));
+    patches.push_back(new Patches(960,224));
     
 }
 gameManager::~gameManager() //destructor deletes all dynamically created objects traversing them in all the lists
