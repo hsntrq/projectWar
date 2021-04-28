@@ -7,14 +7,14 @@ void gameManager::drawObjects() //iterating through the lists and drawing all of
         (*tower)->draw(gRenderer, assets);
     }
     for (list<Projectile *>::iterator projectile = projectiles.begin(); projectile != projectiles.end(); ++projectile)
-    {    
+    {
         (*projectile)->draw(gRenderer, assets);
         (*projectile)->shoot(500, 416);
         if ((*projectile)->reachedTarget)
         {
             delete (*projectile);
             projectiles.erase(projectile--);
-        }
+        } 
     }
 }
 
