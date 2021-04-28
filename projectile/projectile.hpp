@@ -8,12 +8,11 @@
 class Projectile: public Object
 {
     protected:
-    SDL_Rect approaching = {0, 0, 160, 133};
-    SDL_Rect landed = {494, 298, 144, 117};
-    
+    bool xIsBigger;
 
     public:
     bool reachedTarget = false;
+    Projectile();
     /**
      * Simple constructor that initilizes the x and y locations of the projectile
      * \param x is projectile's x location

@@ -168,6 +168,6 @@ void Game::run()
 		//****************************************************************
 		SDL_RenderPresent(gRenderer); //displays the updated renderer
 
-		SDL_Delay(50); //causes sdl engine to delay for specified miliseconds
+		SDL_Delay(10); //causes sdl engine to delay for specified miliseconds
 	}
 }

@@ -9,7 +9,7 @@ void gameManager::drawObjects() //iterating through the lists and drawing all of
     for (list<Projectile *>::iterator projectile = projectiles.begin(); projectile != projectiles.end(); ++projectile)
     {    
         (*projectile)->draw(gRenderer, assets);
-        (*projectile)->shoot(640, 368);
+        (*projectile)->shoot(500, 416);
         if ((*projectile)->reachedTarget)
         {
             delete (*projectile);
@@ -27,12 +27,12 @@ void gameManager::detectClick(int x, int y)
             if ((*patch)->checkRange(x, y)){
                 int r = rand()%6;
                 auto [a,b] = (*patch)->location();
-                if (r == 0)  {towers.push_back(new FireTower(a, b)); projectiles.push_back(new Projectile(x, y));}
-                else if (r == 1) {towers.push_back(new BombTower(a, b)); projectiles.push_back(new Projectile(x, y));}
-                else if (r == 2) {towers.push_back(new GoldTower(a, b)); projectiles.push_back(new Projectile(x, y));}
-                else if (r == 3) {towers.push_back(new IceTower(a, b)); projectiles.push_back(new Projectile(x, y));}
-                else if (r == 4) {towers.push_back(new LongBowTower(a, b)); projectiles.push_back(new Projectile(x, y));}
-                else if (r == 5) {towers.push_back(new RepairTower(a, b)); projectiles.push_back(new Projectile(x, y));}
+                if (r == 0)  {towers.push_back(new FireTower(a, b)); projectiles.push_back(new FireTowerProjectile(a, b));}
+                else if (r == 1) {towers.push_back(new BombTower(a, b)); projectiles.push_back(new BombTowerProjectile(a, b));}
+                else if (r == 2) {towers.push_back(new GoldTower(a, b)));}
+                else if (r == 3) {towers.push_back(new IceTower(a, b)); projectiles.push_back(new IceTowerProjectile(a, b));}
+                else if (r == 4) {towers.push_back(new LongBowTower(a, b)); projectiles.push_back(new LongBowTowerProjectile(a, b));}
+                else if (r == 5) {towers.push_back(new RepairTower(a, b));}
                 (*patch)->isAvailable = false;
             }
 
