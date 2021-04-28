@@ -5,7 +5,7 @@
  * 
  */
 
-class IceTower: public TowerCard{
+class IceCard: public TowerCard{
 public:
     IceCard();
     IceCard(int x, int y);

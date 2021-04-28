@@ -5,7 +5,7 @@
  * 
  */
 
-class RepairTower: public TowerCard{
+class RepairCard: public TowerCard{
 public:
     RepairCard();
     RepairCard(int x, int y);

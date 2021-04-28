@@ -9,6 +9,11 @@ void TowerCard::draw(SDL_Renderer *gRenderer, SDL_Texture *assets) //selects  th
     SDL_RenderCopy(gRenderer, assets, &srcRect, &moverRect);
 }
 
+bool TowerCard::isClicked(int x, int y)
+{
+    return x >= moverRect.x && x <= moverRect.x + moverRect.w && y >= moverRect.y && y <= moverRect.y + moverRect.h;
+}
+
 TowerCard::TowerCard(int x, int y) //constructor which initiates the TowerCard at location (x, y)
 {
     // it will display TowerCard on (x, y) location, the size of pigeon is 25 width, 35 height

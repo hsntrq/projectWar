@@ -5,7 +5,7 @@
  * 
  */
 
-class GoldTower: public TowerCard{
+class GoldCard: public TowerCard{
 public:
     GoldCard();
     GoldCard(int x, int y);
