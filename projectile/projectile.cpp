@@ -22,22 +22,6 @@ void Projectile::shoot(int targetX, int targetY)
 {
     int gradient;
 
-    if (abs(targetX - moverRect.x) > abs(targetY - moverRect.y))
-    {
-        xIsBigger = true;
-        gradient = abs(targetX - moverRect.x) / abs(targetY - moverRect.y);
-    }
-    else
-    {
-        xIsBigger = false;
-        gradient = abs(targetY - moverRect.y) / abs(targetX - moverRect.x);
-    }
-
-    if (gradient > 9)
-    {
-        gradient = 9;
-    }
-    
     if (moverRect.x >= targetX-20 && moverRect.x <= targetX+20)
     {
         reachedTarget = true;
@@ -47,6 +31,24 @@ void Projectile::shoot(int targetX, int targetY)
     {
         reachedTarget = false;
     }
+
+    if (abs(targetX - moverRect.x) > abs(targetY - moverRect.y))
+    {
+        xIsBigger = true;
+        gradient = abs((targetX - moverRect.x) / (targetY - moverRect.y + 0.001));
+    }
+    else
+    {
+        xIsBigger = false;
+        gradient = abs((targetY - moverRect.y) / (targetX - moverRect.x + 0.001));
+    }
+
+
+    if (gradient > 9)
+    {
+        gradient = 9;
+    }
+
 
     if (xIsBigger)
     {
