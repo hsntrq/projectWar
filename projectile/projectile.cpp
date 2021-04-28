@@ -20,72 +20,76 @@ Projectile::~Projectile(){}
 
 void Projectile::shoot(int targetX, int targetY)
 {
-    int gradient;
-
-    if (moverRect.x >= targetX-20 && moverRect.x <= targetX+20)
+    if (gradient > 0)
     {
-        reachedTarget = true;
-        return; 
-    }
+        if (moverRect.x >= targetX && moverRect.x <= targetX+20 && moverRect.y >= targetY-20 && moverRect.y <= targetY+20)
+        {
+            reachedTarget = true;
+            return; 
+        }
+        else
+        {
+            reachedTarget = false;
+        }
+
+        if (xIsBigger)
+        {
+            if (moverRect.x > targetX)
+            {
+                moverRect.x -= 3*gradient;
+            }
+            else
+            {
+                moverRect.x += 3*gradient;
+            }
+            if (moverRect.y > targetY)
+            {        
+                moverRect.y -= 3;
+            }
+            else
+            {
+                moverRect.y += 3;
+            }
+        }
+        else
+        {
+            if (moverRect.x > targetX)
+            {
+                moverRect.x -= 3;
+            }
+            else
+            {
+                moverRect.x += 3;
+            }
+            if (moverRect.y > targetY)
+            {        
+                moverRect.y -= 3*gradient;
+            }
+            else
+            {
+                moverRect.y += 3*gradient;
+            }
+        }
+    } 
     else
     {
-        reachedTarget = false;
-    }
-
-    if (abs(targetX - moverRect.x) > abs(targetY - moverRect.y))
-    {
-        xIsBigger = true;
-        gradient = abs((targetX - moverRect.x) / (targetY - moverRect.y + 0.001));
-    }
-    else
-    {
-        xIsBigger = false;
-        gradient = abs((targetY - moverRect.y) / (targetX - moverRect.x + 0.001));
-    }
-
-
-    if (gradient > 9)
-    {
-        gradient = 9;
-    }
-
-
-    if (xIsBigger)
-    {
-        if (moverRect.x > targetX)
+        if (abs(targetX - moverRect.x) > abs(targetY - moverRect.y))
         {
-            moverRect.x -= 3*gradient;
+            xIsBigger = true;
+            gradient = abs((targetX - moverRect.x) / (targetY - moverRect.y + 0.000001));
+            gradient++;
+            std::cout << "X is Larger" << '\t' << "Gradient is " << gradient << std::endl;
         }
         else
         {
-            moverRect.x += 3*gradient;
+            xIsBigger = false;
+            gradient = abs((targetY - moverRect.y) / (targetX - moverRect.x + 0.000001));
+            gradient++;
+            std::cout << "Y is Larger" << '\t' << "Gradient is " << gradient << std::endl;
         }
-        if (moverRect.y > targetY)
-        {        
-            moverRect.y -= 3;
-        }
-        else
+        if (gradient > 7)
         {
-            moverRect.y += 3;
-        }
-    }
-    else
-    {
-        if (moverRect.x > targetX)
-        {
-            moverRect.x -= 3;
-        }
-        else
-        {
-            moverRect.x += 3;
-        }
-        if (moverRect.y > targetY)
-        {        
-            moverRect.y -= 3*gradient;
-        }
-        else
-        {
-            moverRect.y += 3*gradient;
+            gradient = 7;
         }
     }
 }
