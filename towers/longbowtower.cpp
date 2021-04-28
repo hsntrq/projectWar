@@ -10,7 +10,7 @@ LongBowTower::LongBowTower(int x, int y){
     towerReloadTime = 2;
     towerAttackRange = 20;
     towerName = "LongBow Tower";
-    moverRect = {x,y,77,121};
+    moverRect = {x+48-77/2,y+96-121-20,77,121};
     specialArrow = 1;
 }
 void LongBowTower::fireProjectile(){

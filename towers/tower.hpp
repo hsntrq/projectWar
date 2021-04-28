@@ -1,5 +1,5 @@
 #include <SDL.h>
-#include "object.hpp"
+#include "../object.hpp"
 #include <string>
 #pragma once
 /**
