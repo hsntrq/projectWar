@@ -50,9 +50,10 @@ void gameManager::detectClick(int x, int y)
     }
 }
 
-gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst) : gRenderer(renderer), assets(asst)
+gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst)
 {
-
+    gRenderer = renderer;
+    assets = asst;
     patches.push_back(new Patches(64, 480));
     patches.push_back(new Patches(288, 416));
     patches.push_back(new Patches(288, 256));
