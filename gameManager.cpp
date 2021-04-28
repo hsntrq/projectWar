@@ -29,7 +29,7 @@ void gameManager::detectClick(int x, int y)
                 auto [a,b] = (*patch)->location();
                 if (r == 0)  {towers.push_back(new FireTower(a, b)); projectiles.push_back(new FireTowerProjectile(a, b));}
                 else if (r == 1) {towers.push_back(new BombTower(a, b)); projectiles.push_back(new BombTowerProjectile(a, b));}
-                else if (r == 2) {towers.push_back(new GoldTower(a, b)));}
+                else if (r == 2) {towers.push_back(new GoldTower(a, b));}
                 else if (r == 3) {towers.push_back(new IceTower(a, b)); projectiles.push_back(new IceTowerProjectile(a, b));}
                 else if (r == 4) {towers.push_back(new LongBowTower(a, b)); projectiles.push_back(new LongBowTowerProjectile(a, b));}
                 else if (r == 5) {towers.push_back(new RepairTower(a, b));}
