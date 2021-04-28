@@ -9,8 +9,12 @@
 #include "repairtower.hpp"
 #include "bombtower.hpp"
 #include "object.hpp"
-#include "projectile.hpp"
+#include "projectile/projectile.hpp"
 #include "patches.hpp"
+#include "projectile/firetowerprojectile.hpp"
+#include "projectile/bombtowerprojectile.hpp"
+#include "projectile/longbowtowerprojectile.hpp"
+#include "projectile/icetowerprojectile.hpp"
 using namespace std;
 
 /**
