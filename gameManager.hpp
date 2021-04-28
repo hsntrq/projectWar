@@ -15,6 +15,13 @@
 #include "projectile/bombtowerprojectile.hpp"
 #include "projectile/longbowtowerprojectile.hpp"
 #include "projectile/icetowerprojectile.hpp"
+#include "towercards/bombcard.hpp"
+#include "towercards/firecard.hpp"
+#include "towercards/goldcard.hpp"
+#include "towercards/repaircard.hpp"
+#include "towercards/icecard.hpp"
+#include "towercards/longbowcard.hpp"
+#include "towercards/towercard.hpp"
 using namespace std;
 
 /**
@@ -28,6 +35,7 @@ class gameManager
     list<Object *> towers;
     list<Projectile *> projectiles;
     list<Patches *> patches;
+    list<TowerCard *> towerCards;
 
 public:
     /**

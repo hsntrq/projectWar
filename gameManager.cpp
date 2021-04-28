@@ -53,7 +53,13 @@ gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst) : gRenderer(
     patches.push_back(new Patches(992,512));
     patches.push_back(new Patches(1152,416));
     patches.push_back(new Patches(960,224));
-    
+
+    towerCards.push_back(new BombCard());
+    towerCards.push_back(new FireCard());
+    towerCards.push_back(new IceCard());
+    towerCards.push_back(new GoldCard());
+    towerCards.push_back(new RepairCard());
+    towerCards.push_back(new LongBowCard());
 }
 gameManager::~gameManager() //destructor deletes all dynamically created objects traversing them in all the lists
 {
