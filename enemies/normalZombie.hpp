@@ -8,10 +8,5 @@ class NormalZombie : public Enemy
 {
 public:
     NormalZombie();
-    NormalZombie(int x, int y);
-    void healthCalculation();
-    void death();
-    void attack();
-    bool followPath();
-    void animateCharacter();
+    NormalZombie(int x, int y, std::list<Path> path_);
 };

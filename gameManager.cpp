@@ -6,6 +6,15 @@ void gameManager::drawObjects() //iterating through the lists and drawing all of
     {
         (*tower)->draw(gRenderer, assets);
     }
+    for (list<Enemy *>::iterator enemy = enemies.begin(); enemy != enemies.end(); ++enemy)
+    {
+        // auto [tower_x,tower_y] = (*enemy)->checkTowerInRange(towers);
+        if((*enemy)->followPath()){
+            delete (*enemy);
+            enemies.erase(enemy--);
+        }
+        (*enemy)->draw(gRenderer, assets);
+    }
     for (int i = 0; i < towerCards.size(); i++)
     {
         towerCards[i].draw(gRenderer, assets);
@@ -18,7 +27,7 @@ void gameManager::drawObjects() //iterating through the lists and drawing all of
         {
             delete (*projectile);
             projectiles.erase(projectile--);
-        } 
+        }
     }
 }
 
@@ -52,6 +61,13 @@ void gameManager::detectClick(int x, int y)
 
 gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst) : gRenderer(renderer), assets(asst)
 {
+    paths.push_back(Path(0,160));
+    paths.push_back(Path(1,640));
+    paths.push_back(Path(2,512));
+    paths.push_back(Path(1,960));
+    paths.push_back(Path(0,384));
+    paths.push_back(Path(1,1184));
+    paths.push_back(Path(0,0));
 
     patches.push_back(new Patches(64, 480));
     patches.push_back(new Patches(288, 416));
@@ -74,6 +90,12 @@ gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst) : gRenderer(
 
     cardClicked = false;
     towerSelected = -1;
+
+    enemies.push_back(new WeakZombie(150 + rand() % 150, 550, paths));
+    enemies.push_back(new NormalZombie(150 + rand() % 150, 550, paths));
+    enemies.push_back(new SpecialZombie(150 + rand() % 150, 550, paths));
+    enemies.push_back(new HighSpeedZombie(150 + rand() % 150, 550, paths));
+    enemies.push_back(new HighHPZombie(150 + rand() % 150, 550, paths));
 }
 gameManager::~gameManager() //destructor deletes all dynamically created objects traversing them in all the lists
 {
