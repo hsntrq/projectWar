@@ -32,7 +32,7 @@ class Game
     SDL_Texture *assets = NULL;
 
     Mix_Music *bgMusic = NULL;
-    map<int, Screen> Screens;
+    vector<Screen*> Screens;
     int screenNumber = 0;
 public:
     bool init();

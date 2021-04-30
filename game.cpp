@@ -130,8 +130,8 @@ void Game::run()
 {
 	bool quit = false;
 	SDL_Event e;
-	gameManager ProjectWar(gRenderer,assets);
-	// Screens.push_back(gameManager(gRenderer,assets));
+	// gameManager ProjectWar(gRenderer,assets);
+	Screens.push_back(new gameManager(gRenderer,assets));
 	
 	while (!quit)
 	{
@@ -150,7 +150,7 @@ void Game::run()
 				//this is a good location to add pigeon in linked list.
 				int xMouse, yMouse;
 				SDL_GetMouseState(&xMouse, &yMouse);
-				ProjectWar.detectClick(xMouse, yMouse);
+				Screens[0]->detectClick(xMouse, yMouse);
 			}
 		}
 
@@ -163,7 +163,7 @@ void Game::run()
 		SDL_RenderCopy(gRenderer, gTexture, NULL, NULL); //Draws background to renderer
 		//***********************draw the objects here********************
 
-		ProjectWar.drawObjects();
+		Screens[0]->drawObjects();
 
 		//****************************************************************
 		SDL_RenderPresent(gRenderer); //displays the updated renderer
