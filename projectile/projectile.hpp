@@ -10,6 +10,7 @@ class Projectile: public Object
     protected:
     int gradient = 0;
     bool xIsBigger;
+    bool addX, addY;
 
     public:
     bool reachedTarget = false;

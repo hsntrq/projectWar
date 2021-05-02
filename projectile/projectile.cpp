@@ -22,7 +22,7 @@ void Projectile::shoot(int targetX, int targetY)
 {
     if (gradient > 0)
     {
-        if (moverRect.x >= targetX && moverRect.x <= targetX+20 && moverRect.y >= targetY-20 && moverRect.y <= targetY+20)
+        if (moverRect.x >= 1280-moverRect.w && moverRect.x <= moverRect.w && moverRect.y >= 736-moverRect.h && moverRect.y <= moverRect.h)
         {
             reachedTarget = true;
             return; 
@@ -34,40 +34,40 @@ void Projectile::shoot(int targetX, int targetY)
 
         if (xIsBigger)
         {
-            if (moverRect.x > targetX)
-            {
-                moverRect.x -= 3*gradient;
-            }
-            else
+            if (addX)
             {
                 moverRect.x += 3*gradient;
             }
-            if (moverRect.y > targetY)
+            else
+            {
+                moverRect.x -= 3*gradient;
+            }
+            if (addY)
             {        
-                moverRect.y -= 3;
+                moverRect.y += 3;
             }
             else
             {
-                moverRect.y += 3;
+                moverRect.y -= 3;
             }
         }
         else
         {
-            if (moverRect.x > targetX)
-            {
-                moverRect.x -= 3;
-            }
-            else
+            if (addX)
             {
                 moverRect.x += 3;
             }
-            if (moverRect.y > targetY)
+            else
+            {
+                moverRect.x -= 3;
+            }
+            if (addY)
             {        
-                moverRect.y -= 3*gradient;
+                moverRect.y += 3*gradient;
             }
             else
             {
-                moverRect.y += 3*gradient;
+                moverRect.y -= 3*gradient;
             }
         }
     } 
@@ -90,6 +90,22 @@ void Projectile::shoot(int targetX, int targetY)
         if (gradient > 7)
         {
             gradient = 7;
+        }
+        if (moverRect.x < targetX)
+        {
+            addX = true;
+        }
+        else
+        {
+            addX = false;
+        }
+        if (moverRect.y < targetY)
+        {
+            addY = true;
+        }
+        else
+        {
+            addY = false;
         }
     }
 }
