@@ -5,9 +5,11 @@
  * 
  */
 
-class BombTower: public Tower{
+class BombTower : public Tower
+{
 private:
     int bombDamage, bombDamageRadius;
+
 public:
     BombTower();
     BombTower(int x, int y);

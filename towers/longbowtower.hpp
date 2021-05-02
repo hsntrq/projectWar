@@ -4,9 +4,11 @@
  * \brief This class stores the attributes and methods specific to the longbow tower
  * 
  */
-class LongBowTower: public Tower{
+class LongBowTower : public Tower
+{
 private:
     int specialArrow;
+
 public:
     LongBowTower();
     LongBowTower(int x, int y);
