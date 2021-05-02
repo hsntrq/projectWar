@@ -2,16 +2,19 @@
 
 void gameManager::drawObjects() //iterating through the lists and drawing all of the instances
 {
+    elapsedFrames++;
     for (list<Tower *>::iterator tower = towers.begin(); tower != towers.end(); ++tower)
     {
         if ((*tower)->towerID < 4)
         {
             auto [enemyX, enemyY] = (*tower)->checkEnemyInRange(enemies);
-            if (enemyX)
+            if (enemyX && (*tower)->cooledDown)
             {
                 (*tower)->fireProjectile(enemyX, enemyY, projectiles);
+                elapsedFrames = 0;
             }
         }
+        (*tower)->updateCoolDownStatus(elapsedFrames); // necessary because the tower has to first fire before going into cooldown
         (*tower)->draw(gRenderer, assets);
     }
     for (list<Enemy *>::iterator enemy = enemies.begin(); enemy != enemies.end(); ++enemy)

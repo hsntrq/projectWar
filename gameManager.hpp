@@ -34,6 +34,7 @@ class gameManager: public Screen
     list<Path> paths;
     int towerSelected; 
     bool cardClicked;
+    int elapsedFrames;
 
 public:
     /**

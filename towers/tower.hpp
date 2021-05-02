@@ -15,10 +15,11 @@ class Tower : public Object
 {
 protected:
     //SDL_Rect srcSprite; //The sprite configuration for the eggs(hatched as well)
-    int towerPrice, towerHealth, towerAttackDamage, towerAttackSpeed, towerReloadTime, towerAttackRange;
+    int towerPrice, towerHealth, towerAttackDamage, towerAttackSpeed, towerAttackRange;
 
 public:      //function declarations
-    int towerID;
+    int towerID, towerReloadTime;
+    bool cooledDown;
     Tower(); // constructors (overloaded)
     /**
      * Simple constructor that initilizes the x and y locations of the tower
@@ -46,6 +47,7 @@ public:      //function declarations
      * Function to destroy tower, overwritten in child classes (in this case, the towers)
      */
     virtual void destroyTower() = 0;
+    void updateCoolDownStatus(int &frames);
     void draw(SDL_Renderer *gRenderer, SDL_Texture *assets);
     std::tuple<int, int> checkEnemyInRange(std::list<Enemy *> &enemies);
 };

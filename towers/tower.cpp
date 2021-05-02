@@ -42,6 +42,18 @@ std::tuple<int, int> Tower::checkEnemyInRange(std::list<Enemy *> &enemies)
     return location;
 }
 
+void Tower::updateCoolDownStatus(int &frames)
+{
+    if (frames == towerReloadTime)
+    {
+        cooledDown = true;
+    }
+    else
+    {
+        cooledDown = false;
+    }
+}
+
 void Tower::fireProjectile(int x, int y, std::list<Projectile *> &projectiles)
 {
     int srcX = moverRect.x + moverRect.w/2;

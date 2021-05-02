@@ -9,11 +9,13 @@ LongBowTower::LongBowTower(int x, int y)
     towerHealth = 100;
     towerAttackDamage = 5;
     towerAttackSpeed = 15;
-    towerReloadTime = 2;
+    towerReloadTime = 100;
     towerAttackRange = 20;
     towerID = 3;
     moverRect = {x + 48 - 77 / 2, y + 96 - 121 - 20, 77, 121};
     specialArrow = 1;
+    cooledDown = true;
+
 }
 void LongBowTower::fireProjectile()
 {

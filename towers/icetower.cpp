@@ -9,10 +9,12 @@ IceTower::IceTower(int x, int y)
     towerHealth = 100;
     towerAttackDamage = 5;
     towerAttackSpeed = 15;
-    towerReloadTime = 2;
+    towerReloadTime = 100;
     towerAttackRange = 20;
     towerID = 2;
     moverRect = {x + 48 - 69 / 2, y + 96 - 75 - 20, 69, 75};
+    cooledDown = true;
+
 }
 void IceTower::fireProjectile()
 {
