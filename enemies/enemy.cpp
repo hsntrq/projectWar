@@ -58,23 +58,3 @@ bool Enemy::followPath(){
 }
 
 
-std::tuple<int, int> Enemy::checkTowerInRange(std::list<Patches *> &patches){
-    int minDistance = 10000;
-    double distance;
-    std::tuple<int, int> location = std::make_tuple(NULL,NULL);
-    for (auto patch: patches){
-        if (!patch->isAvailable){
-            auto [x, y] = patch->location();
-            x+=48;
-            y+=48;
-            distance = ((x-moverRect.x)^2 + (y-moverRect.y)^2)^(1/2);
-            if (attackRange > distance){
-                if (minDistance > distance){
-                    minDistance = distance;
-                    location = std::make_tuple(x,y);
-                }
-            }
-        }
-    }
-    return location;
-}

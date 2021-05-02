@@ -1,6 +1,8 @@
 #include <SDL.h>
 #include "../object.hpp"
 #include <string>
+#include <list>
+#include "../patches.hpp"
 #pragma once
 /**
  * \brief Parent class of all towers, stores methods and attributes common to them all
@@ -45,4 +47,5 @@ public: //function declarations
      */
     virtual void destroyTower() = 0;
     void draw(SDL_Renderer *gRenderer, SDL_Texture *assets);
+    std::tuple<int, int> Tower::checkEnemyInRange(std::list<Patches *> &patches);
 };

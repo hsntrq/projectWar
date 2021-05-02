@@ -19,3 +19,23 @@ Tower::Tower() //default constructor
     // it will display Tower on x = 30, y = 40 location, the size of pigeon is 25 width, 35 height
     moverRect = {30, 40, 25, 35};
 }
+std::tuple<int, int> Tower::checkEnemyInRange(std::list<Patches *> &patches){
+    int minDistance = 10000;
+    double distance;
+    std::tuple<int, int> location = std::make_tuple(NULL,NULL);
+    for (auto patch: patches){
+        if (!patch->isAvailable){
+            auto [x, y] = patch->location();
+            x+=48;
+            y+=48;
+            distance = ((x-moverRect.x)^2 + (y-moverRect.y)^2)^(1/2);
+            if (attackRange > distance){
+                if (minDistance > distance){
+                    minDistance = distance;
+                    location = std::make_tuple(x,y);
+                }
+            }
+        }
+    }
+    return location;
+}
