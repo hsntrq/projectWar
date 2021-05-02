@@ -22,10 +22,10 @@ void Projectile::shoot(int targetX, int targetY)
 {
     if (gradient > 0)
     {
-        if (moverRect.x >= 1280-moverRect.w && moverRect.x <= moverRect.w && moverRect.y >= 736-moverRect.h && moverRect.y <= moverRect.h)
+        if (moverRect.x >= 1280 - moverRect.w && moverRect.x <= moverRect.w && moverRect.y >= 736 - moverRect.h && moverRect.y <= moverRect.h)
         {
             reachedTarget = true;
-            return; 
+            return;
         }
         else
         {
@@ -36,14 +36,14 @@ void Projectile::shoot(int targetX, int targetY)
         {
             if (addX)
             {
-                moverRect.x += 3*gradient;
+                moverRect.x += 3 * gradient;
             }
             else
             {
-                moverRect.x -= 3*gradient;
+                moverRect.x -= 3 * gradient;
             }
             if (addY)
-            {        
+            {
                 moverRect.y += 3;
             }
             else
@@ -62,15 +62,15 @@ void Projectile::shoot(int targetX, int targetY)
                 moverRect.x -= 3;
             }
             if (addY)
-            {        
-                moverRect.y += 3*gradient;
+            {
+                moverRect.y += 3 * gradient;
             }
             else
             {
-                moverRect.y -= 3*gradient;
+                moverRect.y -= 3 * gradient;
             }
         }
-    } 
+    }
     else
     {
         if (abs(targetX - moverRect.x) > abs(targetY - moverRect.y))
