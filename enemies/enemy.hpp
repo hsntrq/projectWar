@@ -14,7 +14,7 @@ struct Path
 class Enemy : public Object
 {
 private:
-    int frame, direction;
+    int frame, direction, health = 50;
 
 protected:
     SDL_Rect srcSprite[12];
@@ -23,6 +23,7 @@ protected:
     string enemyName;
 
 public: //function declarations
+    bool death;
     std::tuple<int, int, int, int> location();
 
     void draw(SDL_Renderer *, SDL_Texture *assets);
@@ -40,11 +41,11 @@ public: //function declarations
     /**
      * Function to calculate the enemy's HP, overwritten in child classes (in this case, the towers)
      */
-    void healthCalculation();
+    void healthCalculation(int damage);
     /**
      * Function to destroy the enemy, overwritten in child classes (in this case, the towers)
      */
-    void death();
+    //void death();
     /**
      * Function to have the enemy follow a defined path, overwritten in child classes (in this case, the towers)
      */

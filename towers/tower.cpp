@@ -46,8 +46,8 @@ void Tower::fireProjectile(int x, int y, std::list<Projectile *> &projectiles)
 {
     int srcX = moverRect.x + moverRect.w/2;
     int srcY = moverRect.y + moverRect.h/2;
-    if (towerID == 0) projectiles.push_back(new FireTowerProjectile(srcX, srcY, x, y));
-    if (towerID == 1) projectiles.push_back(new BombTowerProjectile(srcX, srcY, x, y));
-    if (towerID == 2) projectiles.push_back(new IceTowerProjectile(srcX, srcY, x, y));
-    if (towerID == 3) projectiles.push_back(new LongBowTowerProjectile(srcX, srcY, x, y));
+    if (towerID == 0) projectiles.push_back(new FireTowerProjectile(srcX, srcY, x, y, towerAttackDamage));
+    if (towerID == 1) projectiles.push_back(new BombTowerProjectile(srcX, srcY, x, y, towerAttackDamage));
+    if (towerID == 2) projectiles.push_back(new IceTowerProjectile(srcX, srcY, x, y, towerAttackDamage));
+    if (towerID == 3) projectiles.push_back(new LongBowTowerProjectile(srcX, srcY, x, y, towerAttackDamage));
 }

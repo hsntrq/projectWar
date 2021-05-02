@@ -1,4 +1,6 @@
 #include "../object.hpp"
+#include <list>
+#include "../enemies/enemy.hpp"
 #pragma once
 
 /**
@@ -8,6 +10,7 @@
 class Projectile : public Object
 {
 protected:
+    int damage;
     int gradient;
     bool xIsBigger;
     bool addX, addY;
@@ -30,5 +33,6 @@ public:
      * Function to shoot the projectile, overwritten in child classes (in this case, the towers)
      */
     void shoot();
+    void handleCollision(std::list<Enemy *> &enemies);
     void draw(SDL_Renderer *gRenderer, SDL_Texture *assets);
 };

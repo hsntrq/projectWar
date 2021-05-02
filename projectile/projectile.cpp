@@ -6,7 +6,7 @@ void Projectile::draw(SDL_Renderer *gRenderer, SDL_Texture *assets) //selects  t
     SDL_RenderCopy(gRenderer, assets, &srcRect, &moverRect);
 }
 
-Projectile::Projectile(int x, int y, int tx, int ty): targetX(tx), targetY(ty) //constructor which initiates the Projectile at location (x, y)
+Projectile::Projectile(int x, int y, int tx, int ty) : targetX(tx), targetY(ty) //constructor which initiates the Projectile at location (x, y)
 {
     moverRect = {x, y, 50, 60}; // initializing the projectile to appear at of the tower turret
     gradient = 0;
@@ -19,8 +19,28 @@ Projectile::Projectile() //constructor which initiates the Projectile at locatio
 
 Projectile::~Projectile() {}
 
+void Projectile::handleCollision(std::list<Enemy *> &enemies)
+{
+    for (list<Enemy *>::iterator enemy = enemies.begin(); enemy != enemies.end(); ++enemy)
+    {
+        auto [x, y, w, h] = (*enemy)->location();
+        SDL_Rect enemyRect = {x, y, w, h};
+        if (SDL_HasIntersection (&enemyRect, &moverRect))
+        {
+            reachedTarget = true;
+            (*enemy)->healthCalculation(damage);
+            if ((*enemy)->death)
+            {
+                delete (*enemy);
+                enemies.erase(enemy--);
+            }
+        }
+    }
+}
+
 void Projectile::shoot()
 {
+    
     if (gradient > 0)
     {
         if (moverRect.x >= 1280 - moverRect.w && moverRect.x <= moverRect.w && moverRect.y >= 736 - moverRect.h && moverRect.y <= moverRect.h)
