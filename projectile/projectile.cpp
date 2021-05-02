@@ -79,14 +79,12 @@ void Projectile::shoot()
             xIsBigger = true;
             gradient = abs((targetX - moverRect.x) / (targetY - moverRect.y + 0.000001));
             gradient++;
-            std::cout << "X is Larger" << '\t' << "Gradient is " << gradient << std::endl;
         }
         else
         {
             xIsBigger = false;
             gradient = abs((targetY - moverRect.y) / (targetX - moverRect.x + 0.000001));
             gradient++;
-            std::cout << "Y is Larger" << '\t' << "Gradient is " << gradient << std::endl;
         }
         if (gradient > 7)
         {
