@@ -39,7 +39,7 @@ bool Enemy::followPath()
     direction = path.front().direction;
     if (direction == 0)
     {
-        if (moverRect.y > path.front().stop)
+        if (moverRect.y > path.front().stop + rand() % 64 - 64)
         {
             moverRect.y -= movementSpeed;
             return false;
@@ -47,7 +47,7 @@ bool Enemy::followPath()
     }
     else if (direction == 1)
     {
-        if (moverRect.x < path.front().stop)
+        if (moverRect.x < path.front().stop + rand() % 32 - 32)
         {
             moverRect.x += movementSpeed;
             return false;
@@ -55,7 +55,7 @@ bool Enemy::followPath()
     }
     else if (direction == 2)
     {
-        if (moverRect.y < path.front().stop)
+        if (moverRect.y < path.front().stop - rand() % 32 + 32)
         {
             moverRect.y += movementSpeed;
             return false;
@@ -63,7 +63,7 @@ bool Enemy::followPath()
     }
     else if (direction == 3)
     {
-        if (moverRect.x > path.front().stop)
+        if (moverRect.x > path.front().stop - rand() % 32 + 64)
         {
             moverRect.x -= movementSpeed;
             return false;
@@ -75,7 +75,7 @@ bool Enemy::followPath()
 
 void Enemy::healthCalculation(int damage)
 {
-    health =- damage;
+    health = -damage;
     if (health <= 0)
     {
         death = true;
