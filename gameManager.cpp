@@ -19,7 +19,8 @@ void gameManager::drawObjects() //iterating through the lists and drawing all of
     }
     for (list<Enemy *>::iterator enemy = enemies.begin(); enemy != enemies.end(); ++enemy)
     {
-        if((*enemy)->followPath()){
+        if ((*enemy)->followPath())
+        {
             delete (*enemy);
             enemies.erase(enemy--);
         }
@@ -74,15 +75,13 @@ gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst)
 {
     gRenderer = renderer;
     assets = asst;
-    elapsedFrames = 0;
-
-    paths.push_back(Path(0,160));
-    paths.push_back(Path(1,640));
-    paths.push_back(Path(2,512));
-    paths.push_back(Path(1,960));
-    paths.push_back(Path(0,384));
-    paths.push_back(Path(1,1184));
-    paths.push_back(Path(0,0));
+    paths.push_back(Path(0, 160));
+    paths.push_back(Path(1, 640));
+    paths.push_back(Path(2, 480));
+    paths.push_back(Path(1, 960));
+    paths.push_back(Path(0, 384));
+    paths.push_back(Path(1, 1184));
+    paths.push_back(Path(0, 0));
 
     patches.push_back(new Patches(64, 480));
     patches.push_back(new Patches(288, 416));
@@ -106,11 +105,11 @@ gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst)
     cardClicked = false;
     towerSelected = -1;
 
-    enemies.push_back(new WeakZombie(150 + rand() % 150, 550, paths));
-    enemies.push_back(new NormalZombie(150 + rand() % 150, 550, paths));
-    enemies.push_back(new SpecialZombie(150 + rand() % 150, 550, paths));
-    enemies.push_back(new HighSpeedZombie(150 + rand() % 150, 550, paths));
-    enemies.push_back(new HighHPZombie(150 + rand() % 150, 550, paths));
+    enemies.push_back(new WeakZombie(160 + rand() % 128, 576, paths));
+    enemies.push_back(new NormalZombie(160 + rand() % 128, 576, paths));
+    enemies.push_back(new SpecialZombie(160 + rand() % 128, 576, paths));
+    enemies.push_back(new HighSpeedZombie(160 + rand() % 128, 576, paths));
+    enemies.push_back(new HighHPZombie(160 + rand() % 128, 576, paths));
 }
 gameManager::~gameManager() //destructor deletes all dynamically created objects traversing them in all the lists
 {
