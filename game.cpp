@@ -1,5 +1,5 @@
 #include "game.hpp"
-#include "gameManager.hpp"
+
 bool Game::init()
 {
 	//Initialization flag
@@ -63,15 +63,14 @@ bool Game::loadMedia()
 {
 	//Loading success flag
 	bool success = true;
-
 	assets = loadTexture("assets/assets.png");
 	gTexture = loadTexture("assets/map.png");
+	bgMusic = Mix_LoadMUS("assets/beat.wav");
 	if (assets == NULL || gTexture == NULL)
 	{
 		printf("Unable to run due to error: %s\n", SDL_GetError());
 		success = false;
 	}
-	bgMusic = Mix_LoadMUS( "assets/beat.wav" );
 
 	if (bgMusic == NULL)
 	{
@@ -131,14 +130,15 @@ void Game::run()
 {
 	bool quit = false;
 	SDL_Event e;
-
-	gameManager projectWar(gRenderer, assets);
+	// gameManager ProjectWar(gRenderer,assets);
+	Screens.push_back(new gameManager(gRenderer, assets));
 
 	while (!quit)
 	{
 		//Handle events on queue
 		while (SDL_PollEvent(&e) != 0)
 		{
+
 			//User requests quit
 			if (e.type == SDL_QUIT)
 			{
@@ -150,7 +150,7 @@ void Game::run()
 				//this is a good location to add pigeon in linked list.
 				int xMouse, yMouse;
 				SDL_GetMouseState(&xMouse, &yMouse);
-				projectWar.detectClick(xMouse, yMouse);
+				Screens[0]->detectClick(xMouse, yMouse);
 			}
 		}
 
@@ -163,7 +163,7 @@ void Game::run()
 		SDL_RenderCopy(gRenderer, gTexture, NULL, NULL); //Draws background to renderer
 		//***********************draw the objects here********************
 
-		projectWar.drawObjects();
+		Screens[0]->drawObjects();
 
 		//****************************************************************
 		SDL_RenderPresent(gRenderer); //displays the updated renderer

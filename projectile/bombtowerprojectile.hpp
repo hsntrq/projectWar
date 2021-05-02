@@ -15,7 +15,7 @@ public:
      * \param x is the projectile's x location
      * \param y is the projectile's y location
      */
-    BombTowerProjectile(int x, int y);
+    BombTowerProjectile(int, int, int, int);
     /**
      * Simple destructor
      */

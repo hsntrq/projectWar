@@ -5,14 +5,15 @@
  * \brief Parent class of all projectiles, stores methods and attributes common to them all
  */
 
-class Projectile: public Object
+class Projectile : public Object
 {
-    protected:
-    int gradient = 0;
+protected:
+    int gradient;
     bool xIsBigger;
     bool addX, addY;
+    int targetX, targetY;
 
-    public:
+public:
     bool reachedTarget = false;
     Projectile();
     /**
@@ -20,7 +21,7 @@ class Projectile: public Object
      * \param x is projectile's x location
      * \param y is projectile's y location
      */
-    Projectile(int x, int y);
+    Projectile(int x, int y, int tx, int ty);
     /**
      * Simple destructor
      */
@@ -28,6 +29,6 @@ class Projectile: public Object
     /**
      * Function to shoot the projectile, overwritten in child classes (in this case, the towers)
      */
-    void shoot(int targetX, int targetY);
+    void shoot();
     void draw(SDL_Renderer *gRenderer, SDL_Texture *assets);
 };

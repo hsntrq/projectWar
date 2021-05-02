@@ -6,26 +6,27 @@ void Projectile::draw(SDL_Renderer *gRenderer, SDL_Texture *assets) //selects  t
     SDL_RenderCopy(gRenderer, assets, &srcRect, &moverRect);
 }
 
-Projectile::Projectile(int x, int y) //constructor which initiates the Projectile at location (x, y)
-{   
+Projectile::Projectile(int x, int y, int tx, int ty): targetX(tx), targetY(ty) //constructor which initiates the Projectile at location (x, y)
+{
     moverRect = {x, y, 50, 60}; // initializing the projectile to appear at of the tower turret
+    gradient = 0;
 }
 
 Projectile::Projectile() //constructor which initiates the Projectile at location (x, y)
-{   
+{
     moverRect = {10, 10, 50, 60}; // initializing the projectile to appear at of the tower turret
 }
 
-Projectile::~Projectile(){}
+Projectile::~Projectile() {}
 
-void Projectile::shoot(int targetX, int targetY)
+void Projectile::shoot()
 {
     if (gradient > 0)
     {
-        if (moverRect.x >= 1280-moverRect.w && moverRect.x <= moverRect.w && moverRect.y >= 736-moverRect.h && moverRect.y <= moverRect.h)
+        if (moverRect.x >= 1280 - moverRect.w && moverRect.x <= moverRect.w && moverRect.y >= 736 - moverRect.h && moverRect.y <= moverRect.h)
         {
             reachedTarget = true;
-            return; 
+            return;
         }
         else
         {
@@ -36,14 +37,14 @@ void Projectile::shoot(int targetX, int targetY)
         {
             if (addX)
             {
-                moverRect.x += 3*gradient;
+                moverRect.x += 3 * gradient;
             }
             else
             {
-                moverRect.x -= 3*gradient;
+                moverRect.x -= 3 * gradient;
             }
             if (addY)
-            {        
+            {
                 moverRect.y += 3;
             }
             else
@@ -62,15 +63,15 @@ void Projectile::shoot(int targetX, int targetY)
                 moverRect.x -= 3;
             }
             if (addY)
-            {        
-                moverRect.y += 3*gradient;
+            {
+                moverRect.y += 3 * gradient;
             }
             else
             {
-                moverRect.y -= 3*gradient;
+                moverRect.y -= 3 * gradient;
             }
         }
-    } 
+    }
     else
     {
         if (abs(targetX - moverRect.x) > abs(targetY - moverRect.y))
@@ -78,14 +79,12 @@ void Projectile::shoot(int targetX, int targetY)
             xIsBigger = true;
             gradient = abs((targetX - moverRect.x) / (targetY - moverRect.y + 0.000001));
             gradient++;
-            std::cout << "X is Larger" << '\t' << "Gradient is " << gradient << std::endl;
         }
         else
         {
             xIsBigger = false;
             gradient = abs((targetY - moverRect.y) / (targetX - moverRect.x + 0.000001));
             gradient++;
-            std::cout << "Y is Larger" << '\t' << "Gradient is " << gradient << std::endl;
         }
         if (gradient > 7)
         {

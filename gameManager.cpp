@@ -2,87 +2,110 @@
 
 void gameManager::drawObjects() //iterating through the lists and drawing all of the instances
 {
-    for (list<Object *>::iterator tower = towers.begin(); tower != towers.end(); ++tower)
+    for (list<Tower *>::iterator tower = towers.begin(); tower != towers.end(); ++tower)
     {
+        if ((*tower)->towerID < 4)
+        {
+            auto [enemyX, enemyY] = (*tower)->checkEnemyInRange(enemies);
+            if (enemyX)
+            {
+                (*tower)->fireProjectile(enemyX, enemyY, projectiles);
+            }
+        }
         (*tower)->draw(gRenderer, assets);
     }
-    for (int i=0; i<towerCards.size(); i++)
+    for (list<Enemy *>::iterator enemy = enemies.begin(); enemy != enemies.end(); ++enemy)
+    {
+        // auto [tower_x,tower_y] = (*enemy)->checkTowerInRange(towers);
+        if((*enemy)->followPath()){
+            delete (*enemy);
+            enemies.erase(enemy--);
+        }
+        (*enemy)->draw(gRenderer, assets);
+    }
+    for (int i = 0; i < towerCards.size(); i++)
     {
         towerCards[i].draw(gRenderer, assets);
     }
     for (list<Projectile *>::iterator projectile = projectiles.begin(); projectile != projectiles.end(); ++projectile)
     {
-        (*projectile)->draw(gRenderer, assets);
-        (*projectile)->shoot(500, 416);
+        (*projectile)->shoot();
         if ((*projectile)->reachedTarget)
         {
             delete (*projectile);
             projectiles.erase(projectile--);
-        } 
+        }
+        (*projectile)->draw(gRenderer, assets);
     }
 }
 
 void gameManager::detectClick(int x, int y)
 {
-    std::cout << "Mouse clicked at: " << x << " -- " << y  << std::endl;
+    std::cout << "Mouse clicked at: " << x << " -- " << y << std::endl;
     if (cardClicked)
     {
         for (list<Patches *>::iterator patch = patches.begin(); patch != patches.end(); ++patch)
         {
-            if ((*patch)->isAvailable)
-                if ((*patch)->checkRange(x, y)){
-                    auto [a,b] = (*patch)->location();
-                    if (towerSelected == 0)  {towers.push_back(new FireTower(a, b)); projectiles.push_back(new FireTowerProjectile(a, b));}
-                    else if (towerSelected == 1) {towers.push_back(new BombTower(a, b)); projectiles.push_back(new BombTowerProjectile(a, b));}
-                    else if (towerSelected == 2) {towers.push_back(new GoldTower(a, b));}
-                    else if (towerSelected == 3) {towers.push_back(new IceTower(a, b)); projectiles.push_back(new IceTowerProjectile(a, b));}
-                    else if (towerSelected == 4) {towers.push_back(new LongBowTower(a, b)); projectiles.push_back(new LongBowTowerProjectile(a, b));}
-                    else if (towerSelected == 5) {towers.push_back(new RepairTower(a, b));}
-                    (*patch)->isAvailable = false;
-                }
+            (*patch)->isClicked(towers, towerSelected, x, y);
         }
         cardClicked = false;
         towerCards[towerSelected].isSelected = false;
         towerSelected = -1;
     }
-    for (int i=0; i<towerCards.size(); i++)
+    else
     {
-        if (towerCards[i].isClicked(x, y))
+        for (int i = 0; i < towerCards.size(); i++)
         {
-            cardClicked = true;
-            towerSelected = i;
-            towerCards[towerSelected].isSelected = true;
-            break;
+            if (towerCards[i].isClicked(x, y))
+            {
+                cardClicked = true;
+                towerSelected = i;
+                towerCards[towerSelected].isSelected = true;
+                break;
+            }
         }
     }
-    
 }
 
-gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst) : gRenderer(renderer), assets(asst) {
+gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst)
+{
+    gRenderer = renderer;
+    assets = asst;
+    paths.push_back(Path(0,160));
+    paths.push_back(Path(1,640));
+    paths.push_back(Path(2,512));
+    paths.push_back(Path(1,960));
+    paths.push_back(Path(0,384));
+    paths.push_back(Path(1,1184));
+    paths.push_back(Path(0,0));
 
-    patches.push_back(new Patches(64,480));
-    patches.push_back(new Patches(288,416));
-    patches.push_back(new Patches(288,256));
-    patches.push_back(new Patches(32,64));
-    patches.push_back(new Patches(672,160));
-    patches.push_back(new Patches(480,352));
-    patches.push_back(new Patches(544,544));
-    patches.push_back(new Patches(768,320));
-    patches.push_back(new Patches(992,512));
-    patches.push_back(new Patches(1152,416));
-    patches.push_back(new Patches(960,224));
+    patches.push_back(new Patches(64, 480));
+    patches.push_back(new Patches(288, 416));
+    patches.push_back(new Patches(288, 256));
+    patches.push_back(new Patches(32, 64));
+    patches.push_back(new Patches(672, 160));
+    patches.push_back(new Patches(480, 352));
+    patches.push_back(new Patches(544, 544));
+    patches.push_back(new Patches(768, 320));
+    patches.push_back(new Patches(992, 512));
+    patches.push_back(new Patches(1152, 416));
+    patches.push_back(new Patches(960, 224));
 
-    
     towerCards.push_back(FireCard());
     towerCards.push_back(BombCard());
-    towerCards.push_back(GoldCard());
     towerCards.push_back(IceCard());
     towerCards.push_back(LongBowCard());
+    towerCards.push_back(GoldCard());
     towerCards.push_back(RepairCard());
 
     cardClicked = false;
     towerSelected = -1;
-    
+
+    enemies.push_back(new WeakZombie(150 + rand() % 150, 550, paths));
+    enemies.push_back(new NormalZombie(150 + rand() % 150, 550, paths));
+    enemies.push_back(new SpecialZombie(150 + rand() % 150, 550, paths));
+    enemies.push_back(new HighSpeedZombie(150 + rand() % 150, 550, paths));
+    enemies.push_back(new HighHPZombie(150 + rand() % 150, 550, paths));
 }
 gameManager::~gameManager() //destructor deletes all dynamically created objects traversing them in all the lists
 {

@@ -1,4 +1,4 @@
-#include <SDL.H>
+#include <SDL.h>
 #include <iostream>
 #include <string>
 using namespace std;
@@ -18,7 +18,7 @@ public:
     /**
      * Simple Default Constructor
      */
-    Object();           
+    Object();
     /**
      * Overloaded Constructor
      */
