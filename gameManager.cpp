@@ -16,7 +16,6 @@ void gameManager::drawObjects() //iterating through the lists and drawing all of
     }
     for (list<Enemy *>::iterator enemy = enemies.begin(); enemy != enemies.end(); ++enemy)
     {
-        // auto [tower_x,tower_y] = (*enemy)->checkTowerInRange(towers);
         if((*enemy)->followPath()){
             delete (*enemy);
             enemies.erase(enemy--);
@@ -30,12 +29,13 @@ void gameManager::drawObjects() //iterating through the lists and drawing all of
     for (list<Projectile *>::iterator projectile = projectiles.begin(); projectile != projectiles.end(); ++projectile)
     {
         (*projectile)->shoot();
+        (*projectile)->handleCollision(enemies);
+        (*projectile)->draw(gRenderer, assets);
         if ((*projectile)->reachedTarget)
         {
             delete (*projectile);
             projectiles.erase(projectile--);
         }
-        (*projectile)->draw(gRenderer, assets);
     }
 }
 
