@@ -9,12 +9,15 @@ FireTower::FireTower(int x, int y)
     towerHealth = 100;
     towerAttackDamage = 5;
     towerAttackSpeed = 15;
-    towerReloadTime = 2;
+    towerReloadTime = 100;
     towerAttackRange = 20;
     towerID = 0;
     moverRect = {x - 64 / 2 + 48, y + 96 - 95 - 20, 64, 95};
     int fireDamage = 10;
+    cooledDown = true;
 }
+
+
 void FireTower::fireProjectile()
 {
 }
