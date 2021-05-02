@@ -15,10 +15,10 @@ class Tower : public Object
 {
 protected:
     //SDL_Rect srcSprite; //The sprite configuration for the eggs(hatched as well)
-    int towerPrice, towerHealth, towerAttackDamage, towerAttackSpeed, towerReloadTime, towerAttackRange;
+    int towerPrice, towerHealth, towerAttackDamage, towerAttackSpeed, towerAttackRange;
 
 public:      //function declarations
-    int towerID;
+    int towerID, towerReloadTime;
     Tower(); // constructors (overloaded)
     /**
      * Simple constructor that initilizes the x and y locations of the tower
