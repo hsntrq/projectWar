@@ -18,7 +18,7 @@ public:
     /**
      * Simple Default Constructor
      */
-    Object();           
+    Object();
     /**
      * Overloaded Constructor
      */

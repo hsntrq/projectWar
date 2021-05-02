@@ -5,12 +5,12 @@
  * \brief Parent class of all projectiles, stores methods and attributes common to them all
  */
 
-class Projectile: public Object
+class Projectile : public Object
 {
-    protected:
+protected:
     bool xIsBigger;
 
-    public:
+public:
     bool reachedTarget = false;
     Projectile();
     /**

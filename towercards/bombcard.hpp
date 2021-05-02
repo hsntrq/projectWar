@@ -5,7 +5,8 @@
  * 
  */
 
-class BombCard: public TowerCard{
+class BombCard : public TowerCard
+{
 public:
     BombCard();
     BombCard(int x, int y);

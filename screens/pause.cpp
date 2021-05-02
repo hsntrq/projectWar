@@ -1,11 +1,11 @@
 #include "pause.hpp"
 
-Pause::Pause(){
-
+Pause::Pause()
+{
 }
-void Pause::drawObjects(){
-
+void Pause::drawObjects()
+{
 }
-void Pause::detectClick(int, int){
-
+void Pause::detectClick(int, int)
+{
 }

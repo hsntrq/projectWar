@@ -13,13 +13,16 @@
 #include "projectile/bombtowerprojectile.hpp"
 #include "projectile/longbowtowerprojectile.hpp"
 #include "projectile/icetowerprojectile.hpp"
-class Patches{
-    private:
-        int x,y;
-    public:
-        bool isAvailable;
-        Patches(int, int);
-        bool checkRange(int, int);
-        std::tuple<int, int> location();
-        void isClicked(std::list<Object *> &,std::list<Projectile *> &, int, int, int);
+
+class Patches
+{
+private:
+    int x, y;
+
+public:
+    bool isAvailable;
+    Patches(int, int);
+    bool checkRange(int, int);
+    std::tuple<int, int> location();
+    void isClicked(std::list<Object *> &, std::list<Projectile *> &, int, int, int);
 };

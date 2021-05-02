@@ -1,13 +1,13 @@
 #include "highHPZombie.hpp"
 
-HighHPZombie::HighHPZombie(){}
+HighHPZombie::HighHPZombie() {}
 
 HighHPZombie::HighHPZombie(int x, int y, std::list<Path> path_)
 {
     path = path_;
     attackDamage = 1;
     attackSpeed = 1;
-    movementSpeed = 1+rand()%3;
+    movementSpeed = 1 + rand() % 3;
     attackRange = 3;
     enemyName = "High HP Zombie";
     srcSprite[0] = {521, 10, 24, 31};

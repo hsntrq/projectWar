@@ -32,8 +32,9 @@ class Game
     SDL_Texture *assets = NULL;
 
     Mix_Music *bgMusic = NULL;
-    vector<Screen*> Screens;
+    vector<Screen *> Screens;
     int screenNumber = 0;
+
 public:
     bool init();
     bool loadMedia();

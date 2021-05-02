@@ -7,25 +7,25 @@ void Projectile::draw(SDL_Renderer *gRenderer, SDL_Texture *assets) //selects  t
 }
 
 Projectile::Projectile(int x, int y) //constructor which initiates the Projectile at location (x, y)
-{   
+{
     moverRect = {x, y, 50, 60}; // initializing the projectile to appear at of the tower turret
 }
 
 Projectile::Projectile() //constructor which initiates the Projectile at location (x, y)
-{   
+{
     moverRect = {10, 10, 50, 60}; // initializing the projectile to appear at of the tower turret
 }
 
-Projectile::~Projectile(){}
+Projectile::~Projectile() {}
 
 void Projectile::shoot(int targetX, int targetY)
 {
     int gradient;
 
-    if (moverRect.x >= targetX-20 && moverRect.x <= targetX+20)
+    if (moverRect.x >= targetX - 20 && moverRect.x <= targetX + 20)
     {
         reachedTarget = true;
-        return; 
+        return;
     }
     else
     {
@@ -43,25 +43,23 @@ void Projectile::shoot(int targetX, int targetY)
         gradient = abs((targetY - moverRect.y) / (targetX - moverRect.x + 0.001));
     }
 
-
     if (gradient > 9)
     {
         gradient = 9;
     }
 
-
     if (xIsBigger)
     {
         if (moverRect.x > targetX)
         {
-            moverRect.x -= 3*gradient;
+            moverRect.x -= 3 * gradient;
         }
         else
         {
-            moverRect.x += 3*gradient;
+            moverRect.x += 3 * gradient;
         }
         if (moverRect.y > targetY)
-        {        
+        {
             moverRect.y -= 3;
         }
         else
@@ -80,12 +78,12 @@ void Projectile::shoot(int targetX, int targetY)
             moverRect.x += 3;
         }
         if (moverRect.y > targetY)
-        {        
-            moverRect.y -= 3*gradient;
+        {
+            moverRect.y -= 3 * gradient;
         }
         else
         {
-            moverRect.y += 3*gradient;
+            moverRect.y += 3 * gradient;
         }
     }
 }

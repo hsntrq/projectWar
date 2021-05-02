@@ -12,7 +12,7 @@ protected:
     int towerPrice, towerHealth, towerAttackDamage, towerAttackSpeed, towerReloadTime, towerAttackRange;
     std::string towerName;
 
-public: //function declarations
+public:      //function declarations
     Tower(); // constructors (overloaded)
     /**
      * Simple constructor that initilizes the x and y locations of the tower

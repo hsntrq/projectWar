@@ -8,9 +8,10 @@
 /**
  * \brief Parent class of all enemies/zombies, stores methods and attributes common to them all
  */
-struct Path{
+struct Path
+{
     int direction, stop;
-    Path(int d, int s): direction(d), stop(s){}
+    Path(int d, int s) : direction(d), stop(s) {}
 };
 class Enemy : public Object
 {
@@ -19,7 +20,7 @@ private:
 
 protected:
     SDL_Rect srcSprite[12];
-    int  attackDamage, attackSpeed, movementSpeed, attackRange;
+    int attackDamage, attackSpeed, movementSpeed, attackRange;
     list<Path> path;
     string enemyName;
 

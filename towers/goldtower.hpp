@@ -4,9 +4,11 @@
  * \brief This class stores the attributes and methods specific to the gold tower
  * 
  */
-class GoldTower: public Tower{
+class GoldTower : public Tower
+{
 private:
     int goldMineRate;
+
 public:
     GoldTower();
     GoldTower(int x, int y);

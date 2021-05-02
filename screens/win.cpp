@@ -1,11 +1,11 @@
 #include "win.hpp"
 
-Win::Win(){
-
+Win::Win()
+{
 }
-void Win::drawObjects(){
-
+void Win::drawObjects()
+{
 }
-void Win::detectClick(int, int){
-
-}   
+void Win::detectClick(int, int)
+{
+}

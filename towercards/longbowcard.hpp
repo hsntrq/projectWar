@@ -5,7 +5,8 @@
  * 
  */
 
-class LongBowCard: public TowerCard{
+class LongBowCard : public TowerCard
+{
 public:
     LongBowCard();
     LongBowCard(int x, int y);

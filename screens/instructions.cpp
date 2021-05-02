@@ -1,11 +1,11 @@
 #include "instructions.hpp"
 
-Instructions::Instructions(){
-
+Instructions::Instructions()
+{
 }
-void Instructions::drawObjects(){
-
+void Instructions::drawObjects()
+{
 }
-void Instructions::detectClick(int, int){
-
-}   
+void Instructions::detectClick(int, int)
+{
+}

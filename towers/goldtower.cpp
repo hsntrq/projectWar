@@ -1,8 +1,10 @@
 #include "goldtower.hpp"
 
-GoldTower::GoldTower(): GoldTower::GoldTower(10,10){}
-GoldTower::GoldTower(int x, int y){
-    srcRect = {102,26,72,110};
+GoldTower::GoldTower() : GoldTower::GoldTower(10, 10) {}
+
+GoldTower::GoldTower(int x, int y)
+{
+    srcRect = {102, 26, 72, 110};
     towerPrice = 50;
     towerHealth = 100;
     towerAttackDamage = 5;
@@ -10,27 +12,28 @@ GoldTower::GoldTower(int x, int y){
     towerReloadTime = 2;
     towerAttackRange = 20;
     towerName = "Gold Tower";
-    moverRect = {x+48-72/2,y+96-110-20,72,110};
+    moverRect = {x + 48 - 72 / 2, y + 96 - 110 - 20, 72, 110};
     goldMineRate = 50;
 }
-void GoldTower::fireProjectile(){
-
+void GoldTower::fireProjectile()
+{
 }
-void GoldTower::computeHealth(){
-
+void GoldTower::computeHealth()
+{
 }
-void GoldTower::repairTower(){
-
+void GoldTower::repairTower()
+{
 }
-bool GoldTower::checkEnemyInRange(){
+bool GoldTower::checkEnemyInRange()
+{
     return false;
 }
-void GoldTower::upgradeTower(){
-
+void GoldTower::upgradeTower()
+{
 }
-void GoldTower::destroyTower(){
-
+void GoldTower::destroyTower()
+{
 }
-void GoldTower::generateGold(){
-
+void GoldTower::generateGold()
+{
 }

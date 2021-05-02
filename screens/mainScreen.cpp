@@ -1,11 +1,11 @@
 #include "mainScreen.hpp"
 
-MainScreen::MainScreen(){
-
+MainScreen::MainScreen()
+{
 }
-void MainScreen::drawObjects(){
-
+void MainScreen::drawObjects()
+{
 }
-void MainScreen::detectClick(int, int){
-
-}   
+void MainScreen::detectClick(int, int)
+{
+}

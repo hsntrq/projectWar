@@ -1,11 +1,11 @@
 #include "options.hpp"
 
-Options::Options(){
-
+Options::Options()
+{
 }
-void Options::drawObjects(){
-
+void Options::drawObjects()
+{
 }
-void Options::detectClick(int, int){
-
+void Options::detectClick(int, int)
+{
 }

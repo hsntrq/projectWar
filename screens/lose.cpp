@@ -1,11 +1,11 @@
 #include "lose.hpp"
 
-Lose::Lose(){
-
+Lose::Lose()
+{
 }
-void Lose::drawObjects(){
-
+void Lose::drawObjects()
+{
 }
-void Lose::detectClick(int, int){
-
+void Lose::detectClick(int, int)
+{
 }

@@ -65,13 +65,13 @@ bool Game::loadMedia()
 	bool success = true;
 	assets = loadTexture("assets/assets.png");
 	gTexture = loadTexture("assets/map.png");
-	bgMusic = Mix_LoadMUS( "assets/beat.wav" );
+	bgMusic = Mix_LoadMUS("assets/beat.wav");
 	if (assets == NULL || gTexture == NULL)
 	{
 		printf("Unable to run due to error: %s\n", SDL_GetError());
 		success = false;
 	}
-	
+
 	if (bgMusic == NULL)
 	{
 		printf("Unable to load music: %s \n", Mix_GetError());
@@ -131,14 +131,14 @@ void Game::run()
 	bool quit = false;
 	SDL_Event e;
 	// gameManager ProjectWar(gRenderer,assets);
-	Screens.push_back(new gameManager(gRenderer,assets));
-	
+	Screens.push_back(new gameManager(gRenderer, assets));
+
 	while (!quit)
 	{
 		//Handle events on queue
 		while (SDL_PollEvent(&e) != 0)
 		{
-			
+
 			//User requests quit
 			if (e.type == SDL_QUIT)
 			{

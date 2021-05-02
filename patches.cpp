@@ -1,16 +1,19 @@
 #include "patches.hpp"
 
-bool Patches::checkRange(int a, int b){
+bool Patches::checkRange(int a, int b)
+{
     return ((a >= x && a <= x + 96) && (b >= y && b <= y + 96));
 }
-std::tuple<int, int> Patches::location(){
+std::tuple<int, int> Patches::location()
+{
 
     std::cout << x << " " << y << std::endl;
-    return std::make_tuple(x,y);
+    return std::make_tuple(x, y);
 }
-Patches::Patches(int a, int b): x(a),y(b),isAvailable(true){}
+Patches::Patches(int a, int b) : x(a), y(b), isAvailable(true) {}
 
-void Patches::isClicked(std::list<Object *> &towers, std::list<Projectile *> &projectiles, int towerSelected, int x_, int y_){
+void Patches::isClicked(std::list<Object *> &towers, std::list<Projectile *> &projectiles, int towerSelected, int x_, int y_)
+{
 
     if (isAvailable)
         if (checkRange(x_, y_))
@@ -46,5 +49,4 @@ void Patches::isClicked(std::list<Object *> &towers, std::list<Projectile *> &pr
             }
             isAvailable = false;
         }
-
 }
