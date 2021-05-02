@@ -7,6 +7,11 @@ void Enemy::draw(SDL_Renderer *gRenderer, SDL_Texture *assets) //selects  the sp
     SDL_RenderCopy(gRenderer, assets, &srcRect, &moverRect);
 }
 
+std::tuple<int, int, int, int> Enemy::location()
+{
+    return std::make_tuple(moverRect.x, moverRect.y, moverRect.w, moverRect.h);
+}
+
 Enemy::Enemy(int x, int y) //constructor which initiates the Enemy at location (x, y)
 {
     // it will display Enemy on (x, y) location, the size of pigeon is 25 width, 35 height

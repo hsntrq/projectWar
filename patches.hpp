@@ -8,11 +8,7 @@
 #include "towers/longbowtower.hpp"
 #include "towers/repairtower.hpp"
 #include "towers/bombtower.hpp"
-#include "projectile/projectile.hpp"
-#include "projectile/firetowerprojectile.hpp"
-#include "projectile/bombtowerprojectile.hpp"
-#include "projectile/longbowtowerprojectile.hpp"
-#include "projectile/icetowerprojectile.hpp"
+#pragma once
 
 class Patches
 {
@@ -24,5 +20,5 @@ public:
     Patches(int, int);
     bool checkRange(int, int);
     std::tuple<int, int> location();
-    void isClicked(std::list<Object *> &, std::list<Projectile *> &, int, int, int);
+    void isClicked(std::list<Tower *> &, int, int, int);
 };

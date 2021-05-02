@@ -11,7 +11,7 @@ RepairTower::RepairTower(int x, int y)
     towerAttackSpeed = 15;
     towerReloadTime = 2;
     towerAttackRange = 20;
-    towerName = "Repair Tower";
+    towerID = 5;
     moverRect = {x - 70 / 2 + 48, y + 96 - 115 - 20, 72, 115};
     RepairEffect = 50;
 }

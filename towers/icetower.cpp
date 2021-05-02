@@ -11,7 +11,7 @@ IceTower::IceTower(int x, int y)
     towerAttackSpeed = 15;
     towerReloadTime = 2;
     towerAttackRange = 20;
-    towerName = "Ice Tower";
+    towerID = 2;
     moverRect = {x + 48 - 69 / 2, y + 96 - 75 - 20, 69, 75};
 }
 void IceTower::fireProjectile()

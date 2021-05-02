@@ -11,7 +11,7 @@ FireTower::FireTower(int x, int y)
     towerAttackSpeed = 15;
     towerReloadTime = 2;
     towerAttackRange = 20;
-    towerName = "Fire Tower";
+    towerID = 0;
     moverRect = {x - 64 / 2 + 48, y + 96 - 95 - 20, 64, 95};
     int fireDamage = 10;
 }

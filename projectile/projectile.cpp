@@ -6,9 +6,10 @@ void Projectile::draw(SDL_Renderer *gRenderer, SDL_Texture *assets) //selects  t
     SDL_RenderCopy(gRenderer, assets, &srcRect, &moverRect);
 }
 
-Projectile::Projectile(int x, int y) //constructor which initiates the Projectile at location (x, y)
+Projectile::Projectile(int x, int y, int tx, int ty): targetX(tx), targetY(ty) //constructor which initiates the Projectile at location (x, y)
 {
     moverRect = {x, y, 50, 60}; // initializing the projectile to appear at of the tower turret
+    gradient = 0;
 }
 
 Projectile::Projectile() //constructor which initiates the Projectile at location (x, y)
@@ -18,7 +19,7 @@ Projectile::Projectile() //constructor which initiates the Projectile at locatio
 
 Projectile::~Projectile() {}
 
-void Projectile::shoot(int targetX, int targetY)
+void Projectile::shoot()
 {
     if (gradient > 0)
     {

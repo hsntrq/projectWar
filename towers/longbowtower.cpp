@@ -11,7 +11,7 @@ LongBowTower::LongBowTower(int x, int y)
     towerAttackSpeed = 15;
     towerReloadTime = 2;
     towerAttackRange = 20;
-    towerName = "LongBow Tower";
+    towerID = 3;
     moverRect = {x + 48 - 77 / 2, y + 96 - 121 - 20, 77, 121};
     specialArrow = 1;
 }

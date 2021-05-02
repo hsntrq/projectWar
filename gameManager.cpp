@@ -2,8 +2,16 @@
 
 void gameManager::drawObjects() //iterating through the lists and drawing all of the instances
 {
-    for (list<Object *>::iterator tower = towers.begin(); tower != towers.end(); ++tower)
+    for (list<Tower *>::iterator tower = towers.begin(); tower != towers.end(); ++tower)
     {
+        if ((*tower)->towerID < 4)
+        {
+            auto [enemyX, enemyY] = (*tower)->checkEnemyInRange(enemies);
+            if (enemyX)
+            {
+                (*tower)->fireProjectile(enemyX, enemyY, projectiles);
+            }
+        }
         (*tower)->draw(gRenderer, assets);
     }
     for (list<Enemy *>::iterator enemy = enemies.begin(); enemy != enemies.end(); ++enemy)
@@ -21,13 +29,13 @@ void gameManager::drawObjects() //iterating through the lists and drawing all of
     }
     for (list<Projectile *>::iterator projectile = projectiles.begin(); projectile != projectiles.end(); ++projectile)
     {
-        (*projectile)->draw(gRenderer, assets);
-        (*projectile)->shoot(500, 416);
+        (*projectile)->shoot();
         if ((*projectile)->reachedTarget)
         {
             delete (*projectile);
             projectiles.erase(projectile--);
         }
+        (*projectile)->draw(gRenderer, assets);
     }
 }
 
@@ -38,7 +46,7 @@ void gameManager::detectClick(int x, int y)
     {
         for (list<Patches *>::iterator patch = patches.begin(); patch != patches.end(); ++patch)
         {
-            (*patch)->isClicked(towers, projectiles, towerSelected, x, y);
+            (*patch)->isClicked(towers, towerSelected, x, y);
         }
         cardClicked = false;
         towerCards[towerSelected].isSelected = false;
@@ -85,9 +93,9 @@ gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst)
 
     towerCards.push_back(FireCard());
     towerCards.push_back(BombCard());
-    towerCards.push_back(GoldCard());
     towerCards.push_back(IceCard());
     towerCards.push_back(LongBowCard());
+    towerCards.push_back(GoldCard());
     towerCards.push_back(RepairCard());
 
     cardClicked = false;

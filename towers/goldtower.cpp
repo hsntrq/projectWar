@@ -11,7 +11,7 @@ GoldTower::GoldTower(int x, int y)
     towerAttackSpeed = 15;
     towerReloadTime = 2;
     towerAttackRange = 20;
-    towerName = "Gold Tower";
+    towerID = 4;
     moverRect = {x + 48 - 72 / 2, y + 96 - 110 - 20, 72, 110};
     goldMineRate = 50;
 }

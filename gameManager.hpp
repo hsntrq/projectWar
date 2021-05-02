@@ -17,6 +17,7 @@
 #include "enemies/normalZombie.hpp"
 #include "enemies/specialZombie.hpp"
 #include "enemies/weakZombie.hpp"
+#include "patches.hpp"
 using namespace std;
 
 /**
@@ -25,7 +26,7 @@ using namespace std;
 
 class gameManager: public Screen
 {
-    list<Object *> towers;
+    list<Tower *> towers;
     list<Projectile *> projectiles;
     list<Patches *> patches;
     list<Enemy *> enemies;

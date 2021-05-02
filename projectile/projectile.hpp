@@ -8,9 +8,10 @@
 class Projectile : public Object
 {
 protected:
-    int gradient = 0;
+    int gradient;
     bool xIsBigger;
     bool addX, addY;
+    int targetX, targetY;
 
 public:
     bool reachedTarget = false;
@@ -20,7 +21,7 @@ public:
      * \param x is projectile's x location
      * \param y is projectile's y location
      */
-    Projectile(int x, int y);
+    Projectile(int x, int y, int tx, int ty);
     /**
      * Simple destructor
      */
@@ -28,6 +29,6 @@ public:
     /**
      * Function to shoot the projectile, overwritten in child classes (in this case, the towers)
      */
-    void shoot(int targetX, int targetY);
+    void shoot();
     void draw(SDL_Renderer *gRenderer, SDL_Texture *assets);
 };

@@ -1,10 +1,8 @@
-#include <SDL.h>
 #include "../object.hpp"
-#pragma once
-#include "../patches.hpp"
 #include <iostream>
 #include <list>
 #include <tuple>
+#pragma once
 /**
  * \brief Parent class of all enemies/zombies, stores methods and attributes common to them all
  */
@@ -25,6 +23,8 @@ protected:
     string enemyName;
 
 public: //function declarations
+    std::tuple<int, int, int, int> location();
+
     void draw(SDL_Renderer *, SDL_Texture *assets);
     Enemy();
     /**
@@ -49,6 +49,4 @@ public: //function declarations
      * Function to have the enemy follow a defined path, overwritten in child classes (in this case, the towers)
      */
     bool followPath();
-
-    std::tuple<int, int> checkTowerInRange(std::list<Patches *> &patches);
 };

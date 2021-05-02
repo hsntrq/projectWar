@@ -11,7 +11,7 @@ BombTower::BombTower(int x, int y)
     towerAttackSpeed = 15;
     towerReloadTime = 2;
     towerAttackRange = 20;
-    towerName = "Bomb Tower";
+    towerID = 1;
     moverRect = {x - 77 / 2 + 48, y + 96 - 70 - 20, 77, 70};
 }
 void BombTower::fireProjectile()
