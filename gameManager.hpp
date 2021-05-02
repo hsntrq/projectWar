@@ -3,7 +3,6 @@
 #include <iostream>
 #include <vector>
 #include "towers/tower.hpp"
-#include "patches.hpp"
 #include "towercards/towercard.hpp"
 #include "towercards/bombcard.hpp"
 #include "towercards/firecard.hpp"
@@ -12,6 +11,12 @@
 #include "towercards/icecard.hpp"
 #include "towercards/longbowcard.hpp"
 #include "screens/screen.hpp"
+#include "enemies/enemy.hpp"
+#include "enemies/highHPZombie.hpp"
+#include "enemies/highSpeedZombie.hpp"
+#include "enemies/normalZombie.hpp"
+#include "enemies/specialZombie.hpp"
+#include "enemies/weakZombie.hpp"
 using namespace std;
 
 /**
@@ -23,7 +28,9 @@ class gameManager: public Screen
     list<Object *> towers;
     list<Projectile *> projectiles;
     list<Patches *> patches;
+    list<Enemy *> enemies;
     vector<TowerCard> towerCards;
+    list<Path> paths;
     int towerSelected; 
     bool cardClicked;
 
