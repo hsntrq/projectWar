@@ -9,7 +9,7 @@ FireTower::FireTower(int x, int y)
     towerHealth = 100;
     towerAttackDamage = 5;
     towerAttackSpeed = 15;
-    towerReloadTime = 100;
+    towerReloadTime = 75;
     towerAttackRange = 20;
     towerID = 0;
     moverRect = {x - 64 / 2 + 48, y + 96 - 95 - 20, 64, 95};

@@ -9,7 +9,7 @@ BombTower::BombTower(int x, int y)
     towerHealth = 100;
     towerAttackDamage = 5;
     towerAttackSpeed = 15;
-    towerReloadTime = 100;
+    towerReloadTime = 25;
     towerAttackRange = 20;
     towerID = 1;
     moverRect = {x - 77 / 2 + 48, y + 96 - 70 - 20, 77, 70};

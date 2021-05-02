@@ -9,7 +9,7 @@ IceTower::IceTower(int x, int y)
     towerHealth = 100;
     towerAttackDamage = 5;
     towerAttackSpeed = 15;
-    towerReloadTime = 100;
+    towerReloadTime = 50;
     towerAttackRange = 20;
     towerID = 2;
     moverRect = {x + 48 - 69 / 2, y + 96 - 75 - 20, 69, 75};
