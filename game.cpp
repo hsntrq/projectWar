@@ -169,6 +169,14 @@ void Game::run()
 				int xMouse, yMouse;
 				SDL_GetMouseState(&xMouse, &yMouse);
 				screenNumber = Screens[screenNumber]->detectClick(xMouse, yMouse);
+				if (screenNumber == 3 || screenNumber == 4){
+					delete (Screens[2]);
+					Screens[2] = new gameManager(gRenderer, assets);
+				}
+				if (screenNumber == 1){
+					delete (Screens[7]);
+					Screens[7] = new Loading(gRenderer, assets);
+				}
 			}
 		}
 		if (quit)
