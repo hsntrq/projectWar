@@ -34,11 +34,10 @@ class gameManager: public Screen
     list<Patches *> patches;
     list<Enemy *> enemies;
     vector<TowerCard> towerCards;
-    Wave* waves[6];
+    list <Wave*> waves;
     int towerSelected; 
     bool cardClicked;
     int elapsedFrames;
-    int currentWave;
     int delayBetweenEnemies;
 
 public:

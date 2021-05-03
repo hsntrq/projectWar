@@ -3,18 +3,18 @@
 void gameManager::drawObjects() //iterating through the lists and drawing all of the instances
 {
     elapsedFrames++;
-    if (enemies.empty())
+    if (!waves.front()->enemiesSpawned())
     {
-        if (currentWave == 6)
-        {
-            std::cout << "Congrats: Game Over" << std::endl;
-        }
-        else
-        {
-            currentWave++;
-            (waves[currentWave])->spawnEnemies(enemies);
-
-        }
+        waves.front()->spawnEnemies(enemies, elapsedFrames);
+    }
+    if (waves.front()->waveComplete(elapsedFrames) && enemies.empty())
+    {
+        delete waves.front();
+        waves.pop_front();
+    }
+    if (waves.empty() && enemies.empty())
+    {
+        std::cout << "Game Over" << std::endl;
     }
     for (list<Tower *>::iterator tower = towers.begin(); tower != towers.end(); ++tower)
     {
@@ -24,7 +24,6 @@ void gameManager::drawObjects() //iterating through the lists and drawing all of
             if (enemyX && (*tower)->cooledDown)
             {
                 (*tower)->fireProjectile(enemyX, enemyY, projectiles);
-                elapsedFrames = 0;
             }
         }
         (*tower)->updateCoolDownStatus(elapsedFrames); // necessary because the tower has to first fire before going into cooldown
@@ -115,12 +114,9 @@ gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst)
 
     for (int i=0; i<6; i++) //fills up a list that stores 6 consecutive waves
     {
-        waves[i] = new Wave(i);
+        waves.push_back(new Wave(i));
     }
-    currentWave = 0;
-    (waves[currentWave])->spawnEnemies(enemies);
 }
 
 gameManager::~gameManager() //destructor deletes all dynamically created objects traversing them in all the lists
-{
-}
+{}

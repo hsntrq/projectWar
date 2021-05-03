@@ -1,11 +1,11 @@
 #include "wave.hpp"
 
+Wave::Wave() {}
+
 Wave::Wave(int waveNum)
 {
-    currentWave = waveNum;
-    totalEnemies = 20 * currentWave;
-    usedEnemies = totalEnemies;
-    waveComplete = false;
+    totalEnemies = 20 * waveNum;
+    waveGap = 100;
 
     paths.push_back(Path(0, 160));
     paths.push_back(Path(1, 640));
@@ -18,11 +18,22 @@ Wave::Wave(int waveNum)
 
 Wave::~Wave() {}
 
-void Wave::spawnEnemies(list<Enemy *> &enemyList)
+bool Wave::enemiesSpawned()
 {
-    for (int i=0; i<totalEnemies; i++)
+    return totalEnemies == 0;
+}
+
+bool Wave::waveComplete(int elapsedFrames)
+{
+    return elapsedFrames % waveGap == 0;
+}
+
+void Wave::spawnEnemies(list<Enemy *> &enemyList, int frames)
+{
+    int spawnGap = (rand() %10) + 10;
+    if (frames % spawnGap == 0)
     {
-        int randomVar = rand()% 100;
+        int randomVar = rand() % 100;
         if (randomVar < 30)
         {
             enemyList.push_back(new WeakZombie(160 + rand() % 128, 576, paths));
@@ -43,5 +54,6 @@ void Wave::spawnEnemies(list<Enemy *> &enemyList)
         {
             enemyList.push_back(new SpecialZombie(160 + rand() % 128, 576, paths));
         }
+        totalEnemies--;
     }
 }

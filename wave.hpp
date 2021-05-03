@@ -12,12 +12,15 @@
 class Wave
 {
 private:
-    int currentWave, totalEnemies, usedEnemies, normal, weak, speed, healthy, special;
-    bool waveComplete;
+    int totalEnemies;
     list<Path> paths;
+    int waveGap;
 
 public:
+    Wave();
     Wave(int);
     ~Wave();
-    void spawnEnemies(list <Enemy *> &);
+    bool waveComplete(int);
+    void spawnEnemies(list <Enemy *> &, int);
+    bool enemiesSpawned();
 };
