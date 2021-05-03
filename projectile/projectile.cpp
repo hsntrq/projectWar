@@ -57,38 +57,38 @@ void Projectile::shoot()
         {
             if (addX)
             {
-                moverRect.x += 3 * gradient;
+                moverRect.x += 9 * gradient;
             }
             else
             {
-                moverRect.x -= 3 * gradient;
+                moverRect.x -= 9 * gradient;
             }
             if (addY)
             {
-                moverRect.y += 3;
+                moverRect.y += 9;
             }
             else
             {
-                moverRect.y -= 3;
+                moverRect.y -= 9;
             }
         }
         else
         {
             if (addX)
             {
-                moverRect.x += 3;
+                moverRect.x += 9;
             }
             else
             {
-                moverRect.x -= 3;
+                moverRect.x -= 9;
             }
             if (addY)
             {
-                moverRect.y += 3 * gradient;
+                moverRect.y += 9 * gradient;
             }
             else
             {
-                moverRect.y -= 3 * gradient;
+                moverRect.y -= 9 * gradient;
             }
         }
     }
