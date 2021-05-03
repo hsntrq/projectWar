@@ -3,7 +3,11 @@
 class Win : public Screen
 {
 public:
+    Button continueButton;
+
+public:
     Win();
+    Win(SDL_Renderer *renderer, SDL_Texture *asst);
     void drawObjects();
-    void detectClick(int, int);
+    int detectClick(int, int);
 };
