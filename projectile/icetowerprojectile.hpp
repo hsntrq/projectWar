@@ -6,10 +6,6 @@
  */
 class IceTowerProjectile : public Projectile
 {
-private:
-    SDL_Rect approaching = {521, 10, 24, 31};
-    SDL_Rect landed = {494, 298, 144, 117};
-
 public:
     /**
      * Simple constructor that initilizes the x and y locations of the projectile
