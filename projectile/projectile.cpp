@@ -57,38 +57,38 @@ void Projectile::shoot()
         {
             if (addX)
             {
-                moverRect.x += 3 * gradient;
+                moverRect.x += 9 * gradient;
             }
             else
             {
-                moverRect.x -= 3 * gradient;
+                moverRect.x -= 9 * gradient;
             }
             if (addY)
             {
-                moverRect.y += 3;
+                moverRect.y += 9;
             }
             else
             {
-                moverRect.y -= 3;
+                moverRect.y -= 9;
             }
         }
         else
         {
             if (addX)
             {
-                moverRect.x += 3;
+                moverRect.x += 9;
             }
             else
             {
-                moverRect.x -= 3;
+                moverRect.x -= 9;
             }
             if (addY)
             {
-                moverRect.y += 3 * gradient;
+                moverRect.y += 9 * gradient;
             }
             else
             {
-                moverRect.y -= 3 * gradient;
+                moverRect.y -= 9 * gradient;
             }
         }
     }
@@ -98,18 +98,16 @@ void Projectile::shoot()
         {
             xIsBigger = true;
             gradient = abs((targetX - moverRect.x) / (targetY - moverRect.y + 0.000001));
-            gradient++;
         }
         else
         {
             xIsBigger = false;
             gradient = abs((targetY - moverRect.y) / (targetX - moverRect.x + 0.000001));
-            gradient++;
         }
-        if (gradient > 7)
-        {
-            gradient = 7;
-        }
+        // if (gradient > 7)
+        // {
+        //     gradient = 7;
+        // }
         if (moverRect.x < targetX)
         {
             addX = true;
