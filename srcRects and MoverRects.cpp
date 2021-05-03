@@ -88,13 +88,16 @@
 // //---------------------------------------------------------------------
 
 
-// //UI Assets--------------------------------------------------------------------
+// //UI Assets - Tower Buttons--------------------------------------------------------------------
 
 // //Fire Tower
 // srcRect = {15,358,113,93};
 
 // //Fire Tower Highlighted
 // srcRect = {15,463,113,93};
+
+// //Fire Tower Greyed
+// srcRect = {401,623,114,93};
 
 
 
@@ -104,6 +107,9 @@
 // //Canon Tower Highlighted
 // srcRect = {142,463,114,93};
 
+// //Canon Tower Greyed
+// srcRect = {273,622,114,93};
+
 
 
 // //Repair Tower
@@ -111,6 +117,9 @@
 
 // //Repair Tower Highlighted
 // srcRect = {270,463,114,93};
+
+// //Repair Tower Greyed
+// srcRect = {654,626,114,93};
 
 
 
@@ -120,6 +129,8 @@
 // //LongBow Tower Highlighted
 // srcRect = {398,463,114,93};
 
+// //LongBow Tower Greyed
+// srcRect = {15,624,114,93};
 
 
 
@@ -129,6 +140,8 @@
 // //Ice Tower Highlighted
 // srcRect = {526,463,114,93};
 
+// //Ice Tower Greyed
+// srcRect = {526,624,114,93};
 
 
 
@@ -138,8 +151,123 @@
 // //Gold Tower Highlighted
 // srcRect = {654,463,114,93};
 
+// //Gold Tower Greyed
+// srcRect = {142,624,114,93};
+
 
 
 // //Coin Slab
-// srcRect = {15,568,105,43};s
+// srcRect = {15,568,105,43};
+
+
+
+
+//PROJECTILES-----------------------------------------------------------------------
+
+//Fire projectile
+// srcRect = {634,222,15,15};
+// moverRect = {x,y,15,15};
+
+
+
+//Ice projectile
+// srcRect = {657,222,16,15};
+// moverRect = {x,y,16,15};
+
+
+
+//Canon projectile
+// srcRect = {682,222,14,15};
+// moverRect = {x,y,14,15};
+
+
+
+//Energy Tower/Longbow projectile
+// srcRect = {657,248,16,14};
+// moverRect = {x,y,16,14};
+
+
+
+
+
+//SCREENS-------------------------------------------------------------------------------
+
+//Home screen
+// srcRect = {27,766,1280,736};
+// moverRect = {0,0,1280,736};
+
+
+//Instructions screen
+// srcRect = {27,1566,1280,736};
+// moverRect = {0,0,1280,736};
+
+
+//Pause screen
+// srcRect = {1431,37,1280,736};
+// moverRect = {0,0,1280,736};
+
+
+//Win screen
+// srcRect = {1431,815,1280,736};
+// moverRect = {0,0,1280,736};
+
+
+//Lose screen
+// srcRect = {1431,1593,1280,736};
+// moverRect = {0,0,1280,736};
+
+
+
+//BUTTONS--------------------------------------------------------------------------------
+
+//Continue Button - Win Screen
+// srcRect = {768,46,199,66};
+// moverRect = {541,575,199,66};
+
+
+//Continue Button - Lose Screen
+// srcRect = {768,46,199,66};
+// moverRect = {541,556,199,66};
+
+
+//Back Button - Instructions screen
+// srcRect = {761,136,223,74};
+// moverRect = {529,634,199,66};
+
+
+//Resume Button - Pause screen
+// srcRect = {1052,35,255,85};
+// moverRect = {512,322,255,85};
+
+
+//Quit Button - white  - Pause screen
+// srcRect = {1052,259,255,85};
+// moverRect = {513,433,255,85};
+
+
+//Front Screen Buttons-------
+
+//New game Button
+// srcRect = {1067,487,225,88};
+// moverRect = {76,86,225,88};
+
+
+//Instructions Button
+// srcRect = {1031,594,297,88};
+// moverRect = {40,223,297,88};
+
+
+//Options Button
+// srcRect = {1067,374,225,88};
+// moverRect = {76,360,225,88};
+
+
+//Quit Button - yellow
+// srcRect = {1052,141,225,88};
+// moverRect = {76,497,225,88};
+
+
+
+
+
 
