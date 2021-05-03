@@ -10,6 +10,14 @@
 #include <time.h>
 #include <map>
 #include "gameManager.hpp"
+#include "screens/instructions.hpp"
+#include "screens/pause.hpp"
+#include "screens/win.hpp"
+#include "screens/lose.hpp"
+#include "screens/options.hpp"
+#include "screens/mainScreen.hpp"
+#include "screens/loading.hpp"
+#pragma once
 /**
  * \brief This class contains attributes and methods relevant to the Graphics Window of SDL
  */
@@ -27,13 +35,13 @@ class Game
     SDL_Renderer *gRenderer = NULL;
 
     //Current displayed texture
-    SDL_Texture *gTexture = NULL;
+    vector<SDL_Texture *> gTexture;
     //global reference to png image sheets
     SDL_Texture *assets = NULL;
 
     Mix_Music *bgMusic = NULL;
     vector<Screen *> Screens;
-    int screenNumber = 0;
+    int screenNumber = 0; // 0-> main 1-> instructions 2->NewGame 3-> Won 4-> lose 5-> options 6-> pause 7-> Loading
 
 public:
     bool init();
