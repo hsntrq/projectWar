@@ -128,7 +128,7 @@ gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst)
     towerSelected = -1;
     
 
-    for (int i = 0; i < 2; i++) //fills up a list that stores 6 consecutive waves
+    for (int i = 0; i < 6; i++) //fills up a list that stores 6 consecutive waves
     {
         waves.push_back(new Wave(i));
     }
