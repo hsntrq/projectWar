@@ -6,8 +6,6 @@
  */
 class BombTowerProjectile: public Projectile{
 private:
-SDL_Rect approaching = {436,177,15,26};
-SDL_Rect landed = {494, 298, 144, 117};
 
 public:
 /**

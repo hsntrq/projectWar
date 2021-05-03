@@ -6,10 +6,6 @@
  */
 class LongBowTowerProjectile : public Projectile
 {
-private:
-    SDL_Rect approaching = {0, 0, 160, 133};
-    SDL_Rect landed = {494, 298, 144, 117};
-
 public:
     /**
      * Simple constructor that initilizes the x and y locations of the projectile

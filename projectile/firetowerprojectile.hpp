@@ -6,10 +6,6 @@
  */
 class FireTowerProjectile : public Projectile
 {
-private:
-    SDL_Rect approaching = {353, 173, 15, 30};
-    SDL_Rect landed = {494, 298, 144, 117};
-
 public:
     /**
      * Simple constructor that initilizes the x and y locations of the projectile
