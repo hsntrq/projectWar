@@ -316,3 +316,20 @@
 //Quit Button - yellow PRESSED
 // srcRect = {1479,308,225,72};
 // moverRect = {76,513,225,72};
+
+
+
+
+//------------------------------
+//Pause Button
+// srcRect = {853,283,88,31};
+// moverRect = {643,396,88,31};
+
+
+
+//Pause button pressed
+// srcRect = {853,346,88,29};
+// moverRect = {649,396,88,29};
+
+
+
