@@ -245,6 +245,35 @@
 // moverRect = {513,433,255,85};
 
 
+//-----------PRESSED BUTTONS--------------
+
+//Continue Button - Win Screen PRESSED
+// srcRect = {1503,35,199,53};
+// moverRect = {541,588,199,53};
+
+
+//Continue Button - Lose Screen PRESSED
+// srcRect = {1503,35,199,53};
+// moverRect = {541,569,199,53};
+
+
+//Back Button - Instructions screen PRESSED
+// srcRect = {1481,221,223,59};
+// moverRect = {529,649,223,59};
+
+
+//Resume Button - Pause screen PRESSED
+// srcRect = {1465,409,255,69};
+// moverRect = {512,338,255,69};
+
+
+//Quit Button - white  - Pause screen PRESSED
+// srcRect = {1465,509,255,69};
+// moverRect = {513,449,};
+
+
+
+
 //Front Screen Buttons-------
 
 //New game Button
@@ -267,7 +296,23 @@
 // moverRect = {76,497,225,88};
 
 
+//-----------PRESSED Front Screen Buttons--------------
+
+///New game Button PRESSED
+// srcRect = {1480,609,225,72};
+// moverRect = {76,102,225,72};
 
 
+//Instructions Button PRESSED
+// srcRect = {1453,120,297,72};
+// moverRect = {40,239,297,72};
 
 
+//Options Button PRESSED
+// srcRect = {1490,701,225,72};
+// moverRect = {76,376,225,72};
+
+
+//Quit Button - yellow PRESSED
+// srcRect = {1479,308,225,72};
+// moverRect = {76,513,225,72};
