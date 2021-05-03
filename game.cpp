@@ -173,6 +173,10 @@ void Game::run()
 					delete (Screens[2]);
 					Screens[2] = new gameManager(gRenderer, assets);
 				}
+				if (screenNumber == 1){
+					delete (Screens[7]);
+					Screens[7] = new Loading(gRenderer, assets);
+				}
 			}
 		}
 		if (quit)
