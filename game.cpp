@@ -165,7 +165,6 @@ void Game::run()
 
 			if (e.type == SDL_MOUSEBUTTONDOWN)
 			{
-				//this is a good location to add pigeon in linked list.
 				int xMouse, yMouse;
 				SDL_GetMouseState(&xMouse, &yMouse);
 				screenNumber = Screens[screenNumber]->detectClick(xMouse, yMouse);

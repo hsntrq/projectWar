@@ -18,7 +18,10 @@
 #include "enemies/specialZombie.hpp"
 #include "enemies/weakZombie.hpp"
 #include "patches.hpp"
+#include "wave.hpp"
+
 using namespace std;
+#pragma once
 
 /**
  * \brief This class stores the methods and attributes necessary to carry out game logic
@@ -31,13 +34,15 @@ class gameManager : public Screen
     list<Patches *> patches;
     list<Enemy *> enemies;
     vector<TowerCard> towerCards;
-    list<Path> paths;
-    int towerSelected;
-    bool cardClicked;
-    int elapsedFrames;
     int gameState; // 2-> continue // 3-> won // 4-> lose
     int baseHP;
     int state;
+    list <Wave*> waves;
+    int towerSelected; 
+    bool cardClicked;
+    int elapsedFrames;
+    int delayBetweenEnemies;
+
 public:
     /**
      * Simple Constructor

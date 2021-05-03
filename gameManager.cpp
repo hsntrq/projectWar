@@ -3,6 +3,19 @@
 void gameManager::drawObjects() //iterating through the lists and drawing all of the instances
 {
     elapsedFrames++;
+    if (!waves.front()->enemiesSpawned())
+    {
+        waves.front()->spawnEnemies(enemies, elapsedFrames);
+    }
+    if (waves.front()->waveComplete(elapsedFrames) && enemies.empty())
+    {
+        delete waves.front();
+        waves.pop_front();
+    }
+    if (waves.empty() && enemies.empty())
+    {
+        std::cout << "Game Over" << std::endl;
+    }
     for (list<Tower *>::iterator tower = towers.begin(); tower != towers.end(); ++tower)
     {
         if ((*tower)->towerID < 4)
@@ -11,7 +24,6 @@ void gameManager::drawObjects() //iterating through the lists and drawing all of
             if (enemyX && (*tower)->cooledDown)
             {
                 (*tower)->fireProjectile(enemyX, enemyY, projectiles);
-                elapsedFrames = 0;
             }
         }
         (*tower)->updateCoolDownStatus(elapsedFrames); // necessary because the tower has to first fire before going into cooldown
@@ -87,13 +99,8 @@ gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst)
     baseHP = 100;
     gRenderer = renderer;
     assets = asst;
-    paths.push_back(Path(0, 160));
-    paths.push_back(Path(1, 640));
-    paths.push_back(Path(2, 480));
-    paths.push_back(Path(1, 960));
-    paths.push_back(Path(0, 384));
-    paths.push_back(Path(1, 1184));
-    paths.push_back(Path(0, 0));
+    elapsedFrames = 0;
+
 
     patches.push_back(new Patches(64, 480));
     patches.push_back(new Patches(288, 416));
@@ -117,12 +124,11 @@ gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst)
     cardClicked = false;
     towerSelected = -1;
 
-    enemies.push_back(new WeakZombie(160 + rand() % 128, 576, paths));
-    enemies.push_back(new NormalZombie(160 + rand() % 128, 576, paths));
-    enemies.push_back(new SpecialZombie(160 + rand() % 128, 576, paths));
-    enemies.push_back(new HighSpeedZombie(160 + rand() % 128, 576, paths));
-    enemies.push_back(new HighHPZombie(160 + rand() % 128, 576, paths));
+    for (int i=0; i<6; i++) //fills up a list that stores 6 consecutive waves
+    {
+        waves.push_back(new Wave(i));
+    }
 }
+
 gameManager::~gameManager() //destructor deletes all dynamically created objects traversing them in all the lists
-{
-}
+{}

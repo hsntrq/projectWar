@@ -1,4 +1,5 @@
 #include "enemy.hpp"
+#pragma once
 
 /**
  * \brief This class stores the attributes and functions specific to the special zombie

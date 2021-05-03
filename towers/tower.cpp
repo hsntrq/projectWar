@@ -44,7 +44,7 @@ std::tuple<int, int> Tower::checkEnemyInRange(std::list<Enemy *> &enemies)
 
 void Tower::updateCoolDownStatus(int &frames)
 {
-    if (frames == towerReloadTime)
+    if (frames % towerReloadTime == 0)
     {
         cooledDown = true;
     }
