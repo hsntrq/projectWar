@@ -3,7 +3,7 @@
 class Instructions : public Screen
 {
 private:
-    Button continueButton;
+    Button backButton;
 
 public:
     Instructions();

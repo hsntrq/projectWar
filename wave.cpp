@@ -4,7 +4,7 @@ Wave::Wave() {}
 
 Wave::Wave(int waveNum)
 {
-    totalEnemies = 20 * waveNum;
+    totalEnemies = 2 * waveNum;
     waveGap = 100;
 
     paths.push_back(Path(0, 160));

@@ -3,18 +3,32 @@
 void gameManager::drawObjects() //iterating through the lists and drawing all of the instances
 {
     elapsedFrames++;
-    if (!waves.front()->enemiesSpawned())
+    if (baseHP == 0)
     {
-        waves.front()->spawnEnemies(enemies, elapsedFrames);
+        state = 4;
+        return;
     }
-    if (waves.front()->waveComplete(elapsedFrames) && enemies.empty())
+    else
     {
-        delete waves.front();
-        waves.pop_front();
+        state = 2;
     }
-    if (waves.empty() && enemies.empty())
+    if (!waves.empty())
     {
+        if (!waves.front()->enemiesSpawned())
+        {
+            waves.front()->spawnEnemies(enemies, elapsedFrames);
+        }
+        if (waves.front()->waveComplete(elapsedFrames) && enemies.empty())
+        {
+            delete waves.front();
+            waves.pop_front();
+        }
+    }
+    if (waves.empty() && enemies.empty() && baseHP >= 0)
+    {
+        state = 3;
         std::cout << "Game Over" << std::endl;
+        return;
     }
     for (list<Tower *>::iterator tower = towers.begin(); tower != towers.end(); ++tower)
     {
@@ -52,16 +66,6 @@ void gameManager::drawObjects() //iterating through the lists and drawing all of
             delete (*projectile);
             projectiles.erase(projectile--);
         }
-    }
-    if (enemies.empty()){
-        state = 3;
-        
-    }
-    else if (baseHP == 0){
-        state = 4;
-    }
-    else{
-        state = 2;
     }
 }
 
@@ -101,7 +105,6 @@ gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst)
     assets = asst;
     elapsedFrames = 0;
 
-
     patches.push_back(new Patches(64, 480));
     patches.push_back(new Patches(288, 416));
     patches.push_back(new Patches(288, 256));
@@ -123,12 +126,14 @@ gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst)
 
     cardClicked = false;
     towerSelected = -1;
+    
 
-    for (int i=0; i<6; i++) //fills up a list that stores 6 consecutive waves
+    for (int i = 0; i < 2; i++) //fills up a list that stores 6 consecutive waves
     {
         waves.push_back(new Wave(i));
     }
 }
 
 gameManager::~gameManager() //destructor deletes all dynamically created objects traversing them in all the lists
-{}
+{
+}
