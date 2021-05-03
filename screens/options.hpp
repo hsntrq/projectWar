@@ -2,8 +2,12 @@
 
 class Options : public Screen
 {
+private:
+    Button music, volume, back;
+
 public:
     Options();
+    Options(SDL_Renderer *renderer, SDL_Texture *asst);
     void drawObjects();
-    void detectClick(int, int);
+    int detectClick(int, int);
 };

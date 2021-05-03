@@ -3,7 +3,11 @@
 class Lose : public Screen
 {
 public:
-    Lose();
+    Button continueButton;
+
+public:
+Lose();
+    Lose(SDL_Renderer *renderer, SDL_Texture *asst);
     void drawObjects();
-    void detectClick(int, int);
+    int detectClick(int, int);
 };
