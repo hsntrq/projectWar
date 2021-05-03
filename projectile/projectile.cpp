@@ -98,18 +98,16 @@ void Projectile::shoot()
         {
             xIsBigger = true;
             gradient = abs((targetX - moverRect.x) / (targetY - moverRect.y + 0.000001));
-            gradient++;
         }
         else
         {
             xIsBigger = false;
             gradient = abs((targetY - moverRect.y) / (targetX - moverRect.x + 0.000001));
-            gradient++;
         }
-        if (gradient > 7)
-        {
-            gradient = 7;
-        }
+        // if (gradient > 7)
+        // {
+        //     gradient = 7;
+        // }
         if (moverRect.x < targetX)
         {
             addX = true;

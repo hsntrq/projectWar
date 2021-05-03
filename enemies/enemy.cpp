@@ -75,9 +75,13 @@ bool Enemy::followPath()
 
 void Enemy::healthCalculation(int damage)
 {
-    health = -damage;
+    health -= damage;
     if (health <= 0)
     {
         death = true;
+    }
+    else
+    {
+        death = false;
     }
 }
