@@ -41,9 +41,19 @@ void gameManager::drawObjects() //iterating through the lists and drawing all of
             projectiles.erase(projectile--);
         }
     }
+    if (enemies.empty()){
+        state = 3;
+        
+    }
+    else if (baseHP == 0){
+        state = 4;
+    }
+    else{
+        state = 2;
+    }
 }
 
-void gameManager::detectClick(int x, int y)
+int gameManager::detectClick(int x, int y)
 {
     std::cout << "Mouse clicked at: " << x << " -- " << y << std::endl;
     if (cardClicked)
@@ -69,10 +79,12 @@ void gameManager::detectClick(int x, int y)
             }
         }
     }
+    return state;
 }
 
 gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst)
 {
+    baseHP = 100;
     gRenderer = renderer;
     assets = asst;
     paths.push_back(Path(0, 160));

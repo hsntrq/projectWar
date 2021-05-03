@@ -24,7 +24,7 @@ using namespace std;
  * \brief This class stores the methods and attributes necessary to carry out game logic
  */
 
-class gameManager: public Screen
+class gameManager : public Screen
 {
     list<Tower *> towers;
     list<Projectile *> projectiles;
@@ -32,16 +32,18 @@ class gameManager: public Screen
     list<Enemy *> enemies;
     vector<TowerCard> towerCards;
     list<Path> paths;
-    int towerSelected; 
+    int towerSelected;
     bool cardClicked;
     int elapsedFrames;
-
+    int gameState; // 2-> continue // 3-> won // 4-> lose
+    int baseHP;
+    int state;
 public:
     /**
      * Simple Constructor
      */
     gameManager();
-    
+
     gameManager(SDL_Renderer *, SDL_Texture *); //constructor
     /**
      * Function to draw objects on screen
@@ -50,7 +52,7 @@ public:
     /**
      * Function to spawn objects as required by game
      */
-    void detectClick(int, int) override;
+    int detectClick(int, int) override;
     /**
      * Simple Destructor
      */

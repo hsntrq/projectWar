@@ -2,8 +2,12 @@
 
 class Pause : public Screen
 {
+private:
+    Button resume, quit;
+
 public:
     Pause();
+    Pause(SDL_Renderer *renderer, SDL_Texture *asst);
     void drawObjects();
-    void detectClick(int, int);
+    int detectClick(int, int);
 };

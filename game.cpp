@@ -63,10 +63,19 @@ bool Game::loadMedia()
 {
 	//Loading success flag
 	bool success = true;
+	gTexture.push_back(loadTexture("assets/mainscreen.png"));
+	gTexture.push_back(loadTexture("assets/instructions.png"));
+	gTexture.push_back(loadTexture("assets/map.png"));
+	gTexture.push_back(loadTexture("assets/win.png"));
+	gTexture.push_back(loadTexture("assets/lose.png"));
+	gTexture.push_back(loadTexture("assets/map.png"));
+	gTexture.push_back(loadTexture("assets/pause.png"));
+	gTexture.push_back(loadTexture("assets/map.png"));
+
 	assets = loadTexture("assets/assets.png");
-	gTexture = loadTexture("assets/map.png");
+	// gTexture = loadTexture("assets/map.png");
 	bgMusic = Mix_LoadMUS("assets/beat.wav");
-	if (assets == NULL || gTexture == NULL)
+	if (assets == NULL)
 	{
 		printf("Unable to run due to error: %s\n", SDL_GetError());
 		success = false;
@@ -85,7 +94,8 @@ void Game::close()
 	//Free loaded images
 	SDL_DestroyTexture(assets);
 	assets = NULL;
-	SDL_DestroyTexture(gTexture);
+	for (auto i : gTexture)
+		SDL_DestroyTexture(i);
 
 	//Destroy window
 	SDL_DestroyRenderer(gRenderer);
@@ -131,7 +141,14 @@ void Game::run()
 	bool quit = false;
 	SDL_Event e;
 	// gameManager ProjectWar(gRenderer,assets);
+	Screens.push_back(new MainScreen(gRenderer, assets));
+	Screens.push_back(new Instructions(gRenderer, assets));
 	Screens.push_back(new gameManager(gRenderer, assets));
+	Screens.push_back(new Win(gRenderer, assets));
+	Screens.push_back(new Lose(gRenderer, assets));
+	Screens.push_back(new Options(gRenderer, assets));
+	Screens.push_back(new Pause(gRenderer, assets));
+	Screens.push_back(new Loading(gRenderer, assets));
 
 	while (!quit)
 	{
@@ -140,9 +157,10 @@ void Game::run()
 		{
 
 			//User requests quit
-			if (e.type == SDL_QUIT)
+			if (e.type == SDL_QUIT || screenNumber == 8)
 			{
 				quit = true;
+				break;
 			}
 
 			if (e.type == SDL_MOUSEBUTTONDOWN)
@@ -150,20 +168,21 @@ void Game::run()
 				//this is a good location to add pigeon in linked list.
 				int xMouse, yMouse;
 				SDL_GetMouseState(&xMouse, &yMouse);
-				Screens[0]->detectClick(xMouse, yMouse);
+				screenNumber = Screens[screenNumber]->detectClick(xMouse, yMouse);
 			}
 		}
-
+		if (quit)
+			break;
 		if (Mix_PlayingMusic() == 0)
 		{
 			//Play the music
 			Mix_PlayMusic(bgMusic, 2);
 		}
-		SDL_RenderClear(gRenderer);						 //removes everything from renderer
-		SDL_RenderCopy(gRenderer, gTexture, NULL, NULL); //Draws background to renderer
+		SDL_RenderClear(gRenderer);									   //removes everything from renderer
+		SDL_RenderCopy(gRenderer, gTexture[screenNumber], NULL, NULL); //Draws background to renderer
 		//***********************draw the objects here********************
 
-		Screens[0]->drawObjects();
+		Screens[screenNumber]->drawObjects();
 
 		//****************************************************************
 		SDL_RenderPresent(gRenderer); //displays the updated renderer
