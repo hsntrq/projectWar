@@ -12,7 +12,6 @@ Patches::Patches(int a, int b) : x(a), y(b), isAvailable(true) {}
 
 void Patches::isClicked(std::list<Tower *> &towers, int towerSelected, int x_, int y_)
 {
-
     if (isAvailable)
         if (checkRange(x_, y_))
         {

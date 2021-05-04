@@ -7,9 +7,10 @@
 #include "enemies/normalZombie.hpp"
 #include "enemies/weakZombie.hpp"
 #include <list>
+
 #pragma once
 
-class Wave
+class EnemyFactory
 {
 private:
     int totalEnemies;
@@ -17,9 +18,9 @@ private:
     int waveGap;
 
 public:
-    Wave();
-    Wave(int);
-    ~Wave();
+    EnemyFactory();
+    EnemyFactory(int);
+    ~EnemyFactory();
     bool waveComplete(int);
     void spawnEnemies(list <Enemy *> &, int);
     bool enemiesSpawned();
