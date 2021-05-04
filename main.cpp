@@ -1,20 +1,19 @@
 #include "game.hpp"
 
 int main(int argc, char *argv[]){
-    Game game;
     srand(time(NULL));
-    if( !game.init() ){
+    if( !Game::singleton().init() ){
 		printf( "Failed to initialize!\n" );
         return 0;
 	}
 		//Load media
-    if( !game.loadMedia() ){
+    if( !Game::singleton().loadMedia() ){
         printf( "Failed to load media!\n" );
         return 0;
     }
 
-    game.run();
-    game.close();
+    Game::singleton().run();
+    Game::singleton().close();
 
     return 0;
 }
