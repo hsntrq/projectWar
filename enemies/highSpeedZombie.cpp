@@ -9,6 +9,7 @@ HighSpeedZombie::HighSpeedZombie(int x, int y, std::list<Path> path_)
     attackSpeed = 1;
     movementSpeed = 4 + rand() % 3;
     attackRange = 3;
+    health = 40;
     enemyName = "High Speed Zombie";
     srcSprite[0] = {353, 173, 15, 30};
     srcSprite[1] = {380, 172, 16, 31};

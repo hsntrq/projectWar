@@ -9,6 +9,7 @@ WeakZombie::WeakZombie(int x, int y, std::list<Path> path_)
     attackSpeed = 1;
     movementSpeed = 1 + rand() % 3;
     attackRange = 3;
+    health = 20;
     enemyName = "Weak Zombie";
     srcSprite[0] = {436, 177, 15, 26};
     srcSprite[1] = {466, 176, 14, 26};

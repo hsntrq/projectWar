@@ -9,6 +9,7 @@ NormalZombie::NormalZombie(int x, int y, std::list<Path> path_)
     attackSpeed = 1;
     movementSpeed = 1 + rand() % 3;
     attackRange = 3;
+    health = 60;
     enemyName = "Normal Zombie";
     srcSprite[0] = {271, 15, 15, 26};
     srcSprite[1] = {298, 14, 15, 26};

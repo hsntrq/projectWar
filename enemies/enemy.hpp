@@ -13,8 +13,8 @@ struct Path
 };
 class Enemy : public Object
 {
-private:
-    int frame, direction, health = 50;
+protected:
+    int frame, direction, health;
 
 protected:
     SDL_Rect srcSprite[12];

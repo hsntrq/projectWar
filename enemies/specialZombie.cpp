@@ -8,7 +8,8 @@ SpecialZombie::SpecialZombie(int x, int y, std::list<Path> path_)
     attackDamage = 1;
     attackSpeed = 1;
     movementSpeed = 1 + rand() % 3;
-    attackRange = 3;
+    attackRange = 30;
+    health = 50;
     enemyName = "Special Zombie";
     srcSprite[0] = {352, 12, 17, 29};
     srcSprite[1] = {375, 10, 25, 30};
