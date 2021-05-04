@@ -1,18 +1,19 @@
-#include "patches.hpp"
+#include "towerBuilder.hpp"
 
-bool Patches::checkRange(int a, int b)
+bool TowerBuilder::checkRange(int a, int b)
 {
     return ((a >= x && a <= x + 96) && (b >= y && b <= y + 96));
 }
-std::tuple<int, int> Patches::location()
+
+std::tuple<int, int> TowerBuilder::location()
 {
     return std::make_tuple(x, y);
 }
-Patches::Patches(int a, int b) : x(a), y(b), isAvailable(true) {}
 
-void Patches::isClicked(std::list<Tower *> &towers, int towerSelected, int x_, int y_)
+TowerBuilder::TowerBuilder(int a, int b) : x(a), y(b), isAvailable(true) {}
+
+void TowerBuilder::isClicked(std::list<Tower *> &towers, int towerSelected, int x_, int y_)
 {
-
     if (isAvailable)
         if (checkRange(x_, y_))
         {
@@ -43,4 +44,10 @@ void Patches::isClicked(std::list<Tower *> &towers, int towerSelected, int x_, i
             }
             isAvailable = false;
         }
+    for (auto tower:towers)
+    {
+        tower->buildDamage();
+        tower->buildRange();
+        tower->buildReloadTime();
+    }
 }

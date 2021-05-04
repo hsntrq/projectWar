@@ -18,7 +18,9 @@ Tower::Tower() //default constructor
 {
     // it will display Tower on x = 30, y = 40 location, the size of pigeon is 25 width, 35 height
     moverRect = {30, 40, 25, 35};
+    cooledDown = true;
 }
+
 std::tuple<int, int> Tower::checkEnemyInRange(std::list<Enemy *> &enemies)
 {
     int minDistance = 10000;

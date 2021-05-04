@@ -5,38 +5,23 @@ FireTower::FireTower() : FireTower::FireTower(10, 10) {}
 FireTower::FireTower(int x, int y)
 {
     srcRect = {20, 144, 64, 95};
-    towerPrice = 50;
-    towerHealth = 100;
-    towerAttackDamage = 40;
-    towerAttackSpeed = 15;
-    towerReloadTime = 40;
-    towerAttackRange = 300;
+    towerPrice = 40;
     towerID = 0;
     moverRect = {x - 64 / 2 + 48, y + 96 - 95 - 20, 64, 95};
-    int fireDamage = 10;
     cooledDown = true;
 }
 
+void FireTower::buildDamage()
+{
+    towerAttackDamage = 40;
+}
 
-void FireTower::fireProjectile()
+void FireTower::buildReloadTime()
 {
+    towerReloadTime = 40;
 }
-void FireTower::computeHealth()
+
+void FireTower::buildRange()
 {
-}
-void FireTower::repairTower()
-{
-}
-bool FireTower::checkEnemyInRange()
-{
-    return false;
-}
-void FireTower::upgradeTower()
-{
-}
-void FireTower::destroyTower()
-{
-}
-void FireTower::burnDamage()
-{
+    towerAttackRange = 300;
 }

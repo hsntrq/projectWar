@@ -15,11 +15,10 @@
 class Tower : public Object
 {
 protected:
-    //SDL_Rect srcSprite; //The sprite configuration for the eggs(hatched as well)
-    int towerPrice, towerHealth, towerAttackDamage, towerAttackSpeed, towerAttackRange;
+    int towerPrice, towerAttackDamage, towerAttackRange, towerReloadTime;
 
 public:      //function declarations
-    int towerID, towerReloadTime;
+    int towerID;
     bool cooledDown;
     Tower(); // constructors (overloaded)
     /**
@@ -28,26 +27,11 @@ public:      //function declarations
      * \param y is tower's y location
      */
     Tower(int x, int y);
-    /**
-     * Function to fire the projectile, overwritten in child classes (in this case, the towers)
-     */
+    
     void fireProjectile(int, int, std::list<Projectile *> &);
-    /**
-     * Function to calculate remaining HP, overwritten in child classes (in this case, the towers)
-     */
-    virtual void computeHealth() = 0;
-    /**
-     * Function to repair in case of damage, overwritten in child classes (in this case, the towers)
-     */
-    virtual void repairTower() = 0;
-    /**
-     * Function to upgrade tower specs, overwritten in child classes (in this case, the towers)
-     */
-    virtual void upgradeTower() = 0;
-    /**
-     * Function to destroy tower, overwritten in child classes (in this case, the towers)
-     */
-    virtual void destroyTower() = 0;
+    virtual void buildDamage() = 0;
+    virtual void buildReloadTime() = 0;
+    virtual void buildRange() = 0;
     void updateCoolDownStatus(int &frames);
     void draw(SDL_Renderer *gRenderer, SDL_Texture *assets);
     std::tuple<int, int> checkEnemyInRange(std::list<Enemy *> &enemies);

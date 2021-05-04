@@ -17,7 +17,7 @@
 #include "enemies/normalZombie.hpp"
 #include "enemies/specialZombie.hpp"
 #include "enemies/weakZombie.hpp"
-#include "patches.hpp"
+#include "towerBuilder.hpp"
 #include "wave.hpp"
 
 using namespace std;
@@ -31,7 +31,7 @@ class gameManager : public Screen
 {
     list<Tower *> towers;
     list<Projectile *> projectiles;
-    list<Patches *> patches;
+    list<TowerBuilder *> patches;
     list<Enemy *> enemies;
     vector<TowerCard> towerCards;
     int gameState; // 2-> continue // 3-> won // 4-> lose
