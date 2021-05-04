@@ -3,13 +3,16 @@
 void Button::draw(SDL_Renderer *gRenderer, SDL_Texture *assets) //selects  the sprite of the Button, updates it with drop function and then draws it
 {
     //srcRect = srcSprite;
-    SDL_RenderCopy(gRenderer, assets, &srcRect, &moverRect);
+    if (!isPressed)
+        SDL_RenderCopy(gRenderer, assets, &srcSprite[0], &moverRect);
+    else
+        SDL_RenderCopy(gRenderer, assets, &srcSprite[1], &moverRect);
 }
-
-Button::Button(SDL_Rect srcRect_, SDL_Rect moverRect_) //constructor which initiates the Button at location of given moverRect
+Button::Button(SDL_Rect srcsprite_, SDL_Rect srcsprite_p, SDL_Rect moverRect_) //constructor which initiates the Button at location of given moverRect
 {
     moverRect = moverRect_;
-    srcRect = srcRect_;
+    srcSprite[0] = srcsprite_;
+    srcSprite[1] = srcsprite_p;
     isPressed = false;
 }
 

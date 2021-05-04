@@ -9,10 +9,11 @@ class Screen
 protected:
     SDL_Renderer *gRenderer;
     SDL_Texture *assets;
+    int state;
 
 public:
     Screen();
     Screen(SDL_Renderer *, SDL_Texture *);
-    virtual void drawObjects() = 0;
-    virtual int detectClick(int, int) = 0;
+    virtual int drawObjects() = 0;
+    virtual void detectClick(int, int) = 0;
 };

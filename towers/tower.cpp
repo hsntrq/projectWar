@@ -29,7 +29,7 @@ std::tuple<int, int> Tower::checkEnemyInRange(std::list<Enemy *> &enemies)
         auto [x, y, w, h] = enemy->location();
         x += w/2;
         y += h/2;
-        distance = ((x - moverRect.x+48) ^ 2 + (y - moverRect.y+48) ^ 2) ^ (1 / 2);
+        distance = sqrt((((x - moverRect.x+48)*(x - moverRect.x+48)) + ((y - moverRect.y+48)*(y - moverRect.y+48))));
         if (towerAttackRange > distance)
         {
             if (minDistance > distance)

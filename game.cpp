@@ -167,15 +167,7 @@ void Game::run()
 			{
 				int xMouse, yMouse;
 				SDL_GetMouseState(&xMouse, &yMouse);
-				screenNumber = Screens[screenNumber]->detectClick(xMouse, yMouse);
-				if (screenNumber == 3 || screenNumber == 4){
-					delete (Screens[2]);
-					Screens[2] = new gameManager(gRenderer, assets);
-				}
-				if (screenNumber == 1){
-					delete (Screens[7]);
-					Screens[7] = new Loading(gRenderer, assets);
-				}
+				Screens[screenNumber]->detectClick(xMouse, yMouse);
 			}
 		}
 		if (quit)
@@ -188,9 +180,36 @@ void Game::run()
 		SDL_RenderClear(gRenderer);									   //removes everything from renderer
 		SDL_RenderCopy(gRenderer, gTexture[screenNumber], NULL, NULL); //Draws background to renderer
 		//***********************draw the objects here********************
+		
+		screenNumber = Screens[screenNumber]->drawObjects();
+		if (screenNumber == 3 || screenNumber == 4)
+		{
+			delete (Screens[2]);
+			Screens[2] = new gameManager(gRenderer, assets);
+		}
+		if (screenNumber == 2){
+			delete (Screens[3]);
+			delete (Screens[4]);
+			Screens[3] = new Win(gRenderer, assets);
+			Screens[4] = new Lose(gRenderer, assets);
 
-		Screens[screenNumber]->drawObjects();
-
+		}
+		if (screenNumber == 0)
+		{
+			delete (Screens[0]);
+			delete (Screens[1]);
+			delete (Screens[5]);
+			delete (Screens[7]);
+			Screens[1] = new MainScreen(gRenderer, assets);
+			Screens[1] = new Instructions(gRenderer, assets);
+			Screens[5] = new Options(gRenderer, assets);
+			Screens[7] = new Loading(gRenderer, assets);
+		}
+		if (screenNumber == 2)
+		{
+			delete (Screens[6]);
+			Screens[6] = new Pause(gRenderer, assets);
+		}
 		//****************************************************************
 		SDL_RenderPresent(gRenderer); //displays the updated renderer
 

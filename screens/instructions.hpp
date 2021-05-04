@@ -8,6 +8,6 @@ private:
 public:
     Instructions();
     Instructions(SDL_Renderer *renderer, SDL_Texture *asst);
-    void drawObjects();
-    int detectClick(int, int);
+    int drawObjects();
+    void detectClick(int, int);
 };

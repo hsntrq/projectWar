@@ -4,16 +4,18 @@ Win::Win(SDL_Renderer *renderer, SDL_Texture *asst)
 {
     gRenderer = renderer;
     assets = asst;
-    continueButton = Button({768,46,199,66}, {541,556,199,66});
+    continueButton = Button({768,46,199,66},{1503,35,199,53}, {541,556,199,66});
+    state = 3;
 }
-void Win::drawObjects()
+int Win::drawObjects()
 {
     continueButton.draw(gRenderer, assets);
+    return state;
 }
-int Win::detectClick(int x, int y)
+void Win::detectClick(int x, int y)
 {
     if (continueButton.pressed(x, y))
     {
-        return 0;
+        state = 0;
     }
 }
