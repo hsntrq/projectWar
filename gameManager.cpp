@@ -131,7 +131,7 @@ gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst)
 
     for (int i = 0; i < 5; i++) //fills up a list that stores 6 consecutive waves
     {
-        waves.push_back(new Wave(i));
+        waves.push_back(new EnemyFactory(i));
     }
 }
 

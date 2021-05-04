@@ -52,43 +52,42 @@ void Projectile::shoot()
         {
             reachedTarget = false;
         }
-
         if (xIsBigger)
         {
             if (addX)
             {
-                moverRect.x += 12 * gradient;
+                moverRect.x += 15 * gradient;
             }
             else
             {
-                moverRect.x -= 12 * gradient;
+                moverRect.x -= 15 * gradient;
             }
             if (addY)
             {
-                moverRect.y += 12;
+                moverRect.y += 15;
             }
             else
             {
-                moverRect.y -= 12;
+                moverRect.y -= 15;
             }
         }
         else
         {
             if (addX)
             {
-                moverRect.x += 12;
+                moverRect.x += 15;
             }
             else
             {
-                moverRect.x -= 12;
+                moverRect.x -= 15;
             }
             if (addY)
             {
-                moverRect.y += 12 * gradient;
+                moverRect.y += 15 * gradient;
             }
             else
             {
-                moverRect.y -= 12 * gradient;
+                moverRect.y -= 15 * gradient;
             }
         }
     }

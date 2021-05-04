@@ -18,7 +18,7 @@
 #include "enemies/specialZombie.hpp"
 #include "enemies/weakZombie.hpp"
 #include "patches.hpp"
-#include "wave.hpp"
+#include "enemyFactory.hpp"
 
 using namespace std;
 #pragma once
@@ -37,7 +37,7 @@ class gameManager : public Screen
     int gameState; // 2-> continue // 3-> won // 4-> lose
     int baseHP;
     int state;
-    list <Wave*> waves;
+    list <EnemyFactory *> waves;
     int towerSelected; 
     bool cardClicked;
     int elapsedFrames;

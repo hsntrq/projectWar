@@ -1,8 +1,8 @@
-#include "wave.hpp"
+#include "enemyFactory.hpp"
 
-Wave::Wave() {}
+EnemyFactory::EnemyFactory() {}
 
-Wave::Wave(int waveNum)
+EnemyFactory::EnemyFactory(int waveNum)
 {
     totalEnemies = 17 * (waveNum+1);
     waveGap = 100;
@@ -16,19 +16,19 @@ Wave::Wave(int waveNum)
     paths.push_back(Path(0, 0));
 }
 
-Wave::~Wave() {}
+EnemyFactory::~EnemyFactory() {}
 
-bool Wave::enemiesSpawned()
+bool EnemyFactory::enemiesSpawned()
 {
     return totalEnemies == 0;
 }
 
-bool Wave::waveComplete(int elapsedFrames)
+bool EnemyFactory::waveComplete(int elapsedFrames)
 {
     return elapsedFrames % waveGap == 0;
 }
 
-void Wave::spawnEnemies(list<Enemy *> &enemyList, int frames)
+void EnemyFactory::spawnEnemies(list<Enemy *> &enemyList, int frames)
 {
     int spawnGap = (rand() %10) + 10;
     if (frames % spawnGap == 0)
