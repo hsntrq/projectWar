@@ -50,7 +50,7 @@ void gameManager::drawObjects() //iterating through the lists and drawing all of
             delete (*enemy);
             enemies.erase(enemy--);
         }
-        (*enemy)->draw(gRenderer, assets);
+        else (*enemy)->draw(gRenderer, assets);
     }
     for (int i = 0; i < towerCards.size(); i++)
     {
