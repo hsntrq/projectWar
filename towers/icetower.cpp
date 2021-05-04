@@ -7,10 +7,10 @@ IceTower::IceTower(int x, int y)
     srcRect = {105, 159, 69, 75};
     towerPrice = 50;
     towerHealth = 100;
-    towerAttackDamage = 5;
+    towerAttackDamage = 60;
     towerAttackSpeed = 15;
-    towerReloadTime = 50;
-    towerAttackRange = 20;
+    towerReloadTime = 60;
+    towerAttackRange = 350;
     towerID = 2;
     moverRect = {x + 48 - 69 / 2, y + 96 - 75 - 20, 69, 75};
     cooledDown = true;

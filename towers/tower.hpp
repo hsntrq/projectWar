@@ -6,6 +6,7 @@
 #include "../projectile/bombtowerprojectile.hpp"
 #include "../projectile/longbowtowerprojectile.hpp"
 #include "../projectile/icetowerprojectile.hpp"
+#include <cmath>
 
 #pragma once
 /**
