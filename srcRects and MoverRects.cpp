@@ -397,11 +397,11 @@
 //-------------------
 //HP Bar Green
 // srcRect = {647,766,205,15};
-// moverRect = {};
+// moverRect = {1059,27,205,15};
 
 //HP Bar Red
 // srcRect = {647,803,205,15};
-// moverRect = {};
+// moverRect = {1059,27,205,15};
 
 
 
