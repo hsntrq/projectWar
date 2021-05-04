@@ -379,14 +379,19 @@
 // moverRect = {};
 
 //--------------------
-//Loading bar circle
+//Loading bar circle - left side
 // srcRect = {48,788,36,30};
-// moverRect = {};
+// moverRect = {151,600,36,30};
 
 
 //loading bar rectange
 // srcRect = {106,791,67,36};
-// moverRect = {};
+// moverRect = {169,600,67,36};
+
+
+//Loading bar circle - Right side
+// srcRect = {48,788,36,30};
+// moverRect = {218,600,36,30};
 
 
 //-------------------
