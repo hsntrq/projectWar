@@ -332,4 +332,102 @@
 // moverRect = {649,396,88,29};
 
 
+//--------------------------------------------------
 
+//Number sprites------
+
+//0
+// srcRect = {254,795,16,22};
+
+//1
+// srcRect = {290,794,5,24};
+
+//2
+// srcRect = {315,796,15,20};
+
+//3
+// srcRect = {350,795,15,22};
+
+//4
+// srcRect = {385,794,17,24};
+
+//5
+// srcRect = {422,794,17,24};
+
+//6
+// srcRect = {459,794,14,24};
+
+//7
+// srcRect = {492,794,15,24};
+
+//8
+// srcRect = {527,794,15,24};
+
+//9
+// srcRect = {562,794,14,24};
+
+
+//First number
+// moverRect = {};
+
+
+//second number
+// moverRect = {};
+
+
+//third number
+// moverRect = {};
+
+//--------------------
+//Loading bar circle
+// srcRect = {48,788,36,30};
+// moverRect = {};
+
+
+//loading bar rectange
+// srcRect = {106,791,67,36};
+// moverRect = {};
+
+
+//-------------------
+//HP Bar Green
+// srcRect = {647,766,205,15};
+// moverRect = {};
+
+//HP Bar Red
+// srcRect = {647,803,205,15};
+// moverRect = {};
+
+
+
+//-------------------------------
+//Options screen
+
+//Pause/Play Music
+// srcRect = {287,877,223,74};
+// moverRect = {};
+
+
+//Pause/Play Music PRESSED
+// srcRect = {44,878,223,59};
+// moverRect = {};
+
+
+//Pause Play SFX
+// srcRect = {287,877,223,74};
+// moverRect = {};
+
+
+//Pause Play SFX PRESSED
+// srcRect = {44,878,223,59};
+// moverRect = {};
+
+
+//Back 
+// srcRect = {571,871,223,74};
+// moverRect = {};
+
+
+//Back PRESSED
+// srcRect = {825,876,223,59};
+// moverRect = {};
