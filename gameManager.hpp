@@ -53,11 +53,11 @@ public:
     /**
      * Function to draw objects on screen
      */
-    void drawObjects() override;
+    int drawObjects() override;
     /**
      * Function to spawn objects as required by game
      */
-    int detectClick(int, int) override;
+    void detectClick(int, int) override;
     /**
      * Simple Destructor
      */

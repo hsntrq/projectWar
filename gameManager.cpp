@@ -1,12 +1,11 @@
 #include "gameManager.hpp"
 
-void gameManager::drawObjects() //iterating through the lists and drawing all of the instances
+int gameManager::drawObjects() //iterating through the lists and drawing all of the instances
 {
     elapsedFrames++;
     if (baseHP == 0)
     {
         state = 4;
-        return;
     }
     else
     {
@@ -28,7 +27,7 @@ void gameManager::drawObjects() //iterating through the lists and drawing all of
     {
         state = 3;
         std::cout << "Game Over" << std::endl;
-        return;
+        return state;
     }
     for (list<Tower *>::iterator tower = towers.begin(); tower != towers.end(); ++tower)
     {
@@ -50,7 +49,10 @@ void gameManager::drawObjects() //iterating through the lists and drawing all of
             delete (*enemy);
             enemies.erase(enemy--);
         }
-        (*enemy)->draw(gRenderer, assets);
+        else
+        {
+            (*enemy)->draw(gRenderer, assets);
+        }
     }
     for (int i = 0; i < towerCards.size(); i++)
     {
@@ -67,9 +69,10 @@ void gameManager::drawObjects() //iterating through the lists and drawing all of
             projectiles.erase(projectile--);
         }
     }
+    return state;
 }
 
-int gameManager::detectClick(int x, int y)
+void gameManager::detectClick(int x, int y)
 {
     std::cout << "Mouse clicked at: " << x << " -- " << y << std::endl;
     if (cardClicked)
@@ -95,7 +98,6 @@ int gameManager::detectClick(int x, int y)
             }
         }
     }
-    return state;
 }
 
 gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst)
@@ -104,7 +106,7 @@ gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst)
     gRenderer = renderer;
     assets = asst;
     elapsedFrames = 0;
-
+    state = 2;
     patches.push_back(new Patches(64, 480));
     patches.push_back(new Patches(288, 416));
     patches.push_back(new Patches(288, 256));
@@ -126,9 +128,8 @@ gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst)
 
     cardClicked = false;
     towerSelected = -1;
-    
 
-    for (int i = 0; i < 6; i++) //fills up a list that stores 6 consecutive waves
+    for (int i = 0; i < 5; i++) //fills up a list that stores 6 consecutive waves
     {
         waves.push_back(new Wave(i));
     }

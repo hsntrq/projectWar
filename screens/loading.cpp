@@ -8,15 +8,14 @@ Loading::Loading(SDL_Renderer *renderer, SDL_Texture *asst)
     state = 7;
     srcRect_ = {657,248,16,14};
     moverRect_ = {40, 720, frame, 20};
+    state = 7;
 }
-void Loading::drawObjects()
+int Loading::drawObjects()
 {
     moverRect_ = {40, 720, frame, 20};
     SDL_RenderCopy(gRenderer, assets, &srcRect_, &moverRect_);
     if (frame >= 1240) state = 2;
     else frame+=40;
-}
-int Loading::detectClick(int x, int y)
-{
     return state;
 }
+void Loading::detectClick(int x, int y){}

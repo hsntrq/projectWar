@@ -4,17 +4,20 @@ Instructions::Instructions(SDL_Renderer *renderer, SDL_Texture *asst)
 {
     gRenderer = renderer;
     assets = asst;
-    backButton = Button({761,136,223,74}, {529,634,199,66});
+    backButton = Button({761,136,223,74},{1481,221,223,59}, {529,634,199,66});
+    state = 1;
 }
-void Instructions::drawObjects()
+int Instructions::drawObjects()
 {
     backButton.draw(gRenderer, assets);
+    return state;
 }
-int Instructions::detectClick(int x, int y)
+void Instructions::detectClick(int x, int y)
 {
     if (backButton.pressed(x, y))
     {
-        return 0;
+        state = 0;
     }
-    return 1;
+    else
+        state = 1;
 }
