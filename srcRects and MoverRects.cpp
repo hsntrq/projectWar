@@ -410,29 +410,29 @@
 
 //Pause/Play Music
 // srcRect = {287,877,223,74};
-// moverRect = {};
+// moverRect = {835,216,223,74};
 
 
 //Pause/Play Music PRESSED
 // srcRect = {44,878,223,59};
-// moverRect = {};
+// moverRect = {835,231,223,59};
 
 
 //Pause Play SFX
 // srcRect = {287,877,223,74};
-// moverRect = {};
+// moverRect = {835,411,223,74};
 
 
 //Pause Play SFX PRESSED
 // srcRect = {44,878,223,59};
-// moverRect = {};
+// moverRect = {835,426,223,59};
 
 
 //Back 
 // srcRect = {571,871,223,74};
-// moverRect = {};
+// moverRect = {526,636,223,74};
 
 
 //Back PRESSED
 // srcRect = {825,876,223,59};
-// moverRect = {};
+// moverRect = {526,651,223,74};
