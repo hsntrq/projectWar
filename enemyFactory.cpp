@@ -45,19 +45,19 @@ Enemy *EnemyFactory::produceEnemy()
     {
         return new WeakZombie(160 + rand() % 128, 576, paths);
     }
-    if (randomVar > 30 && randomVar < 60)
+    else if (randomVar > 30 && randomVar < 60)
     {
         return new NormalZombie(160 + rand() % 128, 576, paths);
     }
-    if (randomVar > 60 && randomVar < 80)
+    else if (randomVar > 60 && randomVar < 80)
     {
         return new HighHPZombie(160 + rand() % 128, 576, paths);
     }
-    if (randomVar > 80 && randomVar < 90)
+    else if (randomVar > 80 && randomVar < 90)
     {
         return new HighSpeedZombie(160 + rand() % 128, 576, paths);
     }
-    if (randomVar > 90)
+    else
     {
         return new SpecialZombie(160 + rand() % 128, 576, paths);
     }

@@ -20,33 +20,39 @@ void TowerBuilder::isClicked(std::list<Tower *> &towers, int towerSelected, int 
             auto [a, b] = location();
             if (towerSelected == 0)
             {
-                Tower* t = buildFireTower(a, b, coins);
-                if (t) towers.push_back(t);
+                Tower *t = buildFireTower(a, b, coins);
+                if (t)
+                    towers.push_back(t);
             }
             else if (towerSelected == 1)
             {
-                Tower* t = buildBombTower(a, b, coins);
-                if (t) towers.push_back(t);
+                Tower *t = buildBombTower(a, b, coins);
+                if (t)
+                    towers.push_back(t);
             }
             else if (towerSelected == 2)
             {
-                Tower* t =buildIceTower(a, b, coins);
-                if (t) towers.push_back(t);
+                Tower *t = buildIceTower(a, b, coins);
+                if (t)
+                    towers.push_back(t);
             }
             else if (towerSelected == 3)
             {
-                Tower* t = buildLongBowTower(a, b, coins);
-                if (t) towers.push_back(t);
+                Tower *t = buildLongBowTower(a, b, coins);
+                if (t)
+                    towers.push_back(t);
             }
             else if (towerSelected == 4)
             {
-                Tower* t = buildGoldTower(a, b, coins);
-                if (t) towers.push_back(t);
+                Tower *t = buildGoldTower(a, b, coins);
+                if (t)
+                    towers.push_back(t);
             }
             else if (towerSelected == 5)
             {
-                Tower* t = buildRepairTower(a, b, coins);
-                if (t) towers.push_back(t);
+                Tower *t = buildRepairTower(a, b, coins);
+                if (t)
+                    towers.push_back(t);
             }
             isAvailable = false;
         }
@@ -63,7 +69,7 @@ Tower *TowerBuilder::buildFireTower(int a, int b, CoinDigits &coins)
     Tower *t = new FireTower(a, b);
     if (coins > t->towerPrice)
     {
-        coins-= t->towerPrice;
+        coins -= t->towerPrice;
         return t;
     }
     return NULL;
@@ -71,7 +77,7 @@ Tower *TowerBuilder::buildFireTower(int a, int b, CoinDigits &coins)
 Tower *TowerBuilder::buildIceTower(int a, int b, CoinDigits &coins)
 {
     Tower *t = new IceTower(a, b);
-     if (coins > t->towerPrice)
+    if (coins > t->towerPrice)
     {
         coins -= t->towerPrice;
         return t;
@@ -82,7 +88,7 @@ Tower *TowerBuilder::buildIceTower(int a, int b, CoinDigits &coins)
 Tower *TowerBuilder::buildLongBowTower(int a, int b, CoinDigits &coins)
 {
     Tower *t = new LongBowTower(a, b);
-     if (coins > t->towerPrice)
+    if (coins > t->towerPrice)
     {
         coins -= t->towerPrice;
         return t;
@@ -92,7 +98,7 @@ Tower *TowerBuilder::buildLongBowTower(int a, int b, CoinDigits &coins)
 Tower *TowerBuilder::buildGoldTower(int a, int b, CoinDigits &coins)
 {
     Tower *t = new GoldTower(a, b);
-     if (coins > t->towerPrice)
+    if (coins > t->towerPrice)
     {
         coins -= t->towerPrice;
         return t;
@@ -102,7 +108,7 @@ Tower *TowerBuilder::buildGoldTower(int a, int b, CoinDigits &coins)
 Tower *TowerBuilder::buildRepairTower(int a, int b, CoinDigits &coins)
 {
     Tower *t = new RepairTower(a, b);
-     if (coins > t->towerPrice)
+    if (coins > t->towerPrice)
     {
         coins -= t->towerPrice;
         return t;
@@ -112,7 +118,7 @@ Tower *TowerBuilder::buildRepairTower(int a, int b, CoinDigits &coins)
 Tower *TowerBuilder::buildBombTower(int a, int b, CoinDigits &coins)
 {
     Tower *t = new BombTower(a, b);
-     if (coins > t->towerPrice)
+    if (coins > t->towerPrice)
     {
         coins -= t->towerPrice;
         std::cout << "bomb tower comparison \n";
