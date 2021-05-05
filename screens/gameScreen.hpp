@@ -2,23 +2,23 @@
 #include <list>
 #include <iostream>
 #include <vector>
-#include "towers/tower.hpp"
-#include "towercards/towercard.hpp"
-#include "towercards/bombcard.hpp"
-#include "towercards/firecard.hpp"
-#include "towercards/goldcard.hpp"
-#include "towercards/repaircard.hpp"
-#include "towercards/icecard.hpp"
-#include "towercards/longbowcard.hpp"
-#include "screens/screen.hpp"
-#include "enemies/enemy.hpp"
-#include "enemies/highHPZombie.hpp"
-#include "enemies/highSpeedZombie.hpp"
-#include "enemies/normalZombie.hpp"
-#include "enemies/specialZombie.hpp"
-#include "enemies/weakZombie.hpp"
-#include "enemyFactory.hpp"
-#include "towerBuilder.hpp"
+#include "../towers/tower.hpp"
+#include "../towercards/towercard.hpp"
+#include "../towercards/bombcard.hpp"
+#include "../towercards/firecard.hpp"
+#include "../towercards/goldcard.hpp"
+#include "../towercards/repaircard.hpp"
+#include "../towercards/icecard.hpp"
+#include "../towercards/longbowcard.hpp"
+#include "screen.hpp"
+#include "../enemies/enemy.hpp"
+#include "../enemies/highHPZombie.hpp"
+#include "../enemies/highSpeedZombie.hpp"
+#include "../enemies/normalZombie.hpp"
+#include "../enemies/specialZombie.hpp"
+#include "../enemies/weakZombie.hpp"
+#include "../enemyFactory.hpp"
+#include "../towerBuilder.hpp"
 
 using namespace std;
 #pragma once
@@ -27,7 +27,7 @@ using namespace std;
  * \brief This class stores the methods and attributes necessary to carry out game logic
  */
 
-class gameManager : public Screen
+class GameScreen : public Screen
 {
     list<Tower *> towers;
     list<Projectile *> projectiles;
@@ -48,9 +48,9 @@ public:
     /**
      * Simple Constructor
      */
-    gameManager();
+    GameScreen();
 
-    gameManager(SDL_Renderer *, SDL_Texture *); //constructor
+    GameScreen(SDL_Renderer *, SDL_Texture *); //constructor
     /**
      * Function to draw objects on screen
      */
@@ -62,5 +62,5 @@ public:
     /**
      * Simple Destructor
      */
-    ~gameManager(); //destructor
+    ~GameScreen(); //destructor
 };

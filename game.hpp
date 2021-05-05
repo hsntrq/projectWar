@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <map>
-#include "gameManager.hpp"
+#include "screens/gameScreen.hpp"
 #include "screens/instructions.hpp"
 #include "screens/pause.hpp"
 #include "screens/win.hpp"
