@@ -26,3 +26,5 @@ void GoldTower::buildRange()
 {
     towerAttackRange = 0;
 }
+
+void GoldTower::repairBase(Base &base) {}

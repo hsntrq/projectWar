@@ -5,7 +5,7 @@ NormalZombie::NormalZombie() {}
 NormalZombie::NormalZombie(int x, int y, std::list<Path> path_)
 {
     path = path_;
-    attackDamage = 10;
+    attackDamage = 5;
     attackSpeed = 1;
     movementSpeed = 1 + rand() % 3;
     attackRange = 3;

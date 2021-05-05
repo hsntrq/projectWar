@@ -29,3 +29,5 @@ void IceTower::buildRange()
     towerAttackRange = 250;
 }
 void IceTower::goldAdd(CoinDigits &coins) {}
+
+void IceTower::repairBase(Base &base) {}

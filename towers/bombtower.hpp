@@ -24,4 +24,5 @@ public:
     void buildReloadTime();
     void buildRange();
     void goldAdd(CoinDigits &);
+    void repairBase(Base &);
 };

@@ -26,3 +26,5 @@ void LongBowTower::buildRange()
 {
     towerAttackRange = 250;
 }
+
+void LongBowTower::repairBase(Base &base) {}
