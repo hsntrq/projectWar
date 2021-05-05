@@ -5,11 +5,11 @@ void CoinDigits::draw(SDL_Renderer *gRenderer, SDL_Texture *assets) //selects  t
     moverRect.x += (20 - digitRects[num_3].w);
     moverRect.w = digitRects[num_3].w;
     moverRect.h = digitRects[num_3].h;
-    SDL_RenderCopy(gRenderer, assets, &digitRects[num_3], &moverRect);
+    if (num_3) SDL_RenderCopy(gRenderer, assets, &digitRects[num_3], &moverRect);
     moverRect.x += (digitRects[num_3].w + 20 - digitRects[num_2].w);
     moverRect.w = digitRects[num_2].w;
     moverRect.h = digitRects[num_2].h;
-    SDL_RenderCopy(gRenderer, assets, &digitRects[num_2], &moverRect);
+    if (num_3 || num_2) SDL_RenderCopy(gRenderer, assets, &digitRects[num_2], &moverRect);
     moverRect.x += (digitRects[num_2].w + 20 - digitRects[num_1].w);
     moverRect.w = digitRects[num_1].w;
     moverRect.h = digitRects[num_1].h;
