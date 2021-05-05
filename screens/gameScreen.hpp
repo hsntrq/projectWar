@@ -19,6 +19,10 @@
 #include "../enemies/weakZombie.hpp"
 #include "../enemyFactory.hpp"
 #include "../towerBuilder.hpp"
+#include "../goldCoins/coinDigits.hpp"
+#include "../goldCoins/coinSlab.hpp"
+#include "../base.hpp"
+
 
 using namespace std;
 #pragma once
