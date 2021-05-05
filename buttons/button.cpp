@@ -31,6 +31,7 @@ bool Button::pressed(int x, int y)
 {
     if ((x >= moverSprite[0].x && x <= moverSprite[0].x + moverSprite[0].w) && (y >= moverSprite[0].y && y <= moverSprite[0].y + moverSprite[0].h))
     {
+        clickSoundEffect = Mix_LoadWAV("assets/click_low.wav");
         isPressed = true;
         Mix_PlayChannel(1, clickSoundEffect, 0);
         return true;
@@ -39,3 +40,7 @@ bool Button::pressed(int x, int y)
         return false;
 }
 
+Button::~Button(){
+    Mix_FreeChunk(clickSoundEffect);
+    clickSoundEffect = NULL;
+}

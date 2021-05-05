@@ -16,4 +16,5 @@ public:
     void draw(SDL_Renderer *gRenderer, SDL_Texture *assets);
     bool pressed(int, int);
     void reset();
+    ~Button();
 };
