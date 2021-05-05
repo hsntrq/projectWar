@@ -25,7 +25,7 @@ void Projectile::handleCollision(std::list<Enemy *> &enemies)
     {
         auto [x, y, w, h] = (*enemy)->location();
         SDL_Rect enemyRect = {x, y, w, h};
-        if (SDL_HasIntersection (&enemyRect, &moverRect))
+        if (SDL_HasIntersection(&enemyRect, &moverRect))
         {
             reachedTarget = true;
             (*enemy)->healthCalculation(damage);
@@ -40,7 +40,7 @@ void Projectile::handleCollision(std::list<Enemy *> &enemies)
 
 void Projectile::shoot()
 {
-    
+
     if (gradient > 0)
     {
         if (moverRect.x >= 1280 - moverRect.w && moverRect.x <= moverRect.w && moverRect.y >= 736 - moverRect.h && moverRect.y <= moverRect.h)

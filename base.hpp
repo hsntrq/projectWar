@@ -1,7 +1,7 @@
 #include "object.hpp"
 #pragma once
 
-class Base: public Object
+class Base : public Object
 {
 private:
     SDL_Rect greenStrip;

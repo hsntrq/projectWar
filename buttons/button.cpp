@@ -40,7 +40,8 @@ bool Button::pressed(int x, int y)
         return false;
 }
 
-Button::~Button(){
+Button::~Button()
+{
     Mix_FreeChunk(clickSoundEffect);
     clickSoundEffect = NULL;
 }

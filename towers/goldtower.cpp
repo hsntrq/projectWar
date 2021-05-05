@@ -12,7 +12,7 @@ GoldTower::GoldTower(int x, int y)
 }
 void GoldTower::goldAdd(CoinDigits &coins)
 {
-    coins+=4;
+    coins += 4;
 }
 void GoldTower::buildDamage()
 {

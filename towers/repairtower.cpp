@@ -11,7 +11,7 @@ RepairTower::RepairTower(int x, int y)
     cooledDown = true;
     RepairEffect = 5;
 }
-void RepairTower::goldAdd(CoinDigits &coins){}
+void RepairTower::goldAdd(CoinDigits &coins) {}
 void RepairTower::buildDamage()
 {
     towerAttackDamage = 0;

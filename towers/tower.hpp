@@ -40,5 +40,5 @@ public: //function declarations
     void updateCoolDownStatus(int &frames);
     void draw(SDL_Renderer *gRenderer, SDL_Texture *assets);
     std::tuple<int, int> checkEnemyInRange(std::list<Enemy *> &enemies);
-    bool operator >= (int coins);
+    bool operator>=(int coins);
 };

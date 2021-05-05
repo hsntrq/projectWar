@@ -20,7 +20,8 @@ Tower::Tower() //default constructor
     moverRect = {30, 40, 25, 35};
     cooledDown = true;
 }
-bool Tower::operator >= (int coins){
+bool Tower::operator>=(int coins)
+{
     return towerPrice >= coins;
 }
 std::tuple<int, int> Tower::checkEnemyInRange(std::list<Enemy *> &enemies)
@@ -31,9 +32,9 @@ std::tuple<int, int> Tower::checkEnemyInRange(std::list<Enemy *> &enemies)
     for (auto enemy : enemies)
     {
         auto [x, y, w, h] = enemy->location();
-        x += w/2;
-        y += h/2;
-        distance = sqrt((((x - moverRect.x+48)*(x - moverRect.x+48)) + ((y - moverRect.y+48)*(y - moverRect.y+48))));
+        x += w / 2;
+        y += h / 2;
+        distance = sqrt((((x - moverRect.x + 48) * (x - moverRect.x + 48)) + ((y - moverRect.y + 48) * (y - moverRect.y + 48))));
         if (towerAttackRange > distance)
         {
             if (minDistance > distance)
@@ -59,10 +60,14 @@ void Tower::updateCoolDownStatus(int &frames)
 
 void Tower::fireProjectile(int x, int y, std::list<Projectile *> &projectiles)
 {
-    int srcX = moverRect.x + moverRect.w/2;
-    int srcY = moverRect.y + moverRect.h/2;
-    if (towerID == 0) projectiles.push_back(new FireTowerProjectile(srcX, srcY, x, y, towerAttackDamage));
-    if (towerID == 1) projectiles.push_back(new BombTowerProjectile(srcX, srcY, x, y, towerAttackDamage));
-    if (towerID == 2) projectiles.push_back(new IceTowerProjectile(srcX, srcY, x, y, towerAttackDamage));
-    if (towerID == 3) projectiles.push_back(new LongBowTowerProjectile(srcX, srcY, x, y, towerAttackDamage));
+    int srcX = moverRect.x + moverRect.w / 2;
+    int srcY = moverRect.y + moverRect.h / 2;
+    if (towerID == 0)
+        projectiles.push_back(new FireTowerProjectile(srcX, srcY, x, y, towerAttackDamage));
+    if (towerID == 1)
+        projectiles.push_back(new BombTowerProjectile(srcX, srcY, x, y, towerAttackDamage));
+    if (towerID == 2)
+        projectiles.push_back(new IceTowerProjectile(srcX, srcY, x, y, towerAttackDamage));
+    if (towerID == 3)
+        projectiles.push_back(new LongBowTowerProjectile(srcX, srcY, x, y, towerAttackDamage));
 }

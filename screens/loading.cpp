@@ -21,7 +21,7 @@ int Loading::drawObjects()
     SDL_RenderCopy(gRenderer, assets, &srcRect_l, &moverRect_l);
     SDL_RenderCopy(gRenderer, assets, &srcRect_r, &moverRect_r);
     SDL_RenderCopy(gRenderer, assets, &srcRect_ri, &moverRect_ri);
-    if (frame >= 928-72)
+    if (frame >= 928 - 72)
         state = 2;
     else
         frame += 7;

@@ -22,7 +22,6 @@
 #include "../goldCoins/coinDigits.hpp"
 #include "../goldCoins/coinSlab.hpp"
 
-
 using namespace std;
 #pragma once
 
@@ -40,8 +39,8 @@ class GameScreen : public Screen
     int gameState; // 2-> continue // 3-> won // 4-> lose
     CoinDigits coins;
     int state;
-    list <EnemyFactory *> waves;
-    int towerSelected; 
+    list<EnemyFactory *> waves;
+    int towerSelected;
     bool cardClicked;
     int elapsedFrames;
     int delayBetweenEnemies;

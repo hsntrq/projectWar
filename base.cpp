@@ -2,11 +2,11 @@
 
 Base::Base()
 {
-    greenStrip = {647,766,205,15};
-    greenMoverRect = {1059,27,205,15};
+    greenStrip = {647, 766, 205, 15};
+    greenMoverRect = {1059, 27, 205, 15};
 
-    redStrip = {647,803,205,15};
-    redMoverRect = {1059,27,205,15};
+    redStrip = {647, 803, 205, 15};
+    redMoverRect = {1059, 27, 205, 15};
 
     health = 205;
     greenRectWidth = 205;
@@ -17,12 +17,12 @@ Base::~Base() {}
 void Base::decreaseHealth(int baseDamage)
 {
     health -= baseDamage;
-    if (greenRectWidth <= 0+baseDamage)
+    if (greenRectWidth <= 0 + baseDamage)
     {
         greenRectWidth = 0;
         greenMoverRect = {1059, 27, greenRectWidth, 15};
     }
-    else if (greenRectWidth > 0+baseDamage)
+    else if (greenRectWidth > 0 + baseDamage)
     {
         greenRectWidth -= baseDamage;
         greenMoverRect = {1059, 27, greenRectWidth, 15};
@@ -38,12 +38,12 @@ Base &Base::operator+=(int repair)
 void Base::increaseHealth(int baseRepair)
 {
     health += baseRepair;
-    if (greenRectWidth >= 205-baseRepair)
+    if (greenRectWidth >= 205 - baseRepair)
     {
         greenRectWidth = 205;
         greenMoverRect = {1059, 27, greenRectWidth, 15};
     }
-    else if (greenRectWidth < 205-baseRepair)
+    else if (greenRectWidth < 205 - baseRepair)
     {
         greenRectWidth += baseRepair;
         greenMoverRect = {1059, 27, greenRectWidth, 15};
