@@ -6,7 +6,7 @@ public:
     Button continueButton;
 
 public:
-Lose();
+    Lose();
     Lose(SDL_Renderer *renderer, SDL_Texture *asst);
     int drawObjects();
     void detectClick(int, int);

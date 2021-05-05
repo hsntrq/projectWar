@@ -68,9 +68,9 @@ bool Game::loadMedia()
 	gTexture.push_back(loadTexture("assets/map.png"));
 	gTexture.push_back(loadTexture("assets/win.png"));
 	gTexture.push_back(loadTexture("assets/lose.png"));
-	gTexture.push_back(loadTexture("assets/map.png"));
+	gTexture.push_back(loadTexture("assets/options.png"));
 	gTexture.push_back(loadTexture("assets/pause.png"));
-	gTexture.push_back(loadTexture("assets/map.png"));
+	gTexture.push_back(loadTexture("assets/loading.png"));
 
 	assets = loadTexture("assets/assets.png");
 	// gTexture = loadTexture("assets/map.png");
@@ -180,35 +180,36 @@ void Game::run()
 		SDL_RenderClear(gRenderer);									   //removes everything from renderer
 		SDL_RenderCopy(gRenderer, gTexture[screenNumber], NULL, NULL); //Draws background to renderer
 		//***********************draw the objects here********************
-		
 		screenNumber = Screens[screenNumber]->drawObjects();
 		if (screenNumber == 3 || screenNumber == 4)
 		{
 			delete (Screens[2]);
-			Screens[2] = new gameManager(gRenderer, assets);
-		}
-		if (screenNumber == 2){
-			delete (Screens[3]);
-			delete (Screens[4]);
-			Screens[3] = new Win(gRenderer, assets);
-			Screens[4] = new Lose(gRenderer, assets);
-
-		}
-		if (screenNumber == 0)
-		{
 			delete (Screens[0]);
-			delete (Screens[1]);
-			delete (Screens[5]);
-			delete (Screens[7]);
-			Screens[1] = new MainScreen(gRenderer, assets);
-			Screens[1] = new Instructions(gRenderer, assets);
-			Screens[5] = new Options(gRenderer, assets);
-			Screens[7] = new Loading(gRenderer, assets);
+			Screens[0] = new MainScreen(gRenderer, assets);
+			Screens[2] = new gameManager(gRenderer, assets);
 		}
 		if (screenNumber == 2)
 		{
+			delete (Screens[3]);
+			delete (Screens[4]);
 			delete (Screens[6]);
 			Screens[6] = new Pause(gRenderer, assets);
+			Screens[3] = new Win(gRenderer, assets);
+			Screens[4] = new Lose(gRenderer, assets);
+		}
+		if (screenNumber == 1 || screenNumber == 5 || screenNumber == 6)
+		{
+			delete Screens[0];
+			Screens[0] = new MainScreen(gRenderer, assets);
+		}
+		if (screenNumber == 0)
+		{
+			delete (Screens[1]);
+			delete (Screens[5]);
+			delete (Screens[7]);
+			Screens[1] = new Instructions(gRenderer, assets);
+			Screens[5] = new Options(gRenderer, assets);
+			Screens[7] = new Loading(gRenderer, assets);
 		}
 		//****************************************************************
 		SDL_RenderPresent(gRenderer); //displays the updated renderer

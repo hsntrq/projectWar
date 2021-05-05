@@ -4,13 +4,15 @@ void Button::draw(SDL_Renderer *gRenderer, SDL_Texture *assets) //selects  the s
 {
     //srcRect = srcSprite;
     if (!isPressed)
-        SDL_RenderCopy(gRenderer, assets, &srcSprite[0], &moverRect);
+        SDL_RenderCopy(gRenderer, assets, &srcSprite[0], &moverSprite[0]);
     else
-        SDL_RenderCopy(gRenderer, assets, &srcSprite[1], &moverRect);
+        SDL_RenderCopy(gRenderer, assets, &srcSprite[1], &moverSprite[1]);
 }
-Button::Button(SDL_Rect srcsprite_, SDL_Rect srcsprite_p, SDL_Rect moverRect_) //constructor which initiates the Button at location of given moverRect
+
+Button::Button(SDL_Rect srcsprite_, SDL_Rect srcsprite_p, SDL_Rect moverRect_, SDL_Rect moverRect_p)
 {
-    moverRect = moverRect_;
+    moverSprite[0] = moverRect_;
+    moverSprite[1] = moverRect_p;
     srcSprite[0] = srcsprite_;
     srcSprite[1] = srcsprite_p;
     isPressed = false;
@@ -20,14 +22,17 @@ Button::Button()
 {
     isPressed = false;
 }
-
-
+void Button::reset()
+{
+    isPressed = false;
+}
 bool Button::pressed(int x, int y)
 {
-    if ((x >= moverRect.x && x <= moverRect.x + moverRect.w) && (y >= moverRect.y && y <= moverRect.y + moverRect.h))
+    if ((x >= moverSprite[0].x && x <= moverSprite[0].x + moverSprite[0].w) && (y >= moverSprite[0].y && y <= moverSprite[0].y + moverSprite[0].h))
     {
         isPressed = true;
         return true;
     }
-    else return false;
+    else
+        return false;
 }

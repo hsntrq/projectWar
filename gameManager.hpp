@@ -42,7 +42,8 @@ class gameManager : public Screen
     bool cardClicked;
     int elapsedFrames;
     int delayBetweenEnemies;
-
+    Button pause;
+    bool paused;
 public:
     /**
      * Simple Constructor

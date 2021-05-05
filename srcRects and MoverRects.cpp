@@ -232,7 +232,7 @@
 
 //Back Button - Instructions screen
 // srcRect = {761,136,223,74};
-// moverRect = {529,634,199,66};
+// moverRect = {529,634,223,74};
 
 
 //Resume Button - Pause screen
