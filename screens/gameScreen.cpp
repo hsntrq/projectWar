@@ -1,6 +1,6 @@
-#include "gameManager.hpp"
+#include "gameScreen.hpp"
 
-int gameManager::drawObjects() //iterating through the lists and drawing all of the instances
+int GameScreen::drawObjects() //iterating through the lists and drawing all of the instances
 {
     elapsedFrames++;
     pause.draw(gRenderer, assets);
@@ -75,7 +75,7 @@ int gameManager::drawObjects() //iterating through the lists and drawing all of 
     return state;
 }
 
-void gameManager::detectClick(int x, int y)
+void GameScreen::detectClick(int x, int y)
 {
     std::cout << "Mouse clicked at: " << x << " -- " << y << std::endl;
     if (pause.pressed(x, y))
@@ -107,7 +107,7 @@ void gameManager::detectClick(int x, int y)
     }
 }
 
-gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst)
+GameScreen::GameScreen(SDL_Renderer *renderer, SDL_Texture *asst)
 {
     baseHP = 100;
     gRenderer = renderer;
@@ -143,7 +143,7 @@ gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst)
     pause = Button({853, 283, 88, 31}, {853, 346, 88, 29}, {396, 643, 88, 31}, {396, 649, 88, 29});
 }
 
-gameManager::~gameManager() //destructor deletes all dynamically created objects traversing them in all the lists
+GameScreen::~GameScreen() //destructor deletes all dynamically created objects traversing them in all the lists
 {
     for (auto tower : towers)
     {
