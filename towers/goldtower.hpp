@@ -22,4 +22,5 @@ public:
     void buildDamage();
     void buildReloadTime();
     void buildRange();
+    void repairBase(Base &);
 };

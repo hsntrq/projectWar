@@ -24,3 +24,5 @@ void BombTower::buildRange()
 {
     towerAttackRange = 400;
 }
+
+void BombTower::repairBase(Base &base) {}

@@ -5,7 +5,7 @@ int GameScreen::drawObjects() //iterating through the lists and drawing all of t
     elapsedFrames++;
     pause.draw(gRenderer, assets);
     base.draw(gRenderer, assets);
-    if (baseHP == 0)
+    if (base.health <= 0)
     {
         state = 4;
     }
@@ -27,7 +27,7 @@ int GameScreen::drawObjects() //iterating through the lists and drawing all of t
             waves.pop_front();
         }
     }
-    if (waves.empty() && enemies.empty() && baseHP >= 0)
+    if (waves.empty() && enemies.empty() && base.health >= 0)
     {
         state = 3;
         std::cout << "Game Over" << std::endl;
@@ -43,6 +43,10 @@ int GameScreen::drawObjects() //iterating through the lists and drawing all of t
                 (*tower)->fireProjectile(enemyX, enemyY, projectiles);
             }
         }
+        else if ((*tower)->towerID == 5 && (*tower)->cooledDown)
+        {
+            (*tower)->repairBase(base);
+        }
         (*tower)->updateCoolDownStatus(elapsedFrames); // necessary because the tower has to first fire before going into cooldown
         (*tower)->draw(gRenderer, assets);
     }
@@ -50,7 +54,7 @@ int GameScreen::drawObjects() //iterating through the lists and drawing all of t
     {
         if ((*enemy)->followPath())
         {
-            base.decreaseHealth(baseDamage);
+            base.decreaseHealth(5);
             delete (*enemy);
             enemies.erase(enemy--);
             baseDamage = 0;
@@ -115,7 +119,6 @@ void GameScreen::detectClick(int x, int y)
 
 GameScreen::GameScreen(SDL_Renderer *renderer, SDL_Texture *asst)
 {
-    baseHP = 100;
     gRenderer = renderer;
     assets = asst;
     elapsedFrames = 0;
@@ -147,7 +150,7 @@ GameScreen::GameScreen(SDL_Renderer *renderer, SDL_Texture *asst)
     cardClicked = false;
     towerSelected = -1;
 
-    for (int i = 0; i < 5; i++) //fills up a list that stores 6 consecutive waves
+    for (int i = 0; i < 2; i++) //fills up a list that stores 6 consecutive waves
     {
         waves.push_back(new EnemyFactory(i));
     }

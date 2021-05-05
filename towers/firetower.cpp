@@ -25,3 +25,5 @@ void FireTower::buildRange()
 {
     towerAttackRange = 300;
 }
+
+void FireTower::repairBase(Base &base) {}

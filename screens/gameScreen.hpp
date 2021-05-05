@@ -21,7 +21,6 @@
 #include "../towerBuilder.hpp"
 #include "../goldCoins/coinDigits.hpp"
 #include "../goldCoins/coinSlab.hpp"
-#include "../base.hpp"
 
 
 using namespace std;
@@ -39,7 +38,6 @@ class GameScreen : public Screen
     list<Enemy *> enemies;
     vector<TowerCard> towerCards;
     int gameState; // 2-> continue // 3-> won // 4-> lose
-    int baseHP;
     CoinDigits coins;
     int coinCounter;
     int state;
