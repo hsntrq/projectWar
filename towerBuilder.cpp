@@ -20,27 +20,27 @@ void TowerBuilder::isClicked(std::list<Tower *> &towers, int towerSelected, int 
             auto [a, b] = location();
             if (towerSelected == 0)
             {
-                towers.push_back(new FireTower(a, b));
+                towers.push_back(buildFireTower(a, b));
             }
             else if (towerSelected == 1)
             {
-                towers.push_back(new BombTower(a, b));
+                towers.push_back(buildBombTower(a, b));
             }
             else if (towerSelected == 2)
             {
-                towers.push_back(new IceTower(a, b));
+                towers.push_back(buildIceTower(a, b));
             }
             else if (towerSelected == 3)
             {
-                towers.push_back(new LongBowTower(a, b));
+                towers.push_back(buildLongBowTower(a, b));
             }
             else if (towerSelected == 4)
             {
-                towers.push_back(new GoldTower(a, b));
+                towers.push_back(buildGoldTower(a, b));
             }
             else if (towerSelected == 5)
             {
-                towers.push_back(new RepairTower(a, b));
+                towers.push_back(buildRepairTower(a, b));
             }
             isAvailable = false;
         }
@@ -50,4 +50,29 @@ void TowerBuilder::isClicked(std::list<Tower *> &towers, int towerSelected, int 
         tower->buildRange();
         tower->buildReloadTime();
     }
+}
+
+Tower* TowerBuilder::buildFireTower(int a, int b)
+{
+    return new FireTower(a, b);
+}
+Tower* TowerBuilder::buildIceTower(int a, int b)
+{
+    return new IceTower(a, b);
+}
+Tower* TowerBuilder::buildLongBowTower(int a, int b)
+{
+    return new LongBowTower(a, b);
+}
+Tower* TowerBuilder::buildGoldTower(int a, int b)
+{
+    return new GoldTower(a, b);
+}
+Tower* TowerBuilder::buildRepairTower(int a, int b)
+{
+    return new RepairTower(a, b);
+}
+Tower* TowerBuilder::buildBombTower(int a, int b)
+{
+    return new BombTower(a, b);
 }
