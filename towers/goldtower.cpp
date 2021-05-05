@@ -8,9 +8,20 @@ GoldTower::GoldTower(int x, int y)
     towerPrice = 75;
     towerID = 4;
     moverRect = {x + 48 - 72 / 2, y + 96 - 110 - 20, 72, 110};
-    goldMineRate = 50;
+    cooledDown = true;
 }
 
-void GoldTower::buildDamage() {};
-void GoldTower::buildReloadTime() {};
-void GoldTower::buildRange() {};
+void GoldTower::buildDamage()
+{
+    towerAttackDamage = 0;
+}
+void GoldTower::buildReloadTime()
+{
+    towerReloadTime = 50;
+}
+void GoldTower::buildRange()
+{
+    towerAttackRange = 0;
+}
+
+void GoldTower::repairBase(Base &base) {}

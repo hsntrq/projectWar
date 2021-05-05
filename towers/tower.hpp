@@ -7,6 +7,7 @@
 #include "../projectile/longbowtowerprojectile.hpp"
 #include "../projectile/icetowerprojectile.hpp"
 #include <cmath>
+#include "../base.hpp"
 
 #pragma once
 /**
@@ -17,7 +18,7 @@ class Tower : public Object
 protected:
     int towerPrice, towerAttackDamage, towerAttackRange, towerReloadTime;
 
-public:      //function declarations
+public: //function declarations
     int towerID;
     bool cooledDown;
     Tower(); // constructors (overloaded)
@@ -27,11 +28,12 @@ public:      //function declarations
      * \param y is tower's y location
      */
     Tower(int x, int y);
-    
+
     void fireProjectile(int, int, std::list<Projectile *> &);
     virtual void buildDamage() = 0;
     virtual void buildReloadTime() = 0;
     virtual void buildRange() = 0;
+    virtual void repairBase(Base &) = 0;
     void updateCoolDownStatus(int &frames);
     void draw(SDL_Renderer *gRenderer, SDL_Texture *assets);
     std::tuple<int, int> checkEnemyInRange(std::list<Enemy *> &enemies);

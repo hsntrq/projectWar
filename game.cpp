@@ -74,7 +74,7 @@ bool Game::loadMedia()
 
 	assets = loadTexture("assets/assets.png");
 	// gTexture = loadTexture("assets/map.png");
-	bgMusic = Mix_LoadMUS("assets/beat.wav");
+	bgMusic = Mix_LoadMUS("assets/beat.mp3");
 	if (assets == NULL)
 	{
 		printf("Unable to run due to error: %s\n", SDL_GetError());
@@ -140,10 +140,10 @@ void Game::run()
 {
 	bool quit = false;
 	SDL_Event e;
-	// gameManager ProjectWar(gRenderer,assets);
+	// GameScreen ProjectWar(gRenderer,assets);
 	Screens.push_back(new MainScreen(gRenderer, assets));
 	Screens.push_back(new Instructions(gRenderer, assets));
-	Screens.push_back(new gameManager(gRenderer, assets));
+	Screens.push_back(new GameScreen(gRenderer, assets));
 	Screens.push_back(new Win(gRenderer, assets));
 	Screens.push_back(new Lose(gRenderer, assets));
 	Screens.push_back(new Options(gRenderer, assets));
@@ -186,7 +186,7 @@ void Game::run()
 			delete (Screens[2]);
 			delete (Screens[0]);
 			Screens[0] = new MainScreen(gRenderer, assets);
-			Screens[2] = new gameManager(gRenderer, assets);
+			Screens[2] = new GameScreen(gRenderer, assets);
 		}
 		if (screenNumber == 2)
 		{

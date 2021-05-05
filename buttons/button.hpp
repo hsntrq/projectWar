@@ -1,4 +1,6 @@
 #include "../object.hpp"
+#include "SDL_mixer.h"
+#pragma once
 
 class Button : public Object
 {
@@ -6,6 +8,7 @@ private:
     bool isPressed;
     SDL_Rect srcSprite[2];
     SDL_Rect moverSprite[2];
+    Mix_Chunk *clickSoundEffect = NULL;
 
 public:
     Button();
@@ -13,4 +16,5 @@ public:
     void draw(SDL_Renderer *gRenderer, SDL_Texture *assets);
     bool pressed(int, int);
     void reset();
+    ~Button();
 };
