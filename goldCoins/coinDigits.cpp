@@ -17,8 +17,6 @@ void CoinDigits::draw(SDL_Renderer *gRenderer, SDL_Texture *assets) //selects  t
     moverRect.h = digitRects[num_1].h;
     SDL_RenderCopy(gRenderer, assets, &digitRects[num_1], &moverRect);
     moverRect.x = 427;
-    std::cout<<num_1<<num_2<<num_3<<std::endl;
-    std::cout <<coinCounter<<endl;
 }
 
 CoinDigits::CoinDigits() {}

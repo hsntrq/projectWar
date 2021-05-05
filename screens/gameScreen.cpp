@@ -30,7 +30,6 @@ int GameScreen::drawObjects() //iterating through the lists and drawing all of t
     if (waves.empty() && enemies.empty() && base.health >= 0)
     {
         state = 3;
-        std::cout << "Game Over" << std::endl;
         return state;
     }
     for (list<Tower *>::iterator tower = towers.begin(); tower != towers.end(); ++tower)
@@ -91,7 +90,6 @@ int GameScreen::drawObjects() //iterating through the lists and drawing all of t
 
 void GameScreen::detectClick(int x, int y)
 {
-    std::cout << "Mouse clicked at: " << x << " -- " << y << std::endl;
     if (pause.pressed(x, y))
     {
         paused = true;
