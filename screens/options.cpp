@@ -14,19 +14,43 @@ int Options::drawObjects()
     music.draw(gRenderer, assets);
     volume.draw(gRenderer, assets);
     back.draw(gRenderer, assets);
+    if (state1)
+    {
+        state1 = false;
+        music.reset();
+        return state;
+    }
+    if (state2)
+    {
+        state2 = false;
+        volume.reset();
+        return state;
+    }
     return state;
 }
 void Options::detectClick(int x, int y)
 {
     if (music.pressed(x, y))
     {
+        if (Mix_PausedMusic() == 1)
+        {
+            //Resume the music
+            Mix_ResumeMusic();
+        }
+        //If the music is playing
+        else
+        {
+            //Pause the music
+            Mix_PauseMusic();
+        }
         cout << "music is pressed";
-        music.reset();
+
+        state1 = true;
     }
     else if (volume.pressed(x, y))
     {
         cout << "music is pressed";
-        volume.reset();
+        state2 = true;
     }
     else if (back.pressed(x, y))
     {

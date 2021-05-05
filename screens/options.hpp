@@ -4,6 +4,7 @@ class Options : public Screen
 {
 private:
     Button music, volume, back;
+    bool state1, state2;
 
 public:
     Options();

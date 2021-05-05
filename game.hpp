@@ -40,6 +40,7 @@ class Game
     SDL_Texture *assets = NULL;
 
     Mix_Music *bgMusic = NULL;
+    
     vector<Screen *> Screens;
     int screenNumber = 0; // 0-> main 1-> instructions 2->NewGame 3-> Won 4-> lose 5-> options 6-> pause 7-> Loading
 
