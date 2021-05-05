@@ -4,7 +4,7 @@ EnemyFactory::EnemyFactory() {}
 
 EnemyFactory::EnemyFactory(int waveNum)
 {
-    totalEnemies = 5 * (waveNum + 1);
+    totalEnemies = 25 * (waveNum + 1);
     waveGap = 100;
 
     paths.push_back(Path(0, 160));

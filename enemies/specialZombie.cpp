@@ -5,7 +5,7 @@ SpecialZombie::SpecialZombie() {}
 SpecialZombie::SpecialZombie(int x, int y, std::list<Path> path_)
 {
     path = path_;
-    attackDamage = 5;
+    attackDamage = 25;
     attackSpeed = 1;
     movementSpeed = 1 + rand() % 3;
     attackRange = 30;

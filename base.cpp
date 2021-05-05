@@ -17,14 +17,14 @@ Base::~Base() {}
 void Base::decreaseHealth(int baseDamage)
 {
     health -= baseDamage;
-    if (greenRectWidth <= 0+50)
+    if (greenRectWidth <= 0+baseDamage)
     {
         greenRectWidth = 0;
         greenMoverRect = {1059, 27, greenRectWidth, 15};
     }
-    else if (greenRectWidth > 0+50)
+    else if (greenRectWidth > 0+baseDamage)
     {
-        greenRectWidth -= 50;
+        greenRectWidth -= baseDamage;
         greenMoverRect = {1059, 27, greenRectWidth, 15};
     }
 }
@@ -38,14 +38,14 @@ Base &Base::operator+=(int repair)
 void Base::increaseHealth(int baseRepair)
 {
     health += baseRepair;
-    if (greenRectWidth >= 205-10)
+    if (greenRectWidth >= 205-baseRepair)
     {
         greenRectWidth = 205;
         greenMoverRect = {1059, 27, greenRectWidth, 15};
     }
-    else if (greenRectWidth < 205-10)
+    else if (greenRectWidth < 205-baseRepair)
     {
-        greenRectWidth += 10;
+        greenRectWidth += baseRepair;
         greenMoverRect = {1059, 27, greenRectWidth, 15};
     }
 }

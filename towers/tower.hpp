@@ -17,11 +17,12 @@
 class Tower : public Object
 {
 protected:
-    int towerAttackDamage, towerAttackRange, towerReloadTime, towerPrice;
+    int towerAttackDamage, towerAttackRange, towerReloadTime;
 
 public: //function declarations
     int towerID;
     bool cooledDown;
+    int towerPrice;
     Tower(); // constructors (overloaded)
     /**
      * Simple constructor that initilizes the x and y locations of the tower

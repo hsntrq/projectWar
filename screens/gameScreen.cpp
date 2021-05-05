@@ -58,7 +58,7 @@ int GameScreen::drawObjects() //iterating through the lists and drawing all of t
     {
         if ((*enemy)->followPath())
         {
-            base.decreaseHealth(5);
+            base.decreaseHealth((*enemy)->attackDamage);
             delete (*enemy);
             enemies.erase(enemy--);
             baseDamage = 0;
