@@ -75,6 +75,9 @@ int gameManager::drawObjects() //iterating through the lists and drawing all of 
             projectiles.erase(projectile--);
         }
     }
+    coins.updateCoins(coinCounter);
+    slab.draw(gRenderer, assets);
+    coins.draw(gRenderer, assets);
     return state;
 }
 
@@ -118,6 +121,9 @@ gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst)
     elapsedFrames = 0;
     state = 2;
     baseDamage = 0;
+    coinCounter = 123;
+
+    coins = CoinDigits(427, 689);
 
     patches.push_back(new TowerBuilder(288, 416));
     patches.push_back(new TowerBuilder(288, 256));

@@ -20,6 +20,8 @@
 #include "enemyFactory.hpp"
 #include "towerBuilder.hpp"
 #include "base.hpp"
+#include "goldCoins/coinDigits.hpp"
+#include "goldCoins/coinSlab.hpp"
 
 using namespace std;
 #pragma once
@@ -37,6 +39,8 @@ class gameManager : public Screen
     vector<TowerCard> towerCards;
     int gameState; // 2-> continue // 3-> won // 4-> lose
     int baseHP;
+    CoinDigits coins;
+    int coinCounter;
     int state;
     list <EnemyFactory *> waves;
     int towerSelected; 
@@ -47,6 +51,8 @@ class gameManager : public Screen
     bool paused;
     Base base;
     int baseDamage;
+    CoinSlab slab;
+
 public:
     /**
      * Simple Constructor
