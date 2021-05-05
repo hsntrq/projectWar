@@ -6,9 +6,7 @@ IceTower::IceTower(int x, int y)
 {
     srcRect = {105, 159, 69, 75};
     towerPrice = 50;
-    towerHealth = 100;
     towerAttackDamage = 60;
-    towerAttackSpeed = 15;
     towerReloadTime = 60;
     towerAttackRange = 350;
     towerID = 2;
@@ -16,25 +14,18 @@ IceTower::IceTower(int x, int y)
     cooledDown = true;
 
 }
-void IceTower::fireProjectile()
+
+void IceTower::buildDamage()
 {
+    towerAttackDamage = 60;
 }
-void IceTower::computeHealth()
+
+void IceTower::buildReloadTime()
 {
+    towerReloadTime = 60;
 }
-void IceTower::repairTower()
+
+void IceTower::buildRange()
 {
-}
-bool IceTower::checkEnemyInRange()
-{
-    return false;
-}
-void IceTower::upgradeTower()
-{
-}
-void IceTower::destroyTower()
-{
-}
-void IceTower::iceSlow()
-{
+    towerAttackRange = 250;
 }

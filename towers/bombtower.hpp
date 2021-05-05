@@ -20,4 +20,7 @@ public:
     void upgradeTower();
     void destroyTower();
     void bombExplode();
+    void buildDamage();
+    void buildReloadTime();
+    void buildRange();
 };

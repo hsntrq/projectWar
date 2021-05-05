@@ -77,7 +77,7 @@ void gameManager::detectClick(int x, int y)
     std::cout << "Mouse clicked at: " << x << " -- " << y << std::endl;
     if (cardClicked)
     {
-        for (list<Patches *>::iterator patch = patches.begin(); patch != patches.end(); ++patch)
+        for (list<TowerBuilder *>::iterator patch = patches.begin(); patch != patches.end(); ++patch)
         {
             (*patch)->isClicked(towers, towerSelected, x, y);
         }
@@ -107,17 +107,17 @@ gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst)
     assets = asst;
     elapsedFrames = 0;
     state = 2;
-    patches.push_back(new Patches(64, 480));
-    patches.push_back(new Patches(288, 416));
-    patches.push_back(new Patches(288, 256));
-    patches.push_back(new Patches(32, 64));
-    patches.push_back(new Patches(672, 160));
-    patches.push_back(new Patches(480, 352));
-    patches.push_back(new Patches(544, 544));
-    patches.push_back(new Patches(768, 320));
-    patches.push_back(new Patches(992, 512));
-    patches.push_back(new Patches(1152, 416));
-    patches.push_back(new Patches(960, 224));
+    patches.push_back(new TowerBuilder(288, 416));
+    patches.push_back(new TowerBuilder(288, 256));
+    patches.push_back(new TowerBuilder(32, 64));
+    patches.push_back(new TowerBuilder(672, 160));
+    patches.push_back(new TowerBuilder(480, 352));
+    patches.push_back(new TowerBuilder(544, 544));
+    patches.push_back(new TowerBuilder(768, 320));
+    patches.push_back(new TowerBuilder(992, 512));
+    patches.push_back(new TowerBuilder(1152, 416));
+    patches.push_back(new TowerBuilder(960, 224));
+    patches.push_back(new TowerBuilder(64, 480));
 
     towerCards.push_back(FireCard());
     towerCards.push_back(BombCard());

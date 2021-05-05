@@ -8,17 +8,24 @@
 #include "towers/longbowtower.hpp"
 #include "towers/repairtower.hpp"
 #include "towers/bombtower.hpp"
+
 #pragma once
 
-class Patches
+class TowerBuilder
 {
 private:
     int x, y;
 
 public:
     bool isAvailable;
-    Patches(int, int);
+    TowerBuilder(int, int);
     bool checkRange(int, int);
     std::tuple<int, int> location();
     void isClicked(std::list<Tower *> &, int, int, int);
+    Tower* buildFireTower(int a, int b);
+    Tower* buildIceTower(int a, int b);
+    Tower* buildLongBowTower(int a, int b);
+    Tower* buildGoldTower(int a, int b);
+    Tower* buildRepairTower(int a, int b);
+    Tower* buildBombTower(int a, int b);
 };
