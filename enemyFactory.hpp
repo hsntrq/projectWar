@@ -22,6 +22,7 @@ public:
     EnemyFactory(int);
     ~EnemyFactory();
     bool waveComplete(int);
-    void spawnEnemies(list <Enemy *> &, int);
+    void spawnEnemies(list<Enemy *> &, int);
     bool enemiesSpawned();
+    Enemy *produceEnemy();
 };
