@@ -121,7 +121,6 @@ Tower *TowerBuilder::buildBombTower(int a, int b, CoinDigits &coins)
     if (coins > t->towerPrice)
     {
         coins -= t->towerPrice;
-        std::cout << "bomb tower comparison \n";
         return t;
     }
     return NULL;

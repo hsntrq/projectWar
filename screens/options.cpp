@@ -43,13 +43,11 @@ void Options::detectClick(int x, int y)
             //Pause the music
             Mix_PauseMusic();
         }
-        cout << "music is pressed";
 
         state1 = true;
     }
     else if (volume.pressed(x, y))
     {
-        cout << "music is pressed";
         state2 = true;
     }
     else if (back.pressed(x, y))

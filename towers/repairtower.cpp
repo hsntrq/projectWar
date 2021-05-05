@@ -9,7 +9,7 @@ RepairTower::RepairTower(int x, int y)
     towerID = 5;
     moverRect = {x - 70 / 2 + 48, y + 96 - 115 - 20, 72, 115};
     cooledDown = true;
-    RepairEffect = 25;
+    RepairEffect = 5;
 }
 void RepairTower::goldAdd(CoinDigits &coins){}
 void RepairTower::buildDamage()
