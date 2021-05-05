@@ -19,6 +19,7 @@
 #include "enemies/weakZombie.hpp"
 #include "enemyFactory.hpp"
 #include "towerBuilder.hpp"
+#include "base.hpp"
 
 using namespace std;
 #pragma once
@@ -44,6 +45,8 @@ class gameManager : public Screen
     int delayBetweenEnemies;
     Button pause;
     bool paused;
+    Base base;
+    int baseDamage;
 public:
     /**
      * Simple Constructor

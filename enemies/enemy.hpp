@@ -18,12 +18,13 @@ protected:
 
 protected:
     SDL_Rect srcSprite[12];
-    int attackDamage, attackSpeed, movementSpeed, attackRange;
+    int attackSpeed, movementSpeed, attackRange;
     list<Path> path;
     string enemyName;
 
 public: //function declarations
     bool death;
+    int attackDamage;
     std::tuple<int, int, int, int> location();
 
     void draw(SDL_Renderer *, SDL_Texture *assets);
