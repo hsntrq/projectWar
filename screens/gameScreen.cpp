@@ -43,9 +43,7 @@ int GameScreen::drawObjects() //iterating through the lists and drawing all of t
                 (*tower)->fireProjectile(enemyX, enemyY, projectiles);
             }
         }
-        std::cout<<"Error at 1"<<std::endl;
         (*tower)->updateCoolDownStatus(elapsedFrames); // necessary because the tower has to first fire before going into cooldown
-        std::cout<<"Error at 2"<<std::endl;
         (*tower)->draw(gRenderer, assets);
     }
     for (list<Enemy *>::iterator enemy = enemies.begin(); enemy != enemies.end(); ++enemy)
