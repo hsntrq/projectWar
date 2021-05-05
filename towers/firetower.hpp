@@ -19,4 +19,7 @@ public:
     void upgradeTower();
     void destroyTower();
     void burnDamage();
+    void buildDamage();
+    void buildReloadTime();
+    void buildRange();
 };

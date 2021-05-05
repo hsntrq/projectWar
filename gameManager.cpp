@@ -84,7 +84,7 @@ void gameManager::detectClick(int x, int y)
     }
     if (cardClicked)
     {
-        for (list<Patches *>::iterator patch = patches.begin(); patch != patches.end(); ++patch)
+        for (list<TowerBuilder *>::iterator patch = patches.begin(); patch != patches.end(); ++patch)
         {
             (*patch)->isClicked(towers, towerSelected, x, y);
         }
@@ -114,17 +114,17 @@ gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst)
     assets = asst;
     elapsedFrames = 0;
     state = 2;
-    patches.push_back(new Patches(64, 480));
-    patches.push_back(new Patches(288, 416));
-    patches.push_back(new Patches(288, 256));
-    patches.push_back(new Patches(32, 64));
-    patches.push_back(new Patches(672, 160));
-    patches.push_back(new Patches(480, 352));
-    patches.push_back(new Patches(544, 544));
-    patches.push_back(new Patches(768, 320));
-    patches.push_back(new Patches(992, 512));
-    patches.push_back(new Patches(1152, 416));
-    patches.push_back(new Patches(960, 224));
+    patches.push_back(new TowerBuilder(288, 416));
+    patches.push_back(new TowerBuilder(288, 256));
+    patches.push_back(new TowerBuilder(32, 64));
+    patches.push_back(new TowerBuilder(672, 160));
+    patches.push_back(new TowerBuilder(480, 352));
+    patches.push_back(new TowerBuilder(544, 544));
+    patches.push_back(new TowerBuilder(768, 320));
+    patches.push_back(new TowerBuilder(992, 512));
+    patches.push_back(new TowerBuilder(1152, 416));
+    patches.push_back(new TowerBuilder(960, 224));
+    patches.push_back(new TowerBuilder(64, 480));
 
     towerCards.push_back(FireCard());
     towerCards.push_back(BombCard());
@@ -138,11 +138,31 @@ gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst)
 
     for (int i = 0; i < 5; i++) //fills up a list that stores 6 consecutive waves
     {
-        waves.push_back(new Wave(i));
+        waves.push_back(new EnemyFactory(i));
     }
     pause = Button({853, 283, 88, 31}, {853, 346, 88, 29}, {396, 643, 88, 31}, {396, 649, 88, 29});
 }
 
 gameManager::~gameManager() //destructor deletes all dynamically created objects traversing them in all the lists
 {
+    for (auto tower : towers)
+    {
+        delete tower;
+    }
+    for (auto projectile : projectiles)
+    {
+        delete projectile;
+    }
+    for (auto patch : patches)
+    {
+        delete patch;
+    }
+    for (auto enemy : enemies)
+    {
+        delete enemy;
+    }
+    for (auto wave : waves)
+    {
+        delete wave;
+    }
 }
