@@ -4,6 +4,7 @@ int GameScreen::drawObjects() //iterating through the lists and drawing all of t
 {
     elapsedFrames++;
     pause.draw(gRenderer, assets);
+    base.draw(gRenderer, assets);
     if (baseHP == 0)
     {
         state = 4;
@@ -49,8 +50,10 @@ int GameScreen::drawObjects() //iterating through the lists and drawing all of t
     {
         if ((*enemy)->followPath())
         {
+            base.decreaseHealth(baseDamage);
             delete (*enemy);
             enemies.erase(enemy--);
+            baseDamage = 0;
         }
         else
         {
@@ -72,6 +75,9 @@ int GameScreen::drawObjects() //iterating through the lists and drawing all of t
             projectiles.erase(projectile--);
         }
     }
+    coins.updateCoins(coinCounter);
+    slab.draw(gRenderer, assets);
+    coins.draw(gRenderer, assets);
     return state;
 }
 
@@ -114,6 +120,11 @@ GameScreen::GameScreen(SDL_Renderer *renderer, SDL_Texture *asst)
     assets = asst;
     elapsedFrames = 0;
     state = 2;
+    baseDamage = 0;
+    coinCounter = 123;
+
+    coins = CoinDigits(427, 689);
+
     patches.push_back(new TowerBuilder(288, 416));
     patches.push_back(new TowerBuilder(288, 256));
     patches.push_back(new TowerBuilder(32, 64));

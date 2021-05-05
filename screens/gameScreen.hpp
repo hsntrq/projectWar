@@ -36,6 +36,8 @@ class GameScreen : public Screen
     vector<TowerCard> towerCards;
     int gameState; // 2-> continue // 3-> won // 4-> lose
     int baseHP;
+    CoinDigits coins;
+    int coinCounter;
     int state;
     list <EnemyFactory *> waves;
     int towerSelected; 
@@ -44,6 +46,10 @@ class GameScreen : public Screen
     int delayBetweenEnemies;
     Button pause;
     bool paused;
+    Base base;
+    int baseDamage;
+    CoinSlab slab;
+
 public:
     /**
      * Simple Constructor
