@@ -16,6 +16,7 @@ Button::Button(SDL_Rect srcsprite_, SDL_Rect srcsprite_p, SDL_Rect moverRect_, S
     srcSprite[0] = srcsprite_;
     srcSprite[1] = srcsprite_p;
     isPressed = false;
+    clickSoundEffect = Mix_LoadWAV("assets/click_low.wav");
 }
 
 Button::Button()
@@ -31,6 +32,7 @@ bool Button::pressed(int x, int y)
     if ((x >= moverSprite[0].x && x <= moverSprite[0].x + moverSprite[0].w) && (y >= moverSprite[0].y && y <= moverSprite[0].y + moverSprite[0].h))
     {
         isPressed = true;
+        Mix_PlayChannel(1, clickSoundEffect, 0);
         return true;
     }
     else

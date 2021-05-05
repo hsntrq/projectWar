@@ -74,7 +74,7 @@ bool Game::loadMedia()
 
 	assets = loadTexture("assets/assets.png");
 	// gTexture = loadTexture("assets/map.png");
-	bgMusic = Mix_LoadMUS("assets/beat.wav");
+	bgMusic = Mix_LoadMUS("assets/beat.mp3");
 	if (assets == NULL)
 	{
 		printf("Unable to run due to error: %s\n", SDL_GetError());
