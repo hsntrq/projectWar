@@ -8,7 +8,7 @@
 #include "towers/longbowtower.hpp"
 #include "towers/repairtower.hpp"
 #include "towers/bombtower.hpp"
-
+#include "goldCoins/coinDigits.hpp"
 #pragma once
 
 class TowerBuilder
@@ -21,11 +21,11 @@ public:
     TowerBuilder(int, int);
     bool checkRange(int, int);
     std::tuple<int, int> location();
-    void isClicked(std::list<Tower *> &, int, int, int);
-    Tower* buildFireTower(int a, int b);
-    Tower* buildIceTower(int a, int b);
-    Tower* buildLongBowTower(int a, int b);
-    Tower* buildGoldTower(int a, int b);
-    Tower* buildRepairTower(int a, int b);
-    Tower* buildBombTower(int a, int b);
+    void isClicked(std::list<Tower *> &, int, int, int, CoinDigits &);
+    Tower *buildFireTower(int a, int b, CoinDigits &coins);
+    Tower *buildIceTower(int a, int b, CoinDigits &coins);
+    Tower *buildLongBowTower(int a, int b, CoinDigits &coins);
+    Tower *buildGoldTower(int a, int b, CoinDigits &coins);
+    Tower *buildRepairTower(int a, int b, CoinDigits &coins);
+    Tower *buildBombTower(int a, int b, CoinDigits &coins);
 };

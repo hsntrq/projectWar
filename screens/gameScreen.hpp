@@ -41,7 +41,6 @@ class GameScreen : public Screen
     int gameState; // 2-> continue // 3-> won // 4-> lose
     int baseHP;
     CoinDigits coins;
-    int coinCounter;
     int state;
     list <EnemyFactory *> waves;
     int towerSelected; 

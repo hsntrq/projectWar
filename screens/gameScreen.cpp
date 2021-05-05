@@ -75,7 +75,7 @@ int GameScreen::drawObjects() //iterating through the lists and drawing all of t
             projectiles.erase(projectile--);
         }
     }
-    coins.updateCoins(coinCounter);
+    coins.updateCoins();
     slab.draw(gRenderer, assets);
     coins.draw(gRenderer, assets);
     return state;
@@ -92,7 +92,7 @@ void GameScreen::detectClick(int x, int y)
     {
         for (list<TowerBuilder *>::iterator patch = patches.begin(); patch != patches.end(); ++patch)
         {
-            (*patch)->isClicked(towers, towerSelected, x, y);
+            (*patch)->isClicked(towers, towerSelected, x, y, coins);
         }
         cardClicked = false;
         towerCards[towerSelected].isSelected = false;
@@ -121,7 +121,6 @@ GameScreen::GameScreen(SDL_Renderer *renderer, SDL_Texture *asst)
     elapsedFrames = 0;
     state = 2;
     baseDamage = 0;
-    coinCounter = 123;
 
     coins = CoinDigits(427, 689);
 
