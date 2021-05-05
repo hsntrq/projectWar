@@ -9,6 +9,7 @@ private:
     int num_2;
     int num_3;
     int coinCounter;
+
 public:
     CoinDigits();
     CoinDigits(int, int);
@@ -17,4 +18,5 @@ public:
     void updateCoins();
     bool operator>(int price);
     CoinDigits &operator-=(const int price);
+    CoinDigits &operator+=(int gold);
 };

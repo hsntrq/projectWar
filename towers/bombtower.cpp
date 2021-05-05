@@ -24,3 +24,4 @@ void BombTower::buildRange()
 {
     towerAttackRange = 400;
 }
+void BombTower::goldAdd(CoinDigits &coins){}

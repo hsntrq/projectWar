@@ -10,14 +10,17 @@ GoldTower::GoldTower(int x, int y)
     moverRect = {x + 48 - 72 / 2, y + 96 - 110 - 20, 72, 110};
     cooledDown = true;
 }
-
+void GoldTower::goldAdd(CoinDigits &coins)
+{
+    coins+=4;
+}
 void GoldTower::buildDamage()
 {
     towerAttackDamage = 0;
 }
 void GoldTower::buildReloadTime()
 {
-    towerReloadTime = 50;
+    towerReloadTime = 100;
 }
 void GoldTower::buildRange()
 {

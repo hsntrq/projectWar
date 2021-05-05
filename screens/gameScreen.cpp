@@ -43,6 +43,10 @@ int GameScreen::drawObjects() //iterating through the lists and drawing all of t
                 (*tower)->fireProjectile(enemyX, enemyY, projectiles);
             }
         }
+        if ((*tower)->towerID == 4 && (*tower)->cooledDown)
+        {
+            (*tower)->goldAdd(coins);
+        }
         (*tower)->updateCoolDownStatus(elapsedFrames); // necessary because the tower has to first fire before going into cooldown
         (*tower)->draw(gRenderer, assets);
     }

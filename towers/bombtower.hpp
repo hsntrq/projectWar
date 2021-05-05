@@ -23,4 +23,5 @@ public:
     void buildDamage();
     void buildReloadTime();
     void buildRange();
+    void goldAdd(CoinDigits &);
 };

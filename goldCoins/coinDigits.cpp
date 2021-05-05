@@ -63,6 +63,11 @@ CoinDigits &CoinDigits::operator-=(const int price)
     coinCounter -= price;
     return *this;
 }
+CoinDigits &CoinDigits::operator+=(int gold)
+{
+    coinCounter += gold;
+    return *this;
+}
 void CoinDigits::updateCoins()
 {
     num_1 = coinCounter % 10;

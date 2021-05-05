@@ -6,6 +6,7 @@
 #include "../projectile/bombtowerprojectile.hpp"
 #include "../projectile/longbowtowerprojectile.hpp"
 #include "../projectile/icetowerprojectile.hpp"
+#include "../goldCoins/coinDigits.hpp"
 #include <cmath>
 
 #pragma once
@@ -32,6 +33,7 @@ public:      //function declarations
     virtual void buildDamage() = 0;
     virtual void buildReloadTime() = 0;
     virtual void buildRange() = 0;
+    virtual void goldAdd(CoinDigits &) = 0;
     void updateCoolDownStatus(int &frames);
     void draw(SDL_Renderer *gRenderer, SDL_Texture *assets);
     std::tuple<int, int> checkEnemyInRange(std::list<Enemy *> &enemies);

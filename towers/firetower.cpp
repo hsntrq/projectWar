@@ -25,3 +25,4 @@ void FireTower::buildRange()
 {
     towerAttackRange = 300;
 }
+void FireTower::goldAdd(CoinDigits &coins){}

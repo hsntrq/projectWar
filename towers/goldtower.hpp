@@ -1,5 +1,4 @@
 #include "tower.hpp"
-
 /**
  * \brief This class stores the attributes and methods specific to the gold tower
  * 
@@ -22,4 +21,5 @@ public:
     void buildDamage();
     void buildReloadTime();
     void buildRange();
+    void goldAdd(CoinDigits &coins);
 };
