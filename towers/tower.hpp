@@ -15,10 +15,10 @@
 class Tower : public Object
 {
 protected:
-    int towerPrice, towerAttackDamage, towerAttackRange, towerReloadTime;
+    int towerAttackDamage, towerAttackRange, towerReloadTime;
 
 public:      //function declarations
-    int towerID;
+    int towerID, towerPrice;
     bool cooledDown;
     Tower(); // constructors (overloaded)
     /**
@@ -35,4 +35,5 @@ public:      //function declarations
     void updateCoolDownStatus(int &frames);
     void draw(SDL_Renderer *gRenderer, SDL_Texture *assets);
     std::tuple<int, int> checkEnemyInRange(std::list<Enemy *> &enemies);
+    bool operator >= (int coins);
 };

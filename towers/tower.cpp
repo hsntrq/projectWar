@@ -20,7 +20,9 @@ Tower::Tower() //default constructor
     moverRect = {30, 40, 25, 35};
     cooledDown = true;
 }
-
+bool Tower::operator >= (int coins){
+    return towerPrice >= coins;
+}
 std::tuple<int, int> Tower::checkEnemyInRange(std::list<Enemy *> &enemies)
 {
     int minDistance = 10000;
@@ -43,7 +45,6 @@ std::tuple<int, int> Tower::checkEnemyInRange(std::list<Enemy *> &enemies)
     }
     return location;
 }
-
 void Tower::updateCoolDownStatus(int &frames)
 {
     if (frames % towerReloadTime == 0)

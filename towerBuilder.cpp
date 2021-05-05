@@ -12,7 +12,7 @@ std::tuple<int, int> TowerBuilder::location()
 
 TowerBuilder::TowerBuilder(int a, int b) : x(a), y(b), isAvailable(true) {}
 
-void TowerBuilder::isClicked(std::list<Tower *> &towers, int towerSelected, int x_, int y_)
+void TowerBuilder::isClicked(std::list<Tower *> &towers, int towerSelected, int x_, int y_, CoinDigits &coins)
 {
     if (isAvailable)
         if (checkRange(x_, y_))
@@ -20,31 +20,37 @@ void TowerBuilder::isClicked(std::list<Tower *> &towers, int towerSelected, int 
             auto [a, b] = location();
             if (towerSelected == 0)
             {
-                towers.push_back(buildFireTower(a, b));
+                Tower* t = buildFireTower(a, b, coins);
+                if (t) towers.push_back(t);
             }
             else if (towerSelected == 1)
             {
-                towers.push_back(buildBombTower(a, b));
+                Tower* t = buildBombTower(a, b, coins);
+                if (t) towers.push_back(t);
             }
             else if (towerSelected == 2)
             {
-                towers.push_back(buildIceTower(a, b));
+                Tower* t =buildIceTower(a, b, coins);
+                if (t) towers.push_back(t);
             }
             else if (towerSelected == 3)
             {
-                towers.push_back(buildLongBowTower(a, b));
+                Tower* t = buildLongBowTower(a, b, coins);
+                if (t) towers.push_back(t);
             }
             else if (towerSelected == 4)
             {
-                towers.push_back(buildGoldTower(a, b));
+                Tower* t = buildGoldTower(a, b, coins);
+                if (t) towers.push_back(t);
             }
             else if (towerSelected == 5)
             {
-                towers.push_back(buildRepairTower(a, b));
+                Tower* t = buildRepairTower(a, b, coins);
+                if (t) towers.push_back(t);
             }
             isAvailable = false;
         }
-    for (auto tower:towers)
+    for (auto tower : towers)
     {
         tower->buildDamage();
         tower->buildRange();
@@ -52,27 +58,65 @@ void TowerBuilder::isClicked(std::list<Tower *> &towers, int towerSelected, int 
     }
 }
 
-Tower* TowerBuilder::buildFireTower(int a, int b)
+Tower *TowerBuilder::buildFireTower(int a, int b, CoinDigits &coins)
 {
-    return new FireTower(a, b);
+    Tower *t = new FireTower(a, b);
+    if (coins > t->towerPrice)
+    {
+        coins-= t->towerPrice;
+        return t;
+    }
+    return NULL;
 }
-Tower* TowerBuilder::buildIceTower(int a, int b)
+Tower *TowerBuilder::buildIceTower(int a, int b, CoinDigits &coins)
 {
-    return new IceTower(a, b);
+    Tower *t = new IceTower(a, b);
+     if (coins > t->towerPrice)
+    {
+        coins -= t->towerPrice;
+        return t;
+    }
+    return NULL;
 }
-Tower* TowerBuilder::buildLongBowTower(int a, int b)
+
+Tower *TowerBuilder::buildLongBowTower(int a, int b, CoinDigits &coins)
 {
-    return new LongBowTower(a, b);
+    Tower *t = new LongBowTower(a, b);
+     if (coins > t->towerPrice)
+    {
+        coins -= t->towerPrice;
+        return t;
+    }
+    return NULL;
 }
-Tower* TowerBuilder::buildGoldTower(int a, int b)
+Tower *TowerBuilder::buildGoldTower(int a, int b, CoinDigits &coins)
 {
-    return new GoldTower(a, b);
+    Tower *t = new GoldTower(a, b);
+     if (coins > t->towerPrice)
+    {
+        coins -= t->towerPrice;
+        return t;
+    }
+    return NULL;
 }
-Tower* TowerBuilder::buildRepairTower(int a, int b)
+Tower *TowerBuilder::buildRepairTower(int a, int b, CoinDigits &coins)
 {
-    return new RepairTower(a, b);
+    Tower *t = new RepairTower(a, b);
+     if (coins > t->towerPrice)
+    {
+        coins -= t->towerPrice;
+        return t;
+    }
+    return NULL;
 }
-Tower* TowerBuilder::buildBombTower(int a, int b)
+Tower *TowerBuilder::buildBombTower(int a, int b, CoinDigits &coins)
 {
-    return new BombTower(a, b);
+    Tower *t = new BombTower(a, b);
+     if (coins > t->towerPrice)
+    {
+        coins -= t->towerPrice;
+        std::cout << "bomb tower comparison \n";
+        return t;
+    }
+    return NULL;
 }
