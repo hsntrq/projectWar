@@ -137,4 +137,24 @@ gameManager::gameManager(SDL_Renderer *renderer, SDL_Texture *asst)
 
 gameManager::~gameManager() //destructor deletes all dynamically created objects traversing them in all the lists
 {
+    for (auto tower : towers)
+    {
+        delete tower;
+    }
+    for (auto projectile : projectiles)
+    {
+        delete projectile;
+    }
+    for (auto patch : patches)
+    {
+        delete patch;
+    }
+    for (auto enemy : enemies)
+    {
+        delete enemy;
+    }
+    for (auto wave : waves)
+    {
+        delete wave;
+    }
 }
