@@ -181,11 +181,9 @@ void Game::run()
 		SDL_RenderCopy(gRenderer, gTexture[screenNumber], NULL, NULL); //Draws background to renderer
 		//***********************draw the objects here********************
 		screenNumber = Screens[screenNumber]->drawObjects();
-		if (screenNumber == 3 || screenNumber == 4)
+		if (screenNumber == 3 || screenNumber == 4 || screenNumber == 0)
 		{
 			delete (Screens[2]);
-			delete (Screens[0]);
-			Screens[0] = new MainScreen(gRenderer, assets);
 			Screens[2] = new GameScreen(gRenderer, assets);
 		}
 		if (screenNumber == 2)
@@ -197,7 +195,7 @@ void Game::run()
 			Screens[3] = new Win(gRenderer, assets);
 			Screens[4] = new Lose(gRenderer, assets);
 		}
-		if (screenNumber == 1 || screenNumber == 5 || screenNumber == 6)
+		if (screenNumber == 1 || screenNumber == 5 || screenNumber == 6 || screenNumber == 3 || screenNumber == 4)
 		{
 			delete Screens[0];
 			Screens[0] = new MainScreen(gRenderer, assets);
