@@ -25,7 +25,7 @@ std::tuple<int, int> Tower::checkEnemyInRange(std::list<Enemy *> &enemies)
 {
     int minDistance = 10000;
     double distance;
-    std::tuple<int, int> location = std::make_tuple(NULL, NULL);
+    std::tuple<int, int> location = std::make_tuple(0, 0);
     for (auto enemy : enemies)
     {
         auto [x, y, w, h] = enemy->location();
