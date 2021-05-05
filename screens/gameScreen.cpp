@@ -91,7 +91,6 @@ int GameScreen::drawObjects() //iterating through the lists and drawing all of t
 
 void GameScreen::detectClick(int x, int y)
 {
-    std::cout << "Mouse clicked at: " << x << " -- " << y << std::endl;
     if (pause.pressed(x, y))
     {
         paused = true;
