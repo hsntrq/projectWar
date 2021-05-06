@@ -17,7 +17,7 @@ protected:
     int targetX, targetY;
 
 public:
-    bool reachedTarget = false;
+    bool reachedTarget;
     Projectile();
     /**
      * Simple constructor that initilizes the x and y locations of the projectile

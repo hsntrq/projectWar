@@ -8,6 +8,7 @@ BombTowerProjectile::BombTowerProjectile(int x, int y, int tx, int ty, int tower
     srcRect = {682, 222, 14, 15};
     targetX = tx;
     targetY = ty;
+    reachedTarget = false;
 }
 
 BombTowerProjectile::~BombTowerProjectile() {}

@@ -2,7 +2,7 @@
 
 class Lose : public Screen
 {
-public:
+private:
     Button continueButton;
 
 public:

@@ -8,6 +8,7 @@ LongBowTowerProjectile::LongBowTowerProjectile(int x, int y, int tx, int ty, int
     srcRect = {657, 248, 16, 14};
     targetX = tx;
     targetY = ty;
+    reachedTarget = false;
 }
 
 LongBowTowerProjectile::~LongBowTowerProjectile() {}

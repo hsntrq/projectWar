@@ -151,7 +151,7 @@ GameScreen::GameScreen(SDL_Renderer *renderer, SDL_Texture *asst)
     cardClicked = false;
     towerSelected = -1;
 
-    for (int i = 0; i < 2; i++) //fills up a list that stores 6 consecutive waves
+    for (int i = 0; i < 4; i++) //fills up a list that stores 6 consecutive waves
     {
         waves.push_back(new EnemyFactory(i));
     }

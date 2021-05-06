@@ -8,6 +8,7 @@ IceTowerProjectile::IceTowerProjectile(int x, int y, int tx, int ty, int towerDa
     moverRect = {x, y, 16, 15}; // initializing the projectile to appear at of the tower turret
     gradient = 0;
     srcRect = {657, 222, 16, 15};
+    reachedTarget = false;
 }
 
 IceTowerProjectile::~IceTowerProjectile() {}
