@@ -8,6 +8,13 @@
 class GoldCard : public TowerCard
 {
 public:
+    /**
+     * Simple constructor
+     */
     GoldCard();
+
+    /**
+     * Constructor that initializes attributes
+     */
     GoldCard(int x, int y);
 };

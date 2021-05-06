@@ -1,0 +1,91 @@
+\hypertarget{class_game_screen}{}\doxysection{Game\+Screen Class Reference}
+\label{class_game_screen}\index{GameScreen@{GameScreen}}
+
+
+This class stores the methods and attributes necessary to carry out game logic, main game screen.  
+
+
+
+
+{\ttfamily \#include $<$game\+Screen.\+hpp$>$}
+
+Inheritance diagram for Game\+Screen\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_screen}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_screen_ae68a867285e0aba9d2b22bff690616ac}{Game\+Screen}} ()
+\item 
+\mbox{\hyperlink{class_game_screen_a6bda50244eaa05926a5a233f386ed9da}{Game\+Screen}} (SDL\+\_\+\+Renderer $\ast$, SDL\+\_\+\+Texture $\ast$)
+\item 
+int \mbox{\hyperlink{class_game_screen_a02923a429396c431b432de7958840c9d}{draw\+Objects}} () override
+\item 
+void \mbox{\hyperlink{class_game_screen_a2653dfccb204781057855a4344ee0099}{detect\+Click}} (int, int) override
+\item 
+\mbox{\hyperlink{class_game_screen_a0d25dfce42d72954aab40dbccbf1a0b1}{$\sim$\+Game\+Screen}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class stores the methods and attributes necessary to carry out game logic, main game screen. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_screen_ae68a867285e0aba9d2b22bff690616ac}\label{class_game_screen_ae68a867285e0aba9d2b22bff690616ac}} 
+\index{GameScreen@{GameScreen}!GameScreen@{GameScreen}}
+\index{GameScreen@{GameScreen}!GameScreen@{GameScreen}}
+\doxysubsubsection{\texorpdfstring{GameScreen()}{GameScreen()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Game\+Screen\+::\+Game\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple Constructor, doesn\textquotesingle{}t initalize anything \mbox{\Hypertarget{class_game_screen_a6bda50244eaa05926a5a233f386ed9da}\label{class_game_screen_a6bda50244eaa05926a5a233f386ed9da}} 
+\index{GameScreen@{GameScreen}!GameScreen@{GameScreen}}
+\index{GameScreen@{GameScreen}!GameScreen@{GameScreen}}
+\doxysubsubsection{\texorpdfstring{GameScreen()}{GameScreen()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Game\+Screen\+::\+Game\+Screen (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{SDL\+\_\+\+Texture $\ast$}]{asst }\end{DoxyParamCaption})}
+
+Simple ocnstructor, initalizes all attributes to desired values \mbox{\Hypertarget{class_game_screen_a0d25dfce42d72954aab40dbccbf1a0b1}\label{class_game_screen_a0d25dfce42d72954aab40dbccbf1a0b1}} 
+\index{GameScreen@{GameScreen}!````~GameScreen@{$\sim$GameScreen}}
+\index{````~GameScreen@{$\sim$GameScreen}!GameScreen@{GameScreen}}
+\doxysubsubsection{\texorpdfstring{$\sim$GameScreen()}{~GameScreen()}}
+{\footnotesize\ttfamily Game\+Screen\+::$\sim$\+Game\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple Destructor that destroys all dynamic structures in game 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_screen_a2653dfccb204781057855a4344ee0099}\label{class_game_screen_a2653dfccb204781057855a4344ee0099}} 
+\index{GameScreen@{GameScreen}!detectClick@{detectClick}}
+\index{detectClick@{detectClick}!GameScreen@{GameScreen}}
+\doxysubsubsection{\texorpdfstring{detectClick()}{detectClick()}}
+{\footnotesize\ttfamily void Game\+Screen\+::detect\+Click (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Function to detect clicks and spawn objects as required by game 
+\begin{DoxyParams}{Parameters}
+{\em x} & is x axis of pixel cliked \\
+\hline
+{\em y} & is xy axis of pixel cliked \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_screen_ad9d8d5810dbc39e0e15d8d72d5d603f2}{Screen}}.
+
+\mbox{\Hypertarget{class_game_screen_a02923a429396c431b432de7958840c9d}\label{class_game_screen_a02923a429396c431b432de7958840c9d}} 
+\index{GameScreen@{GameScreen}!drawObjects@{drawObjects}}
+\index{drawObjects@{drawObjects}!GameScreen@{GameScreen}}
+\doxysubsubsection{\texorpdfstring{drawObjects()}{drawObjects()}}
+{\footnotesize\ttfamily int Game\+Screen\+::draw\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Function to draw objects on screen 
+
+Implements \mbox{\hyperlink{class_screen_a9742ee8176d3119aa97b41819e8b61ff}{Screen}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/game\+Screen.\+hpp\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/game\+Screen.\+cpp\end{DoxyCompactItemize}

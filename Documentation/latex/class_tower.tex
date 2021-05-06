@@ -1,0 +1,186 @@
+\hypertarget{class_tower}{}\doxysection{Tower Class Reference}
+\label{class_tower}\index{Tower@{Tower}}
+
+
+Parent class of all towers, stores methods and attributes common to them all.  
+
+
+
+
+{\ttfamily \#include $<$tower.\+hpp$>$}
+
+Inheritance diagram for Tower\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.616822cm]{class_tower}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tower_a1b785dc1e9fb979a10620ca183b5761d}{Tower}} ()
+\item 
+\mbox{\hyperlink{class_tower_a330b70ccd30f0964eab8c905fe25fdcf}{Tower}} (int x, int y)
+\item 
+void \mbox{\hyperlink{class_tower_afb552fa4d9b453098e9f120bd8b42ae9}{fire\+Projectile}} (int, int, std\+::list$<$ \mbox{\hyperlink{class_projectile}{Projectile}} $\ast$ $>$ \&)
+\item 
+virtual void \mbox{\hyperlink{class_tower_a8db8451d87bbdfcce27856327265f679}{build\+Damage}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_tower_a79e03d9d3e01a7c73c518bafdd8aa888}{build\+Reload\+Time}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_tower_ac1584a44211342cf2f2b48756543337c}{build\+Range}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_tower_a8996d9f9f03d792071bec859eb82f310}{gold\+Add}} (\mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&)=0
+\item 
+virtual void \mbox{\hyperlink{class_tower_ab90a0ace16186db5d3b6e7aa8cbb5ada}{repair\+Base}} (\mbox{\hyperlink{class_base}{Base}} \&)=0
+\item 
+void \mbox{\hyperlink{class_tower_ab7ce547528ad713da4cb9010bb0b35d9}{update\+Cool\+Down\+Status}} (int \&frames)
+\item 
+void \mbox{\hyperlink{class_tower_a1a20a59041e373bf046d46ea83970f82}{draw}} (SDL\+\_\+\+Renderer $\ast$g\+Renderer, SDL\+\_\+\+Texture $\ast$assets)
+\item 
+std\+::tuple$<$ int, int $>$ \mbox{\hyperlink{class_tower_a9c432a9090363ce3f451afecf269b8a5}{check\+Enemy\+In\+Range}} (std\+::list$<$ \mbox{\hyperlink{class_enemy}{Enemy}} $\ast$ $>$ \&enemies)
+\item 
+bool \mbox{\hyperlink{class_tower_a076f8128f5bb600375fddd4290b23eea}{operator$>$=}} (int coins)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_ae98095c75e7d2a36377c1281ae60559d}\label{class_tower_ae98095c75e7d2a36377c1281ae60559d}} 
+int {\bfseries tower\+ID}
+\item 
+\mbox{\Hypertarget{class_tower_abc4fcb83bf2eb6e838cbe6512df58f78}\label{class_tower_abc4fcb83bf2eb6e838cbe6512df58f78}} 
+bool {\bfseries cooled\+Down}
+\item 
+\mbox{\Hypertarget{class_tower_a261aa7efffe33e9dcc0792fce2e60832}\label{class_tower_a261aa7efffe33e9dcc0792fce2e60832}} 
+int {\bfseries tower\+Price}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_a3aa4c036dab1c93986cb9b86e6f552e4}\label{class_tower_a3aa4c036dab1c93986cb9b86e6f552e4}} 
+int {\bfseries tower\+Attack\+Damage}
+\item 
+\mbox{\Hypertarget{class_tower_a96bf9b1893d0cdbb7f3e34d94e9dbd1d}\label{class_tower_a96bf9b1893d0cdbb7f3e34d94e9dbd1d}} 
+int {\bfseries tower\+Attack\+Range}
+\item 
+\mbox{\Hypertarget{class_tower_a1a7bd7a1153488e19122ac6c13575520}\label{class_tower_a1a7bd7a1153488e19122ac6c13575520}} 
+int {\bfseries tower\+Reload\+Time}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Parent class of all towers, stores methods and attributes common to them all. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tower_a1b785dc1e9fb979a10620ca183b5761d}\label{class_tower_a1b785dc1e9fb979a10620ca183b5761d}} 
+\index{Tower@{Tower}!Tower@{Tower}}
+\index{Tower@{Tower}!Tower@{Tower}}
+\doxysubsubsection{\texorpdfstring{Tower()}{Tower()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tower\+::\+Tower (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple Constructor \mbox{\Hypertarget{class_tower_a330b70ccd30f0964eab8c905fe25fdcf}\label{class_tower_a330b70ccd30f0964eab8c905fe25fdcf}} 
+\index{Tower@{Tower}!Tower@{Tower}}
+\index{Tower@{Tower}!Tower@{Tower}}
+\doxysubsubsection{\texorpdfstring{Tower()}{Tower()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Tower\+::\+Tower (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Simple constructor that initilizes the x and y locations of the tower 
+\begin{DoxyParams}{Parameters}
+{\em x} & is tower\textquotesingle{}s x location \\
+\hline
+{\em y} & is tower\textquotesingle{}s y location \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tower_a8db8451d87bbdfcce27856327265f679}\label{class_tower_a8db8451d87bbdfcce27856327265f679}} 
+\index{Tower@{Tower}!buildDamage@{buildDamage}}
+\index{buildDamage@{buildDamage}!Tower@{Tower}}
+\doxysubsubsection{\texorpdfstring{buildDamage()}{buildDamage()}}
+{\footnotesize\ttfamily virtual void Tower\+::build\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+sets damage of the tower 
+
+Implemented in \mbox{\hyperlink{class_repair_tower_a93bbe7348e8ccfbaa92c2bf0b7d4e26e}{Repair\+Tower}}, \mbox{\hyperlink{class_long_bow_tower_a09766518334e74e2708e0e9a72add1ef}{Long\+Bow\+Tower}}, \mbox{\hyperlink{class_ice_tower_ac0114c7655a16141f71103ec944d72ab}{Ice\+Tower}}, \mbox{\hyperlink{class_gold_tower_a6a8b0cc12c410131c81d20b282d1611c}{Gold\+Tower}}, \mbox{\hyperlink{class_fire_tower_a65c433c1b2bba2d088f3a9e61896f0d6}{Fire\+Tower}}, and \mbox{\hyperlink{class_bomb_tower_ae842e87c00599f328d5c5c6037e83ba2}{Bomb\+Tower}}.
+
+\mbox{\Hypertarget{class_tower_ac1584a44211342cf2f2b48756543337c}\label{class_tower_ac1584a44211342cf2f2b48756543337c}} 
+\index{Tower@{Tower}!buildRange@{buildRange}}
+\index{buildRange@{buildRange}!Tower@{Tower}}
+\doxysubsubsection{\texorpdfstring{buildRange()}{buildRange()}}
+{\footnotesize\ttfamily virtual void Tower\+::build\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+sets range of the tower 
+
+Implemented in \mbox{\hyperlink{class_repair_tower_a30ce64c77637030afe84b955ec92d3a6}{Repair\+Tower}}, \mbox{\hyperlink{class_long_bow_tower_a4e3124ae641fe4cf1c9c501c2dc00e89}{Long\+Bow\+Tower}}, \mbox{\hyperlink{class_ice_tower_a4949ed08bdaf937fadd92c425b4f3bfa}{Ice\+Tower}}, \mbox{\hyperlink{class_gold_tower_a23e504f42dfe73ff87e4fcfd7ddebee6}{Gold\+Tower}}, \mbox{\hyperlink{class_fire_tower_a215f0ea821b5a5382ee63670a042723e}{Fire\+Tower}}, and \mbox{\hyperlink{class_bomb_tower_ae01adb6f633f2c8b2aca89338b069675}{Bomb\+Tower}}.
+
+\mbox{\Hypertarget{class_tower_a79e03d9d3e01a7c73c518bafdd8aa888}\label{class_tower_a79e03d9d3e01a7c73c518bafdd8aa888}} 
+\index{Tower@{Tower}!buildReloadTime@{buildReloadTime}}
+\index{buildReloadTime@{buildReloadTime}!Tower@{Tower}}
+\doxysubsubsection{\texorpdfstring{buildReloadTime()}{buildReloadTime()}}
+{\footnotesize\ttfamily virtual void Tower\+::build\+Reload\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+sets reload time of the tower 
+
+Implemented in \mbox{\hyperlink{class_repair_tower_ac4b543f2799b2da8e76a51dc50e1aef2}{Repair\+Tower}}, \mbox{\hyperlink{class_long_bow_tower_a90522cb180f64ccf202f5d41629af3a9}{Long\+Bow\+Tower}}, \mbox{\hyperlink{class_ice_tower_a37912efafe65697fdcadc44d12e0e8dd}{Ice\+Tower}}, \mbox{\hyperlink{class_gold_tower_a1573e6f4e7764d64be232134f4cbdaf7}{Gold\+Tower}}, \mbox{\hyperlink{class_fire_tower_a87f0f519a21aa95511d3a2cb610e7f24}{Fire\+Tower}}, and \mbox{\hyperlink{class_bomb_tower_aa331601fb0e6c4f0592c57393e0bc22e}{Bomb\+Tower}}.
+
+\mbox{\Hypertarget{class_tower_a9c432a9090363ce3f451afecf269b8a5}\label{class_tower_a9c432a9090363ce3f451afecf269b8a5}} 
+\index{Tower@{Tower}!checkEnemyInRange@{checkEnemyInRange}}
+\index{checkEnemyInRange@{checkEnemyInRange}!Tower@{Tower}}
+\doxysubsubsection{\texorpdfstring{checkEnemyInRange()}{checkEnemyInRange()}}
+{\footnotesize\ttfamily std\+::tuple$<$ int, int $>$ Tower\+::check\+Enemy\+In\+Range (\begin{DoxyParamCaption}\item[{std\+::list$<$ \mbox{\hyperlink{class_enemy}{Enemy}} $\ast$ $>$ \&}]{enemies }\end{DoxyParamCaption})}
+
+checks if there\textquotesingle{}s an enemy in range \mbox{\Hypertarget{class_tower_a1a20a59041e373bf046d46ea83970f82}\label{class_tower_a1a20a59041e373bf046d46ea83970f82}} 
+\index{Tower@{Tower}!draw@{draw}}
+\index{draw@{draw}!Tower@{Tower}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Tower\+::draw (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{g\+Renderer,  }\item[{SDL\+\_\+\+Texture $\ast$}]{assets }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+draws tower to screen 
+
+Implements \mbox{\hyperlink{class_object_a0167ec326ca4b4e00fddaaf0a4b2f8a2}{Object}}.
+
+\mbox{\Hypertarget{class_tower_afb552fa4d9b453098e9f120bd8b42ae9}\label{class_tower_afb552fa4d9b453098e9f120bd8b42ae9}} 
+\index{Tower@{Tower}!fireProjectile@{fireProjectile}}
+\index{fireProjectile@{fireProjectile}!Tower@{Tower}}
+\doxysubsubsection{\texorpdfstring{fireProjectile()}{fireProjectile()}}
+{\footnotesize\ttfamily void Tower\+::fire\+Projectile (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{std\+::list$<$ \mbox{\hyperlink{class_projectile}{Projectile}} $\ast$ $>$ \&}]{projectiles }\end{DoxyParamCaption})}
+
+fires projectiles \mbox{\Hypertarget{class_tower_a8996d9f9f03d792071bec859eb82f310}\label{class_tower_a8996d9f9f03d792071bec859eb82f310}} 
+\index{Tower@{Tower}!goldAdd@{goldAdd}}
+\index{goldAdd@{goldAdd}!Tower@{Tower}}
+\doxysubsubsection{\texorpdfstring{goldAdd()}{goldAdd()}}
+{\footnotesize\ttfamily virtual void Tower\+::gold\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+adds gold every few seconds 
+
+Implemented in \mbox{\hyperlink{class_gold_tower_a07cad3fb7c7475f5459932961822bcd1}{Gold\+Tower}}, \mbox{\hyperlink{class_repair_tower_a3000aea434ed0008e4e2e582bb4dccbf}{Repair\+Tower}}, \mbox{\hyperlink{class_long_bow_tower_a6c53f07ac8d6546598195884b6f86a2b}{Long\+Bow\+Tower}}, \mbox{\hyperlink{class_ice_tower_a67dbf033a33ee15e6b02df5f2e018927}{Ice\+Tower}}, \mbox{\hyperlink{class_fire_tower_a08f51e085051ee7b95e9412d7a80a7ca}{Fire\+Tower}}, and \mbox{\hyperlink{class_bomb_tower_a0e82141bc0e581e50036794918bfaefc}{Bomb\+Tower}}.
+
+\mbox{\Hypertarget{class_tower_a076f8128f5bb600375fddd4290b23eea}\label{class_tower_a076f8128f5bb600375fddd4290b23eea}} 
+\index{Tower@{Tower}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!Tower@{Tower}}
+\doxysubsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily bool Tower\+::operator$>$= (\begin{DoxyParamCaption}\item[{int}]{coins }\end{DoxyParamCaption})}
+
+operator overloaded \mbox{\Hypertarget{class_tower_ab90a0ace16186db5d3b6e7aa8cbb5ada}\label{class_tower_ab90a0ace16186db5d3b6e7aa8cbb5ada}} 
+\index{Tower@{Tower}!repairBase@{repairBase}}
+\index{repairBase@{repairBase}!Tower@{Tower}}
+\doxysubsubsection{\texorpdfstring{repairBase()}{repairBase()}}
+{\footnotesize\ttfamily virtual void Tower\+::repair\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_base}{Base}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+repairs base every few seconds 
+
+Implemented in \mbox{\hyperlink{class_repair_tower_ab5c18c1814656083343e7389b21efda3}{Repair\+Tower}}, \mbox{\hyperlink{class_long_bow_tower_aeee7991ac8600b37ebfbd4b676a3ad75}{Long\+Bow\+Tower}}, \mbox{\hyperlink{class_ice_tower_a8bce038a03098085b9a1ff4bca8fe533}{Ice\+Tower}}, \mbox{\hyperlink{class_gold_tower_a439fddc4bbfcf31a7d963dc60b16c165}{Gold\+Tower}}, \mbox{\hyperlink{class_fire_tower_a0cbdf1c7ea5293125cf99d615fe602d5}{Fire\+Tower}}, and \mbox{\hyperlink{class_bomb_tower_a772eb992175f41bc512f66b58bdc4acb}{Bomb\+Tower}}.
+
+\mbox{\Hypertarget{class_tower_ab7ce547528ad713da4cb9010bb0b35d9}\label{class_tower_ab7ce547528ad713da4cb9010bb0b35d9}} 
+\index{Tower@{Tower}!updateCoolDownStatus@{updateCoolDownStatus}}
+\index{updateCoolDownStatus@{updateCoolDownStatus}!Tower@{Tower}}
+\doxysubsubsection{\texorpdfstring{updateCoolDownStatus()}{updateCoolDownStatus()}}
+{\footnotesize\ttfamily void Tower\+::update\+Cool\+Down\+Status (\begin{DoxyParamCaption}\item[{int \&}]{frames }\end{DoxyParamCaption})}
+
+updates the cooldown status of the towes after cooldown time and firing projectiles 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/tower.\+hpp\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/tower.\+cpp\end{DoxyCompactItemize}

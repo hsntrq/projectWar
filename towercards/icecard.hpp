@@ -8,6 +8,13 @@
 class IceCard : public TowerCard
 {
 public:
+    /**
+     * Simple constructor
+     */
     IceCard();
+
+    /**
+     * Constructor that initializes attributes
+     */
     IceCard(int x, int y);
 };

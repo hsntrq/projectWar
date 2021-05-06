@@ -1,0 +1,80 @@
+\hypertarget{class_object}{}\doxysection{Object Class Reference}
+\label{class_object}\index{Object@{Object}}
+
+
+Parent class of all objects that apper on screen; enemies, towers, base, projectiles.  
+
+
+
+
+{\ttfamily \#include $<$object.\+hpp$>$}
+
+Inheritance diagram for Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.000000cm]{class_object}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_object_a40860402e64d8008fb42329df7097cdb}{Object}} ()
+\item 
+\mbox{\hyperlink{class_object_a56c138e019b02f47a5d10839ea5279c3}{Object}} (SDL\+\_\+\+Rect m)
+\item 
+\mbox{\hyperlink{class_object_a40e0f080d7ecc576869e12585702a776}{Object}} (SDL\+\_\+\+Rect s, SDL\+\_\+\+Rect m)
+\item 
+virtual void \mbox{\hyperlink{class_object_a0167ec326ca4b4e00fddaaf0a4b2f8a2}{draw}} (SDL\+\_\+\+Renderer $\ast$g\+Renderer, SDL\+\_\+\+Texture $\ast$assets)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_object_a3e337de953af744293b3a2c2c4963c27}\label{class_object_a3e337de953af744293b3a2c2c4963c27}} 
+SDL\+\_\+\+Rect {\bfseries src\+Rect}
+\item 
+\mbox{\Hypertarget{class_object_ad5715d6c90da2f8f6f052db153456708}\label{class_object_ad5715d6c90da2f8f6f052db153456708}} 
+SDL\+\_\+\+Rect {\bfseries mover\+Rect}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Parent class of all objects that apper on screen; enemies, towers, base, projectiles. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_object_a40860402e64d8008fb42329df7097cdb}\label{class_object_a40860402e64d8008fb42329df7097cdb}} 
+\index{Object@{Object}!Object@{Object}}
+\index{Object@{Object}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Object\+::\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple Default Constructor \mbox{\Hypertarget{class_object_a56c138e019b02f47a5d10839ea5279c3}\label{class_object_a56c138e019b02f47a5d10839ea5279c3}} 
+\index{Object@{Object}!Object@{Object}}
+\index{Object@{Object}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Object\+::\+Object (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Rect}]{m }\end{DoxyParamCaption})}
+
+Constructor that initializes attributes in response to paramter \mbox{\Hypertarget{class_object_a40e0f080d7ecc576869e12585702a776}\label{class_object_a40e0f080d7ecc576869e12585702a776}} 
+\index{Object@{Object}!Object@{Object}}
+\index{Object@{Object}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Object\+::\+Object (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Rect}]{s,  }\item[{SDL\+\_\+\+Rect}]{m }\end{DoxyParamCaption})}
+
+function for the child class if the object is to be deleted 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_object_a0167ec326ca4b4e00fddaaf0a4b2f8a2}\label{class_object_a0167ec326ca4b4e00fddaaf0a4b2f8a2}} 
+\index{Object@{Object}!draw@{draw}}
+\index{draw@{draw}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void Object\+::draw (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{g\+Renderer,  }\item[{SDL\+\_\+\+Texture $\ast$}]{assets }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Function to draw object on screen, overwritten where redefined 
+
+Implemented in \mbox{\hyperlink{class_tower_card_aade799f03ceb2e0db30f98d7ca22b60b}{Tower\+Card}}, \mbox{\hyperlink{class_tower_a1a20a59041e373bf046d46ea83970f82}{Tower}}, \mbox{\hyperlink{class_projectile_a9a0dd60d8648e9edba2debd338ba72ad}{Projectile}}, \mbox{\hyperlink{class_coin_slab_acf88c4bdceb9eaf2028256739539c56a}{Coin\+Slab}}, \mbox{\hyperlink{class_coin_digits_a7d756368ae2f19b8a55979dcf5e7b567}{Coin\+Digits}}, \mbox{\hyperlink{class_button_a2129cfd28986c02ca4a073700ac57d37}{Button}}, \mbox{\hyperlink{class_base_a4f5e17affc054fbb741e575b7f9ca5bd}{Base}}, and \mbox{\hyperlink{class_enemy_a66d7672d2fc3adc4901b2b5500eb117d}{Enemy}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/object.\+hpp\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/object.\+cpp\end{DoxyCompactItemize}

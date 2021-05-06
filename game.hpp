@@ -47,14 +47,37 @@ class Game
     Game() {}
 
 public:
+    /**
+     * Singleton design pattern implementation
+     */
     static Game &singleton()
     {
         static Game game;
         return game;
     }
+
+    /**
+     * Inializes all attributes in class Game
+     */
     bool init();
+
+    /**
+     * Loads all media for class game objects
+     */
     bool loadMedia();
+
+    /**
+     * closes window of game
+     */
     void close();
+
+    /**
+     * Loads Texture assets
+     */
     SDL_Texture *loadTexture(std::string path);
+    
+    /**
+     * runs game
+     */
     void run();
 };

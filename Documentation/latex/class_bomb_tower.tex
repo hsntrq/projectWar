@@ -1,0 +1,127 @@
+\hypertarget{class_bomb_tower}{}\doxysection{Bomb\+Tower Class Reference}
+\label{class_bomb_tower}\index{BombTower@{BombTower}}
+
+
+This class stores the attributes and methods specific to the bomb tower.  
+
+
+
+
+{\ttfamily \#include $<$bombtower.\+hpp$>$}
+
+Inheritance diagram for Bomb\+Tower\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_bomb_tower}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bomb_tower_afcb6502463a90869de699f948d165c95}{Bomb\+Tower}} ()
+\item 
+\mbox{\hyperlink{class_bomb_tower_a608c7c9b2bef3040a2ce55fb1170c9e2}{Bomb\+Tower}} (int x, int y)
+\item 
+void \mbox{\hyperlink{class_bomb_tower_a996578d2716ad0b5e56bc80c8c74d5d0}{fire\+Projectile}} ()
+\item 
+void \mbox{\hyperlink{class_bomb_tower_ae842e87c00599f328d5c5c6037e83ba2}{build\+Damage}} ()
+\item 
+void \mbox{\hyperlink{class_bomb_tower_aa331601fb0e6c4f0592c57393e0bc22e}{build\+Reload\+Time}} ()
+\item 
+void \mbox{\hyperlink{class_bomb_tower_ae01adb6f633f2c8b2aca89338b069675}{build\+Range}} ()
+\item 
+void \mbox{\hyperlink{class_bomb_tower_a0e82141bc0e581e50036794918bfaefc}{gold\+Add}} (\mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&)
+\item 
+void \mbox{\hyperlink{class_bomb_tower_a772eb992175f41bc512f66b58bdc4acb}{repair\+Base}} (\mbox{\hyperlink{class_base}{Base}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class stores the attributes and methods specific to the bomb tower. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_bomb_tower_afcb6502463a90869de699f948d165c95}\label{class_bomb_tower_afcb6502463a90869de699f948d165c95}} 
+\index{BombTower@{BombTower}!BombTower@{BombTower}}
+\index{BombTower@{BombTower}!BombTower@{BombTower}}
+\doxysubsubsection{\texorpdfstring{BombTower()}{BombTower()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Bomb\+Tower\+::\+Bomb\+Tower (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple Constructor \mbox{\Hypertarget{class_bomb_tower_a608c7c9b2bef3040a2ce55fb1170c9e2}\label{class_bomb_tower_a608c7c9b2bef3040a2ce55fb1170c9e2}} 
+\index{BombTower@{BombTower}!BombTower@{BombTower}}
+\index{BombTower@{BombTower}!BombTower@{BombTower}}
+\doxysubsubsection{\texorpdfstring{BombTower()}{BombTower()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Bomb\+Tower\+::\+Bomb\+Tower (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Simple constructor that initilizes the x and y locations of the tower 
+\begin{DoxyParams}{Parameters}
+{\em x} & is tower\textquotesingle{}s x location \\
+\hline
+{\em y} & is tower\textquotesingle{}s y location \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bomb_tower_ae842e87c00599f328d5c5c6037e83ba2}\label{class_bomb_tower_ae842e87c00599f328d5c5c6037e83ba2}} 
+\index{BombTower@{BombTower}!buildDamage@{buildDamage}}
+\index{buildDamage@{buildDamage}!BombTower@{BombTower}}
+\doxysubsubsection{\texorpdfstring{buildDamage()}{buildDamage()}}
+{\footnotesize\ttfamily void Bomb\+Tower\+::build\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+sets damage of the tower 
+
+Implements \mbox{\hyperlink{class_tower_a8db8451d87bbdfcce27856327265f679}{Tower}}.
+
+\mbox{\Hypertarget{class_bomb_tower_ae01adb6f633f2c8b2aca89338b069675}\label{class_bomb_tower_ae01adb6f633f2c8b2aca89338b069675}} 
+\index{BombTower@{BombTower}!buildRange@{buildRange}}
+\index{buildRange@{buildRange}!BombTower@{BombTower}}
+\doxysubsubsection{\texorpdfstring{buildRange()}{buildRange()}}
+{\footnotesize\ttfamily void Bomb\+Tower\+::build\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+sets range of the tower 
+
+Implements \mbox{\hyperlink{class_tower_ac1584a44211342cf2f2b48756543337c}{Tower}}.
+
+\mbox{\Hypertarget{class_bomb_tower_aa331601fb0e6c4f0592c57393e0bc22e}\label{class_bomb_tower_aa331601fb0e6c4f0592c57393e0bc22e}} 
+\index{BombTower@{BombTower}!buildReloadTime@{buildReloadTime}}
+\index{buildReloadTime@{buildReloadTime}!BombTower@{BombTower}}
+\doxysubsubsection{\texorpdfstring{buildReloadTime()}{buildReloadTime()}}
+{\footnotesize\ttfamily void Bomb\+Tower\+::build\+Reload\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+sets reload time of the tower 
+
+Implements \mbox{\hyperlink{class_tower_a79e03d9d3e01a7c73c518bafdd8aa888}{Tower}}.
+
+\mbox{\Hypertarget{class_bomb_tower_a996578d2716ad0b5e56bc80c8c74d5d0}\label{class_bomb_tower_a996578d2716ad0b5e56bc80c8c74d5d0}} 
+\index{BombTower@{BombTower}!fireProjectile@{fireProjectile}}
+\index{fireProjectile@{fireProjectile}!BombTower@{BombTower}}
+\doxysubsubsection{\texorpdfstring{fireProjectile()}{fireProjectile()}}
+{\footnotesize\ttfamily void Bomb\+Tower\+::fire\+Projectile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+fires projectiles \mbox{\Hypertarget{class_bomb_tower_a0e82141bc0e581e50036794918bfaefc}\label{class_bomb_tower_a0e82141bc0e581e50036794918bfaefc}} 
+\index{BombTower@{BombTower}!goldAdd@{goldAdd}}
+\index{goldAdd@{goldAdd}!BombTower@{BombTower}}
+\doxysubsubsection{\texorpdfstring{goldAdd()}{goldAdd()}}
+{\footnotesize\ttfamily void Bomb\+Tower\+::gold\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&}]{coins }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+empty function 
+
+Implements \mbox{\hyperlink{class_tower_a8996d9f9f03d792071bec859eb82f310}{Tower}}.
+
+\mbox{\Hypertarget{class_bomb_tower_a772eb992175f41bc512f66b58bdc4acb}\label{class_bomb_tower_a772eb992175f41bc512f66b58bdc4acb}} 
+\index{BombTower@{BombTower}!repairBase@{repairBase}}
+\index{repairBase@{repairBase}!BombTower@{BombTower}}
+\doxysubsubsection{\texorpdfstring{repairBase()}{repairBase()}}
+{\footnotesize\ttfamily void Bomb\+Tower\+::repair\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_base}{Base}} \&}]{base }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+empty function 
+
+Implements \mbox{\hyperlink{class_tower_ab90a0ace16186db5d3b6e7aa8cbb5ada}{Tower}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/bombtower.\+hpp\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/bombtower.\+cpp\end{DoxyCompactItemize}

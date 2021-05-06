@@ -8,6 +8,13 @@
 class RepairCard : public TowerCard
 {
 public:
+    /**
+     * Simple constructor
+     */
     RepairCard();
+
+    /**
+     * Constructor that initializes attributes
+     */
     RepairCard(int x, int y);
 };

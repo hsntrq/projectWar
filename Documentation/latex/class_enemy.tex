@@ -1,0 +1,133 @@
+\hypertarget{class_enemy}{}\doxysection{Enemy Class Reference}
+\label{class_enemy}\index{Enemy@{Enemy}}
+
+
+Parent class of all enemies/zombies, stores methods and attributes common to them all.  
+
+
+
+
+{\ttfamily \#include $<$enemy.\+hpp$>$}
+
+Inheritance diagram for Enemy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.709677cm]{class_enemy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::tuple$<$ int, int, int, int $>$ \mbox{\hyperlink{class_enemy_abef42a0199db4e3e844a0557c0d3b037}{location}} ()
+\item 
+void \mbox{\hyperlink{class_enemy_a66d7672d2fc3adc4901b2b5500eb117d}{draw}} (SDL\+\_\+\+Renderer $\ast$, SDL\+\_\+\+Texture $\ast$assets)
+\item 
+\mbox{\hyperlink{class_enemy_a94f30d348b6d2840fd71675472ba38dd}{Enemy}} ()
+\item 
+\mbox{\hyperlink{class_enemy_a98f0d2110309536798101b88d2d1d8c9}{Enemy}} (int x, int y)
+\item 
+void \mbox{\hyperlink{class_enemy_af9856f3f37778c12c47cdeb32be961e0}{health\+Calculation}} (int damage)
+\item 
+bool \mbox{\hyperlink{class_enemy_a17302410e4afb303c208dd5195a984c1}{follow\+Path}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_enemy_a7404e96b856d82cf62592c8231c90956}\label{class_enemy_a7404e96b856d82cf62592c8231c90956}} 
+bool {\bfseries death}
+\item 
+\mbox{\Hypertarget{class_enemy_a300791ce62f3acae74cc0fe190c7487a}\label{class_enemy_a300791ce62f3acae74cc0fe190c7487a}} 
+int {\bfseries attack\+Damage}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_enemy_a554574b1537da808a14f909b8a701735}\label{class_enemy_a554574b1537da808a14f909b8a701735}} 
+int {\bfseries frame}
+\item 
+\mbox{\Hypertarget{class_enemy_a1de1605c4b41f74c3b0f4023258323ab}\label{class_enemy_a1de1605c4b41f74c3b0f4023258323ab}} 
+int {\bfseries direction}
+\item 
+\mbox{\Hypertarget{class_enemy_aedd5e7bf8ef07ee97be433c853a10d8d}\label{class_enemy_aedd5e7bf8ef07ee97be433c853a10d8d}} 
+int {\bfseries health}
+\item 
+\mbox{\Hypertarget{class_enemy_a668166836383f7f3fea14823cf66849a}\label{class_enemy_a668166836383f7f3fea14823cf66849a}} 
+SDL\+\_\+\+Rect {\bfseries src\+Sprite} \mbox{[}12\mbox{]}
+\item 
+\mbox{\Hypertarget{class_enemy_a831a6ae950c56bbbe4e9adb1314f3bfc}\label{class_enemy_a831a6ae950c56bbbe4e9adb1314f3bfc}} 
+int {\bfseries attack\+Speed}
+\item 
+\mbox{\Hypertarget{class_enemy_aa73a15e8df74f317505577e5f928f8df}\label{class_enemy_aa73a15e8df74f317505577e5f928f8df}} 
+int {\bfseries movement\+Speed}
+\item 
+\mbox{\Hypertarget{class_enemy_ae324e700627c4d3339a8f96918af449c}\label{class_enemy_ae324e700627c4d3339a8f96918af449c}} 
+int {\bfseries attack\+Range}
+\item 
+\mbox{\Hypertarget{class_enemy_a055286de426956af6a7e3f07ae7f6c78}\label{class_enemy_a055286de426956af6a7e3f07ae7f6c78}} 
+list$<$ \mbox{\hyperlink{struct_path}{Path}} $>$ {\bfseries path}
+\item 
+\mbox{\Hypertarget{class_enemy_a2ce9b3a855d504ea483934c1a661111c}\label{class_enemy_a2ce9b3a855d504ea483934c1a661111c}} 
+string {\bfseries enemy\+Name}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Parent class of all enemies/zombies, stores methods and attributes common to them all. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_enemy_a94f30d348b6d2840fd71675472ba38dd}\label{class_enemy_a94f30d348b6d2840fd71675472ba38dd}} 
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{Enemy()}{Enemy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Enemy\+::\+Enemy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple constructor \mbox{\Hypertarget{class_enemy_a98f0d2110309536798101b88d2d1d8c9}\label{class_enemy_a98f0d2110309536798101b88d2d1d8c9}} 
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{Enemy()}{Enemy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Enemy\+::\+Enemy (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Simple constructor that initilizes the x and y locations of the enemy 
+\begin{DoxyParams}{Parameters}
+{\em x} & is tower\textquotesingle{}s x location \\
+\hline
+{\em y} & is tower\textquotesingle{}s y location \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_enemy_a66d7672d2fc3adc4901b2b5500eb117d}\label{class_enemy_a66d7672d2fc3adc4901b2b5500eb117d}} 
+\index{Enemy@{Enemy}!draw@{draw}}
+\index{draw@{draw}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Enemy\+::draw (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{g\+Renderer,  }\item[{SDL\+\_\+\+Texture $\ast$}]{assets }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Draws enemy to the screen 
+
+Implements \mbox{\hyperlink{class_object_a0167ec326ca4b4e00fddaaf0a4b2f8a2}{Object}}.
+
+\mbox{\Hypertarget{class_enemy_a17302410e4afb303c208dd5195a984c1}\label{class_enemy_a17302410e4afb303c208dd5195a984c1}} 
+\index{Enemy@{Enemy}!followPath@{followPath}}
+\index{followPath@{followPath}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{followPath()}{followPath()}}
+{\footnotesize\ttfamily bool Enemy\+::follow\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function to have the enemy follow a defined path \mbox{\Hypertarget{class_enemy_af9856f3f37778c12c47cdeb32be961e0}\label{class_enemy_af9856f3f37778c12c47cdeb32be961e0}} 
+\index{Enemy@{Enemy}!healthCalculation@{healthCalculation}}
+\index{healthCalculation@{healthCalculation}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{healthCalculation()}{healthCalculation()}}
+{\footnotesize\ttfamily void Enemy\+::health\+Calculation (\begin{DoxyParamCaption}\item[{int}]{damage }\end{DoxyParamCaption})}
+
+Function to calculate the enemy\textquotesingle{}s health \mbox{\Hypertarget{class_enemy_abef42a0199db4e3e844a0557c0d3b037}\label{class_enemy_abef42a0199db4e3e844a0557c0d3b037}} 
+\index{Enemy@{Enemy}!location@{location}}
+\index{location@{location}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{location()}{location()}}
+{\footnotesize\ttfamily std\+::tuple$<$ int, int, int, int $>$ Enemy\+::location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the location of the enemy throuh which it is called 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/enemy.\+hpp\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/enemy.\+cpp\end{DoxyCompactItemize}

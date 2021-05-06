@@ -8,6 +8,13 @@
 class BombCard : public TowerCard
 {
 public:
+    /**
+     * Simple constructor
+     */
     BombCard();
+
+    /**
+     * Constructor that initializes attributes
+     */
     BombCard(int x, int y);
 };

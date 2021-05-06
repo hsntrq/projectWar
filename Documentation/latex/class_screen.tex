@@ -1,0 +1,87 @@
+\hypertarget{class_screen}{}\doxysection{Screen Class Reference}
+\label{class_screen}\index{Screen@{Screen}}
+
+
+This class is the parent class of all the screens in the game.  
+
+
+
+
+{\ttfamily \#include $<$screen.\+hpp$>$}
+
+Inheritance diagram for Screen\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.000000cm]{class_screen}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_screen_ae7576476fc6e6a6eaa66389fdc41fe72}{Screen}} ()
+\item 
+\mbox{\hyperlink{class_screen_a22b6d7717e9e4647779b9936fafd7d11}{Screen}} (SDL\+\_\+\+Renderer $\ast$, SDL\+\_\+\+Texture $\ast$)
+\item 
+virtual int \mbox{\hyperlink{class_screen_a9742ee8176d3119aa97b41819e8b61ff}{draw\+Objects}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_screen_ad9d8d5810dbc39e0e15d8d72d5d603f2}{detect\+Click}} (int, int)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_screen_a31a848454a7b3e0d06962fd83819465c}\label{class_screen_a31a848454a7b3e0d06962fd83819465c}} 
+SDL\+\_\+\+Renderer $\ast$ {\bfseries g\+Renderer}
+\item 
+\mbox{\Hypertarget{class_screen_af1d69facb50c8b0baa52cb9493778c5a}\label{class_screen_af1d69facb50c8b0baa52cb9493778c5a}} 
+SDL\+\_\+\+Texture $\ast$ {\bfseries assets}
+\item 
+\mbox{\Hypertarget{class_screen_ae19b3b98a65d77ba278bc6cb0cf83161}\label{class_screen_ae19b3b98a65d77ba278bc6cb0cf83161}} 
+int {\bfseries state}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is the parent class of all the screens in the game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_screen_ae7576476fc6e6a6eaa66389fdc41fe72}\label{class_screen_ae7576476fc6e6a6eaa66389fdc41fe72}} 
+\index{Screen@{Screen}!Screen@{Screen}}
+\index{Screen@{Screen}!Screen@{Screen}}
+\doxysubsubsection{\texorpdfstring{Screen()}{Screen()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Screen\+::\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple constructor, doesn\textquotesingle{}t initialize anything \mbox{\Hypertarget{class_screen_a22b6d7717e9e4647779b9936fafd7d11}\label{class_screen_a22b6d7717e9e4647779b9936fafd7d11}} 
+\index{Screen@{Screen}!Screen@{Screen}}
+\index{Screen@{Screen}!Screen@{Screen}}
+\doxysubsubsection{\texorpdfstring{Screen()}{Screen()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Screen\+::\+Screen (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{R,  }\item[{SDL\+\_\+\+Texture $\ast$}]{A }\end{DoxyParamCaption})}
+
+Simple constructor, initalizes the g\+Renderer and assests attributes 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_screen_ad9d8d5810dbc39e0e15d8d72d5d603f2}\label{class_screen_ad9d8d5810dbc39e0e15d8d72d5d603f2}} 
+\index{Screen@{Screen}!detectClick@{detectClick}}
+\index{detectClick@{detectClick}!Screen@{Screen}}
+\doxysubsubsection{\texorpdfstring{detectClick()}{detectClick()}}
+{\footnotesize\ttfamily virtual void Screen\+::detect\+Click (\begin{DoxyParamCaption}\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+detects where a click has been done 
+
+Implemented in \mbox{\hyperlink{class_game_screen_a2653dfccb204781057855a4344ee0099}{Game\+Screen}}, \mbox{\hyperlink{class_win_a0abd4c8f2931b1344b1537e4c58f8a39}{Win}}, \mbox{\hyperlink{class_pause_adc994b2792d6725281150786a968f01a}{Pause}}, \mbox{\hyperlink{class_options_aa01b7d0c2c61663f2b03b808270ff789}{Options}}, \mbox{\hyperlink{class_main_screen_aea949228e6bb70836853f88acabea10f}{Main\+Screen}}, \mbox{\hyperlink{class_lose_a1b44cec57bf0c59d20475f7d567d24b4}{Lose}}, \mbox{\hyperlink{class_loading_a728fa4b6ab8aa73a99b855db3479bb8e}{Loading}}, and \mbox{\hyperlink{class_instructions_a3383ddaad490d1d7d622260a930f7449}{Instructions}}.
+
+\mbox{\Hypertarget{class_screen_a9742ee8176d3119aa97b41819e8b61ff}\label{class_screen_a9742ee8176d3119aa97b41819e8b61ff}} 
+\index{Screen@{Screen}!drawObjects@{drawObjects}}
+\index{drawObjects@{drawObjects}!Screen@{Screen}}
+\doxysubsubsection{\texorpdfstring{drawObjects()}{drawObjects()}}
+{\footnotesize\ttfamily virtual int Screen\+::draw\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+draws objects to screen, overwritten in child classes 
+
+Implemented in \mbox{\hyperlink{class_game_screen_a02923a429396c431b432de7958840c9d}{Game\+Screen}}, \mbox{\hyperlink{class_win_aa7f2426a76e30b6b067fba64cf8839c8}{Win}}, \mbox{\hyperlink{class_pause_ab71f8625c92c5cd6da04dc0cf23ec0e4}{Pause}}, \mbox{\hyperlink{class_options_a63350066cbb4817e0e4af46586246612}{Options}}, \mbox{\hyperlink{class_main_screen_af9b2ba77812ab7fa06de011533169087}{Main\+Screen}}, \mbox{\hyperlink{class_lose_a7218811bf48c2c4b0f1431a3036fbc6f}{Lose}}, \mbox{\hyperlink{class_loading_ad1e9d335620f38f65ece83f9d2d94331}{Loading}}, and \mbox{\hyperlink{class_instructions_a094f7b792fe6f1a187422883eeacdd87}{Instructions}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/screen.\+hpp\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/screen.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,83 @@
+\hypertarget{class_instructions}{}\doxysection{Instructions Class Reference}
+\label{class_instructions}\index{Instructions@{Instructions}}
+
+
+This class stores the methods and attributes for the instructions screen.  
+
+
+
+
+{\ttfamily \#include $<$instructions.\+hpp$>$}
+
+Inheritance diagram for Instructions\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_instructions}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_instructions_accd980e9c726a3c6aec6fb0bc79b3731}{Instructions}} ()
+\item 
+\mbox{\hyperlink{class_instructions_adf894994b3bfabf8ce26d35c04cd46d9}{Instructions}} (SDL\+\_\+\+Renderer $\ast$renderer, SDL\+\_\+\+Texture $\ast$asst)
+\item 
+int \mbox{\hyperlink{class_instructions_a094f7b792fe6f1a187422883eeacdd87}{draw\+Objects}} ()
+\item 
+void \mbox{\hyperlink{class_instructions_a3383ddaad490d1d7d622260a930f7449}{detect\+Click}} (int, int)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class stores the methods and attributes for the instructions screen. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_instructions_accd980e9c726a3c6aec6fb0bc79b3731}\label{class_instructions_accd980e9c726a3c6aec6fb0bc79b3731}} 
+\index{Instructions@{Instructions}!Instructions@{Instructions}}
+\index{Instructions@{Instructions}!Instructions@{Instructions}}
+\doxysubsubsection{\texorpdfstring{Instructions()}{Instructions()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Instructions\+::\+Instructions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple constructor, does nothing to attributes \mbox{\Hypertarget{class_instructions_adf894994b3bfabf8ce26d35c04cd46d9}\label{class_instructions_adf894994b3bfabf8ce26d35c04cd46d9}} 
+\index{Instructions@{Instructions}!Instructions@{Instructions}}
+\index{Instructions@{Instructions}!Instructions@{Instructions}}
+\doxysubsubsection{\texorpdfstring{Instructions()}{Instructions()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Instructions\+::\+Instructions (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{SDL\+\_\+\+Texture $\ast$}]{asst }\end{DoxyParamCaption})}
+
+Constructor which initializes the the attributes 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_instructions_a3383ddaad490d1d7d622260a930f7449}\label{class_instructions_a3383ddaad490d1d7d622260a930f7449}} 
+\index{Instructions@{Instructions}!detectClick@{detectClick}}
+\index{detectClick@{detectClick}!Instructions@{Instructions}}
+\doxysubsubsection{\texorpdfstring{detectClick()}{detectClick()}}
+{\footnotesize\ttfamily void Instructions\+::detect\+Click (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+detects whether the back button has been pressed or not based on recieved coordinates via parameters 
+\begin{DoxyParams}{Parameters}
+{\em x} & is x coordinate of click \\
+\hline
+{\em y} & is y coordinate of click \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_screen_ad9d8d5810dbc39e0e15d8d72d5d603f2}{Screen}}.
+
+\mbox{\Hypertarget{class_instructions_a094f7b792fe6f1a187422883eeacdd87}\label{class_instructions_a094f7b792fe6f1a187422883eeacdd87}} 
+\index{Instructions@{Instructions}!drawObjects@{drawObjects}}
+\index{drawObjects@{drawObjects}!Instructions@{Instructions}}
+\doxysubsubsection{\texorpdfstring{drawObjects()}{drawObjects()}}
+{\footnotesize\ttfamily int Instructions\+::draw\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+draws relevant button (back button) to the screen 
+
+Implements \mbox{\hyperlink{class_screen_a9742ee8176d3119aa97b41819e8b61ff}{Screen}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/instructions.\+hpp\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/instructions.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,124 @@
+\hypertarget{class_projectile}{}\doxysection{Projectile Class Reference}
+\label{class_projectile}\index{Projectile@{Projectile}}
+
+
+Parent class of all projectiles, stores methods and attributes common to them all.  
+
+
+
+
+{\ttfamily \#include $<$projectile.\+hpp$>$}
+
+Inheritance diagram for Projectile\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.625000cm]{class_projectile}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_projectile_ac536ed2aad56af866a2078b9a85aa16d}{Projectile}} ()
+\item 
+\mbox{\hyperlink{class_projectile_a7398ac8fec4436b67226254a86896cfe}{Projectile}} (int x, int y, int tx, int ty)
+\item 
+\mbox{\hyperlink{class_projectile_a94903e021fa2edab60ba3836ca0b937d}{$\sim$\+Projectile}} ()
+\item 
+void \mbox{\hyperlink{class_projectile_a9268548b9fd027242af37f340fa62b5d}{shoot}} ()
+\item 
+void \mbox{\hyperlink{class_projectile_a8d0765fb75898a9e3ff3d1346d6ef3f5}{handle\+Collision}} (std\+::list$<$ \mbox{\hyperlink{class_enemy}{Enemy}} $\ast$ $>$ \&enemies)
+\item 
+void \mbox{\hyperlink{class_projectile_a9a0dd60d8648e9edba2debd338ba72ad}{draw}} (SDL\+\_\+\+Renderer $\ast$g\+Renderer, SDL\+\_\+\+Texture $\ast$assets)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_projectile_a7f9b5980aea60df71e4f14df2522a002}\label{class_projectile_a7f9b5980aea60df71e4f14df2522a002}} 
+bool {\bfseries reached\+Target}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_projectile_a90f5793efb184c30d6c74544a6b91bb4}\label{class_projectile_a90f5793efb184c30d6c74544a6b91bb4}} 
+int {\bfseries damage}
+\item 
+\mbox{\Hypertarget{class_projectile_a7a79ecd429a4798ff81a938e1946594f}\label{class_projectile_a7a79ecd429a4798ff81a938e1946594f}} 
+int {\bfseries gradient}
+\item 
+\mbox{\Hypertarget{class_projectile_af1c7301861dd6503dd3cad352abfd746}\label{class_projectile_af1c7301861dd6503dd3cad352abfd746}} 
+bool {\bfseries x\+Is\+Bigger}
+\item 
+\mbox{\Hypertarget{class_projectile_a35a70c3e42a24279f3342ce707c6296c}\label{class_projectile_a35a70c3e42a24279f3342ce707c6296c}} 
+bool {\bfseries addX}
+\item 
+\mbox{\Hypertarget{class_projectile_a434be542bb121be2f9afaff25af3eb7a}\label{class_projectile_a434be542bb121be2f9afaff25af3eb7a}} 
+bool {\bfseries addY}
+\item 
+\mbox{\Hypertarget{class_projectile_ab74b8b08827ef00ddd0ac3bca0b3a341}\label{class_projectile_ab74b8b08827ef00ddd0ac3bca0b3a341}} 
+int {\bfseries targetX}
+\item 
+\mbox{\Hypertarget{class_projectile_a526fd0569edf5441f42636257872d999}\label{class_projectile_a526fd0569edf5441f42636257872d999}} 
+int {\bfseries targetY}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Parent class of all projectiles, stores methods and attributes common to them all. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_projectile_ac536ed2aad56af866a2078b9a85aa16d}\label{class_projectile_ac536ed2aad56af866a2078b9a85aa16d}} 
+\index{Projectile@{Projectile}!Projectile@{Projectile}}
+\index{Projectile@{Projectile}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{Projectile()}{Projectile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Projectile\+::\+Projectile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple constructor, doesn\textquotesingle{}t initalize anything \mbox{\Hypertarget{class_projectile_a7398ac8fec4436b67226254a86896cfe}\label{class_projectile_a7398ac8fec4436b67226254a86896cfe}} 
+\index{Projectile@{Projectile}!Projectile@{Projectile}}
+\index{Projectile@{Projectile}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{Projectile()}{Projectile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Projectile\+::\+Projectile (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{tx,  }\item[{int}]{ty }\end{DoxyParamCaption})}
+
+Simple constructor that initilizes the x and y locations of the projectile 
+\begin{DoxyParams}{Parameters}
+{\em x} & is projectile\textquotesingle{}s x location \\
+\hline
+{\em y} & is projectile\textquotesingle{}s y location \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_projectile_a94903e021fa2edab60ba3836ca0b937d}\label{class_projectile_a94903e021fa2edab60ba3836ca0b937d}} 
+\index{Projectile@{Projectile}!````~Projectile@{$\sim$Projectile}}
+\index{````~Projectile@{$\sim$Projectile}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{$\sim$Projectile()}{~Projectile()}}
+{\footnotesize\ttfamily Projectile\+::$\sim$\+Projectile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_projectile_a9a0dd60d8648e9edba2debd338ba72ad}\label{class_projectile_a9a0dd60d8648e9edba2debd338ba72ad}} 
+\index{Projectile@{Projectile}!draw@{draw}}
+\index{draw@{draw}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Projectile\+::draw (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{g\+Renderer,  }\item[{SDL\+\_\+\+Texture $\ast$}]{assets }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+draws projectile on screen 
+
+Implements \mbox{\hyperlink{class_object_a0167ec326ca4b4e00fddaaf0a4b2f8a2}{Object}}.
+
+\mbox{\Hypertarget{class_projectile_a8d0765fb75898a9e3ff3d1346d6ef3f5}\label{class_projectile_a8d0765fb75898a9e3ff3d1346d6ef3f5}} 
+\index{Projectile@{Projectile}!handleCollision@{handleCollision}}
+\index{handleCollision@{handleCollision}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{handleCollision()}{handleCollision()}}
+{\footnotesize\ttfamily void Projectile\+::handle\+Collision (\begin{DoxyParamCaption}\item[{std\+::list$<$ \mbox{\hyperlink{class_enemy}{Enemy}} $\ast$ $>$ \&}]{enemies }\end{DoxyParamCaption})}
+
+handles the effects of a collison with enemy \mbox{\Hypertarget{class_projectile_a9268548b9fd027242af37f340fa62b5d}\label{class_projectile_a9268548b9fd027242af37f340fa62b5d}} 
+\index{Projectile@{Projectile}!shoot@{shoot}}
+\index{shoot@{shoot}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{shoot()}{shoot()}}
+{\footnotesize\ttfamily void Projectile\+::shoot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function to shoot the projectile 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/projectile.\+hpp\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/projectile.\+cpp\end{DoxyCompactItemize}

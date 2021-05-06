@@ -1,0 +1,85 @@
+\hypertarget{class_enemy_factory}{}\doxysection{Enemy\+Factory Class Reference}
+\label{class_enemy_factory}\index{EnemyFactory@{EnemyFactory}}
+
+
+This class produces enemies for each wave, based on factory design pattern.  
+
+
+
+
+{\ttfamily \#include $<$enemy\+Factory.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_enemy_factory_a9a4bb35b54ff867e03e241dc6b7c0a15}{Enemy\+Factory}} ()
+\item 
+\mbox{\hyperlink{class_enemy_factory_a5b50087da9571a05d2381d4a5fc965b9}{Enemy\+Factory}} (int)
+\item 
+\mbox{\hyperlink{class_enemy_factory_aa8bb5ef447537d445698e44999d2f497}{$\sim$\+Enemy\+Factory}} ()
+\item 
+bool \mbox{\hyperlink{class_enemy_factory_a622f7654c0dcaee1b825fe9c2e4c6f16}{wave\+Complete}} (int)
+\item 
+void \mbox{\hyperlink{class_enemy_factory_a3e05bf4f00147db6cfee40bc7774f73c}{spawn\+Enemies}} (list$<$ \mbox{\hyperlink{class_enemy}{Enemy}} $\ast$ $>$ \&, int)
+\item 
+bool \mbox{\hyperlink{class_enemy_factory_ac58165fe948f8680bc9f6077ced4241a}{enemies\+Spawned}} ()
+\item 
+\mbox{\hyperlink{class_enemy}{Enemy}} $\ast$ \mbox{\hyperlink{class_enemy_factory_a5f45950759d70f2f26d05cd80b3bdadb}{produce\+Enemy}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class produces enemies for each wave, based on factory design pattern. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_enemy_factory_a9a4bb35b54ff867e03e241dc6b7c0a15}\label{class_enemy_factory_a9a4bb35b54ff867e03e241dc6b7c0a15}} 
+\index{EnemyFactory@{EnemyFactory}!EnemyFactory@{EnemyFactory}}
+\index{EnemyFactory@{EnemyFactory}!EnemyFactory@{EnemyFactory}}
+\doxysubsubsection{\texorpdfstring{EnemyFactory()}{EnemyFactory()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Enemy\+Factory\+::\+Enemy\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple constructor \mbox{\Hypertarget{class_enemy_factory_a5b50087da9571a05d2381d4a5fc965b9}\label{class_enemy_factory_a5b50087da9571a05d2381d4a5fc965b9}} 
+\index{EnemyFactory@{EnemyFactory}!EnemyFactory@{EnemyFactory}}
+\index{EnemyFactory@{EnemyFactory}!EnemyFactory@{EnemyFactory}}
+\doxysubsubsection{\texorpdfstring{EnemyFactory()}{EnemyFactory()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Enemy\+Factory\+::\+Enemy\+Factory (\begin{DoxyParamCaption}\item[{int}]{wave\+Num }\end{DoxyParamCaption})}
+
+Simple constructor that assigns values to attributes \mbox{\Hypertarget{class_enemy_factory_aa8bb5ef447537d445698e44999d2f497}\label{class_enemy_factory_aa8bb5ef447537d445698e44999d2f497}} 
+\index{EnemyFactory@{EnemyFactory}!````~EnemyFactory@{$\sim$EnemyFactory}}
+\index{````~EnemyFactory@{$\sim$EnemyFactory}!EnemyFactory@{EnemyFactory}}
+\doxysubsubsection{\texorpdfstring{$\sim$EnemyFactory()}{~EnemyFactory()}}
+{\footnotesize\ttfamily Enemy\+Factory\+::$\sim$\+Enemy\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple Destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_enemy_factory_ac58165fe948f8680bc9f6077ced4241a}\label{class_enemy_factory_ac58165fe948f8680bc9f6077ced4241a}} 
+\index{EnemyFactory@{EnemyFactory}!enemiesSpawned@{enemiesSpawned}}
+\index{enemiesSpawned@{enemiesSpawned}!EnemyFactory@{EnemyFactory}}
+\doxysubsubsection{\texorpdfstring{enemiesSpawned()}{enemiesSpawned()}}
+{\footnotesize\ttfamily bool Enemy\+Factory\+::enemies\+Spawned (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+returns false if all enemies in a wave have been spawned \mbox{\Hypertarget{class_enemy_factory_a5f45950759d70f2f26d05cd80b3bdadb}\label{class_enemy_factory_a5f45950759d70f2f26d05cd80b3bdadb}} 
+\index{EnemyFactory@{EnemyFactory}!produceEnemy@{produceEnemy}}
+\index{produceEnemy@{produceEnemy}!EnemyFactory@{EnemyFactory}}
+\doxysubsubsection{\texorpdfstring{produceEnemy()}{produceEnemy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_enemy}{Enemy}} $\ast$ Enemy\+Factory\+::produce\+Enemy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+produces one enemy object \mbox{\Hypertarget{class_enemy_factory_a3e05bf4f00147db6cfee40bc7774f73c}\label{class_enemy_factory_a3e05bf4f00147db6cfee40bc7774f73c}} 
+\index{EnemyFactory@{EnemyFactory}!spawnEnemies@{spawnEnemies}}
+\index{spawnEnemies@{spawnEnemies}!EnemyFactory@{EnemyFactory}}
+\doxysubsubsection{\texorpdfstring{spawnEnemies()}{spawnEnemies()}}
+{\footnotesize\ttfamily void Enemy\+Factory\+::spawn\+Enemies (\begin{DoxyParamCaption}\item[{list$<$ \mbox{\hyperlink{class_enemy}{Enemy}} $\ast$ $>$ \&}]{enemy\+List,  }\item[{int}]{frames }\end{DoxyParamCaption})}
+
+builds enemies as required \mbox{\Hypertarget{class_enemy_factory_a622f7654c0dcaee1b825fe9c2e4c6f16}\label{class_enemy_factory_a622f7654c0dcaee1b825fe9c2e4c6f16}} 
+\index{EnemyFactory@{EnemyFactory}!waveComplete@{waveComplete}}
+\index{waveComplete@{waveComplete}!EnemyFactory@{EnemyFactory}}
+\doxysubsubsection{\texorpdfstring{waveComplete()}{waveComplete()}}
+{\footnotesize\ttfamily bool Enemy\+Factory\+::wave\+Complete (\begin{DoxyParamCaption}\item[{int}]{elapsed\+Frames }\end{DoxyParamCaption})}
+
+checks if wave is complete 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/enemy\+Factory.\+hpp\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/enemy\+Factory.\+cpp\end{DoxyCompactItemize}

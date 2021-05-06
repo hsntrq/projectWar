@@ -1,0 +1,119 @@
+\hypertarget{class_gold_tower}{}\doxysection{Gold\+Tower Class Reference}
+\label{class_gold_tower}\index{GoldTower@{GoldTower}}
+
+
+This class stores the attributes and methods specific to the gold tower.  
+
+
+
+
+{\ttfamily \#include $<$goldtower.\+hpp$>$}
+
+Inheritance diagram for Gold\+Tower\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_gold_tower}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gold_tower_a0c225309083322a8b28033b5aaee7d4c}{Gold\+Tower}} ()
+\item 
+\mbox{\hyperlink{class_gold_tower_a23606cd285c5b1f2bd5d8055b2fd8fc9}{Gold\+Tower}} (int x, int y)
+\item 
+void \mbox{\hyperlink{class_gold_tower_a6a8b0cc12c410131c81d20b282d1611c}{build\+Damage}} ()
+\item 
+void \mbox{\hyperlink{class_gold_tower_a1573e6f4e7764d64be232134f4cbdaf7}{build\+Reload\+Time}} ()
+\item 
+void \mbox{\hyperlink{class_gold_tower_a23e504f42dfe73ff87e4fcfd7ddebee6}{build\+Range}} ()
+\item 
+void \mbox{\hyperlink{class_gold_tower_a07cad3fb7c7475f5459932961822bcd1}{gold\+Add}} (\mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&coins)
+\item 
+void \mbox{\hyperlink{class_gold_tower_a439fddc4bbfcf31a7d963dc60b16c165}{repair\+Base}} (\mbox{\hyperlink{class_base}{Base}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class stores the attributes and methods specific to the gold tower. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_gold_tower_a0c225309083322a8b28033b5aaee7d4c}\label{class_gold_tower_a0c225309083322a8b28033b5aaee7d4c}} 
+\index{GoldTower@{GoldTower}!GoldTower@{GoldTower}}
+\index{GoldTower@{GoldTower}!GoldTower@{GoldTower}}
+\doxysubsubsection{\texorpdfstring{GoldTower()}{GoldTower()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Gold\+Tower\+::\+Gold\+Tower (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple Constructor \mbox{\Hypertarget{class_gold_tower_a23606cd285c5b1f2bd5d8055b2fd8fc9}\label{class_gold_tower_a23606cd285c5b1f2bd5d8055b2fd8fc9}} 
+\index{GoldTower@{GoldTower}!GoldTower@{GoldTower}}
+\index{GoldTower@{GoldTower}!GoldTower@{GoldTower}}
+\doxysubsubsection{\texorpdfstring{GoldTower()}{GoldTower()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Gold\+Tower\+::\+Gold\+Tower (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Simple constructor that initilizes the x and y locations of the tower 
+\begin{DoxyParams}{Parameters}
+{\em x} & is tower\textquotesingle{}s x location \\
+\hline
+{\em y} & is tower\textquotesingle{}s y location \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_gold_tower_a6a8b0cc12c410131c81d20b282d1611c}\label{class_gold_tower_a6a8b0cc12c410131c81d20b282d1611c}} 
+\index{GoldTower@{GoldTower}!buildDamage@{buildDamage}}
+\index{buildDamage@{buildDamage}!GoldTower@{GoldTower}}
+\doxysubsubsection{\texorpdfstring{buildDamage()}{buildDamage()}}
+{\footnotesize\ttfamily void Gold\+Tower\+::build\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+sets damage of the tower 
+
+Implements \mbox{\hyperlink{class_tower_a8db8451d87bbdfcce27856327265f679}{Tower}}.
+
+\mbox{\Hypertarget{class_gold_tower_a23e504f42dfe73ff87e4fcfd7ddebee6}\label{class_gold_tower_a23e504f42dfe73ff87e4fcfd7ddebee6}} 
+\index{GoldTower@{GoldTower}!buildRange@{buildRange}}
+\index{buildRange@{buildRange}!GoldTower@{GoldTower}}
+\doxysubsubsection{\texorpdfstring{buildRange()}{buildRange()}}
+{\footnotesize\ttfamily void Gold\+Tower\+::build\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+sets range of the tower 
+
+Implements \mbox{\hyperlink{class_tower_ac1584a44211342cf2f2b48756543337c}{Tower}}.
+
+\mbox{\Hypertarget{class_gold_tower_a1573e6f4e7764d64be232134f4cbdaf7}\label{class_gold_tower_a1573e6f4e7764d64be232134f4cbdaf7}} 
+\index{GoldTower@{GoldTower}!buildReloadTime@{buildReloadTime}}
+\index{buildReloadTime@{buildReloadTime}!GoldTower@{GoldTower}}
+\doxysubsubsection{\texorpdfstring{buildReloadTime()}{buildReloadTime()}}
+{\footnotesize\ttfamily void Gold\+Tower\+::build\+Reload\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+sets reload time of the tower 
+
+Implements \mbox{\hyperlink{class_tower_a79e03d9d3e01a7c73c518bafdd8aa888}{Tower}}.
+
+\mbox{\Hypertarget{class_gold_tower_a07cad3fb7c7475f5459932961822bcd1}\label{class_gold_tower_a07cad3fb7c7475f5459932961822bcd1}} 
+\index{GoldTower@{GoldTower}!goldAdd@{goldAdd}}
+\index{goldAdd@{goldAdd}!GoldTower@{GoldTower}}
+\doxysubsubsection{\texorpdfstring{goldAdd()}{goldAdd()}}
+{\footnotesize\ttfamily void Gold\+Tower\+::gold\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&}]{coins }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+adds gold every few seconds 
+
+Implements \mbox{\hyperlink{class_tower_a8996d9f9f03d792071bec859eb82f310}{Tower}}.
+
+\mbox{\Hypertarget{class_gold_tower_a439fddc4bbfcf31a7d963dc60b16c165}\label{class_gold_tower_a439fddc4bbfcf31a7d963dc60b16c165}} 
+\index{GoldTower@{GoldTower}!repairBase@{repairBase}}
+\index{repairBase@{repairBase}!GoldTower@{GoldTower}}
+\doxysubsubsection{\texorpdfstring{repairBase()}{repairBase()}}
+{\footnotesize\ttfamily void Gold\+Tower\+::repair\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_base}{Base}} \&}]{base }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+does nothing 
+
+Implements \mbox{\hyperlink{class_tower_ab90a0ace16186db5d3b6e7aa8cbb5ada}{Tower}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/goldtower.\+hpp\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/goldtower.\+cpp\end{DoxyCompactItemize}

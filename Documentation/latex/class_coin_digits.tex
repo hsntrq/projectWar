@@ -1,0 +1,116 @@
+\hypertarget{class_coin_digits}{}\doxysection{Coin\+Digits Class Reference}
+\label{class_coin_digits}\index{CoinDigits@{CoinDigits}}
+
+
+This class stores the digits that appear on screen for total gold count.  
+
+
+
+
+{\ttfamily \#include $<$coin\+Digits.\+hpp$>$}
+
+Inheritance diagram for Coin\+Digits\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_coin_digits}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_coin_digits_a425d3d76759e9916ce965b74474e5cc6}{Coin\+Digits}} ()
+\item 
+\mbox{\hyperlink{class_coin_digits_a01dffba52552d960be0d25b185303228}{Coin\+Digits}} (int, int)
+\item 
+\mbox{\hyperlink{class_coin_digits_a157b85ba431ba23a54f458761f30019d}{Coin\+Digits}} (int coin)
+\item 
+void \mbox{\hyperlink{class_coin_digits_a7d756368ae2f19b8a55979dcf5e7b567}{draw}} (SDL\+\_\+\+Renderer $\ast$g\+Renderer, SDL\+\_\+\+Texture $\ast$assets)
+\item 
+void \mbox{\hyperlink{class_coin_digits_af382a0446230bd319c8e57aa64813865}{update\+Coins}} ()
+\item 
+bool \mbox{\hyperlink{class_coin_digits_aae05c0dbed579fe6f94c14d337f1c420}{operator$>$}} (int price)
+\item 
+\mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \& \mbox{\hyperlink{class_coin_digits_a3684efacd71c65b5ab077993d8d201ea}{operator-\/=}} (const int price)
+\item 
+\mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \& \mbox{\hyperlink{class_coin_digits_aa6bf664a7c4795a9f5754be64fa1f7b6}{operator+=}} (int gold)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class stores the digits that appear on screen for total gold count. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_coin_digits_a425d3d76759e9916ce965b74474e5cc6}\label{class_coin_digits_a425d3d76759e9916ce965b74474e5cc6}} 
+\index{CoinDigits@{CoinDigits}!CoinDigits@{CoinDigits}}
+\index{CoinDigits@{CoinDigits}!CoinDigits@{CoinDigits}}
+\doxysubsubsection{\texorpdfstring{CoinDigits()}{CoinDigits()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Coin\+Digits\+::\+Coin\+Digits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple constructor, doens\textquotesingle{}t initialize anything \mbox{\Hypertarget{class_coin_digits_a01dffba52552d960be0d25b185303228}\label{class_coin_digits_a01dffba52552d960be0d25b185303228}} 
+\index{CoinDigits@{CoinDigits}!CoinDigits@{CoinDigits}}
+\index{CoinDigits@{CoinDigits}!CoinDigits@{CoinDigits}}
+\doxysubsubsection{\texorpdfstring{CoinDigits()}{CoinDigits()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Coin\+Digits\+::\+Coin\+Digits (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+initializes all elements of digit\+Rects as well as num\+\_\+1, num\+\_\+2, num\+\_\+3 and coin counter attributes 
+\begin{DoxyParams}{Parameters}
+{\em x} & is the top left x coordinate of the slab \\
+\hline
+{\em y} & is the top left y coordinate of the slab \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_coin_digits_a157b85ba431ba23a54f458761f30019d}\label{class_coin_digits_a157b85ba431ba23a54f458761f30019d}} 
+\index{CoinDigits@{CoinDigits}!CoinDigits@{CoinDigits}}
+\index{CoinDigits@{CoinDigits}!CoinDigits@{CoinDigits}}
+\doxysubsubsection{\texorpdfstring{CoinDigits()}{CoinDigits()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Coin\+Digits\+::\+Coin\+Digits (\begin{DoxyParamCaption}\item[{int}]{coin }\end{DoxyParamCaption})}
+
+initializes all elements of digit\+Rects as well as num\+\_\+1, num\+\_\+2, num\+\_\+3 and coin counter attributes 
+\begin{DoxyParams}{Parameters}
+{\em coin} & is total number of coins to start with, set as the value for coin counter \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_coin_digits_a7d756368ae2f19b8a55979dcf5e7b567}\label{class_coin_digits_a7d756368ae2f19b8a55979dcf5e7b567}} 
+\index{CoinDigits@{CoinDigits}!draw@{draw}}
+\index{draw@{draw}!CoinDigits@{CoinDigits}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Coin\+Digits\+::draw (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{g\+Renderer,  }\item[{SDL\+\_\+\+Texture $\ast$}]{assets }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+draws coin digits on screen 
+
+Implements \mbox{\hyperlink{class_object_a0167ec326ca4b4e00fddaaf0a4b2f8a2}{Object}}.
+
+\mbox{\Hypertarget{class_coin_digits_aa6bf664a7c4795a9f5754be64fa1f7b6}\label{class_coin_digits_aa6bf664a7c4795a9f5754be64fa1f7b6}} 
+\index{CoinDigits@{CoinDigits}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!CoinDigits@{CoinDigits}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \& Coin\+Digits\+::operator+= (\begin{DoxyParamCaption}\item[{int}]{gold }\end{DoxyParamCaption})}
+
+operator overload \mbox{\Hypertarget{class_coin_digits_a3684efacd71c65b5ab077993d8d201ea}\label{class_coin_digits_a3684efacd71c65b5ab077993d8d201ea}} 
+\index{CoinDigits@{CoinDigits}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!CoinDigits@{CoinDigits}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \& Coin\+Digits\+::operator-\/= (\begin{DoxyParamCaption}\item[{const int}]{price }\end{DoxyParamCaption})}
+
+operator overload \mbox{\Hypertarget{class_coin_digits_aae05c0dbed579fe6f94c14d337f1c420}\label{class_coin_digits_aae05c0dbed579fe6f94c14d337f1c420}} 
+\index{CoinDigits@{CoinDigits}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!CoinDigits@{CoinDigits}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool Coin\+Digits\+::operator$>$ (\begin{DoxyParamCaption}\item[{int}]{price }\end{DoxyParamCaption})}
+
+operator overload \mbox{\Hypertarget{class_coin_digits_af382a0446230bd319c8e57aa64813865}\label{class_coin_digits_af382a0446230bd319c8e57aa64813865}} 
+\index{CoinDigits@{CoinDigits}!updateCoins@{updateCoins}}
+\index{updateCoins@{updateCoins}!CoinDigits@{CoinDigits}}
+\doxysubsubsection{\texorpdfstring{updateCoins()}{updateCoins()}}
+{\footnotesize\ttfamily void Coin\+Digits\+::update\+Coins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+updates the coin\+Counter attribute when called 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/coin\+Digits.\+hpp\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/coin\+Digits.\+cpp\end{DoxyCompactItemize}

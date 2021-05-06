@@ -8,6 +8,13 @@
 class FireCard : public TowerCard
 {
 public:
+    /**
+     * Simple constructor
+     */
     FireCard();
+
+    /**
+     * Constructor that initializes attributes
+     */
     FireCard(int x, int y);
 };

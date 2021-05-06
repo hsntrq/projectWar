@@ -8,6 +8,13 @@
 class LongBowCard : public TowerCard
 {
 public:
+    /**
+     * Simple constructor
+     */
     LongBowCard();
+
+    /**
+     * Constructor that initializes attributes
+     */
     LongBowCard(int x, int y);
 };

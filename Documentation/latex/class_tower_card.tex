@@ -1,0 +1,93 @@
+\hypertarget{class_tower_card}{}\doxysection{Tower\+Card Class Reference}
+\label{class_tower_card}\index{TowerCard@{TowerCard}}
+
+
+Parent class of all towers, stores methods and attributes common to them all.  
+
+
+
+
+{\ttfamily \#include $<$towercard.\+hpp$>$}
+
+Inheritance diagram for Tower\+Card\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.800000cm]{class_tower_card}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tower_card_a0620808393d58653fec2d0d2ce3782e0}{Tower\+Card}} ()
+\item 
+\mbox{\hyperlink{class_tower_card_af05213a8334754636a6d8b9925a4e633}{Tower\+Card}} (int x, int y)
+\item 
+bool \mbox{\hyperlink{class_tower_card_a2374bb73f32d74d8d24f7f2dc7d1c1ab}{is\+Clicked}} (int, int)
+\item 
+void \mbox{\hyperlink{class_tower_card_aade799f03ceb2e0db30f98d7ca22b60b}{draw}} (SDL\+\_\+\+Renderer $\ast$g\+Renderer, SDL\+\_\+\+Texture $\ast$assets)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_card_afd0fd8b9115ec78fe22e3b3ec16822ca}\label{class_tower_card_afd0fd8b9115ec78fe22e3b3ec16822ca}} 
+int {\bfseries card\+ID}
+\item 
+\mbox{\Hypertarget{class_tower_card_affda1e84ee8ea9ce6c2ac91f4e008e76}\label{class_tower_card_affda1e84ee8ea9ce6c2ac91f4e008e76}} 
+bool {\bfseries is\+Selected}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_card_a2c5626e18bb9aa0268cb0f2664df0668}\label{class_tower_card_a2c5626e18bb9aa0268cb0f2664df0668}} 
+SDL\+\_\+\+Rect {\bfseries src\+Sprite} \mbox{[}2\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Parent class of all towers, stores methods and attributes common to them all. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tower_card_a0620808393d58653fec2d0d2ce3782e0}\label{class_tower_card_a0620808393d58653fec2d0d2ce3782e0}} 
+\index{TowerCard@{TowerCard}!TowerCard@{TowerCard}}
+\index{TowerCard@{TowerCard}!TowerCard@{TowerCard}}
+\doxysubsubsection{\texorpdfstring{TowerCard()}{TowerCard()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tower\+Card\+::\+Tower\+Card (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple Constructor \mbox{\Hypertarget{class_tower_card_af05213a8334754636a6d8b9925a4e633}\label{class_tower_card_af05213a8334754636a6d8b9925a4e633}} 
+\index{TowerCard@{TowerCard}!TowerCard@{TowerCard}}
+\index{TowerCard@{TowerCard}!TowerCard@{TowerCard}}
+\doxysubsubsection{\texorpdfstring{TowerCard()}{TowerCard()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Tower\+Card\+::\+Tower\+Card (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Simple constructor that initilizes the x and y locations of the tower 
+\begin{DoxyParams}{Parameters}
+{\em x} & is tower\textquotesingle{}s x location \\
+\hline
+{\em y} & is tower\textquotesingle{}s y location \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tower_card_aade799f03ceb2e0db30f98d7ca22b60b}\label{class_tower_card_aade799f03ceb2e0db30f98d7ca22b60b}} 
+\index{TowerCard@{TowerCard}!draw@{draw}}
+\index{draw@{draw}!TowerCard@{TowerCard}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Tower\+Card\+::draw (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{g\+Renderer,  }\item[{SDL\+\_\+\+Texture $\ast$}]{assets }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+draws card to screen 
+
+Implements \mbox{\hyperlink{class_object_a0167ec326ca4b4e00fddaaf0a4b2f8a2}{Object}}.
+
+\mbox{\Hypertarget{class_tower_card_a2374bb73f32d74d8d24f7f2dc7d1c1ab}\label{class_tower_card_a2374bb73f32d74d8d24f7f2dc7d1c1ab}} 
+\index{TowerCard@{TowerCard}!isClicked@{isClicked}}
+\index{isClicked@{isClicked}!TowerCard@{TowerCard}}
+\doxysubsubsection{\texorpdfstring{isClicked()}{isClicked()}}
+{\footnotesize\ttfamily bool Tower\+Card\+::is\+Clicked (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+checks if card is clicked 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/towercard.\+hpp\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/towercard.\+cpp\end{DoxyCompactItemize}

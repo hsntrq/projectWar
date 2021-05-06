@@ -1,0 +1,115 @@
+\hypertarget{class_tower_builder}{}\doxysection{Tower\+Builder Class Reference}
+\label{class_tower_builder}\index{TowerBuilder@{TowerBuilder}}
+
+
+This class build towers to place in acceptable coordinates using builder design pattern.  
+
+
+
+
+{\ttfamily \#include $<$tower\+Builder.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tower_builder_acb80e724ca35b8d74a759263d8e30694}{Tower\+Builder}} (int, int)
+\item 
+bool \mbox{\hyperlink{class_tower_builder_a9b34acdc8600eaded0cfb49d31076859}{check\+Range}} (int, int)
+\item 
+std\+::tuple$<$ int, int $>$ \mbox{\hyperlink{class_tower_builder_ab9055f6bbcdb7cf09baa8675e2eecc44}{location}} ()
+\item 
+void \mbox{\hyperlink{class_tower_builder_a971659da15ca66bb3542b15a7041ce7b}{is\+Clicked}} (std\+::list$<$ \mbox{\hyperlink{class_tower}{Tower}} $\ast$ $>$ \&, int, int, int, \mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&)
+\item 
+\mbox{\hyperlink{class_tower}{Tower}} $\ast$ \mbox{\hyperlink{class_tower_builder_ad120b5a22f49d2d263a9d982b6720e74}{build\+Fire\+Tower}} (int a, int b, \mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&coins)
+\item 
+\mbox{\hyperlink{class_tower}{Tower}} $\ast$ \mbox{\hyperlink{class_tower_builder_ae07762a22c8bf79da34079524b024fab}{build\+Ice\+Tower}} (int a, int b, \mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&coins)
+\item 
+\mbox{\hyperlink{class_tower}{Tower}} $\ast$ \mbox{\hyperlink{class_tower_builder_ab245ecd7e90dd5ec95aebb9232d8c207}{build\+Long\+Bow\+Tower}} (int a, int b, \mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&coins)
+\item 
+\mbox{\hyperlink{class_tower}{Tower}} $\ast$ \mbox{\hyperlink{class_tower_builder_a88de6370bcd7b050e35fdebace1faecb}{build\+Gold\+Tower}} (int a, int b, \mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&coins)
+\item 
+\mbox{\hyperlink{class_tower}{Tower}} $\ast$ \mbox{\hyperlink{class_tower_builder_a332142fbd1c3f20e7cb282208ca08f6a}{build\+Repair\+Tower}} (int a, int b, \mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&coins)
+\item 
+\mbox{\hyperlink{class_tower}{Tower}} $\ast$ \mbox{\hyperlink{class_tower_builder_a66691a9e0ed093db6b0c50f6b6771a05}{build\+Bomb\+Tower}} (int a, int b, \mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&coins)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_builder_ae41ef90dedcb35cba2b1b02ca7535f35}\label{class_tower_builder_ae41ef90dedcb35cba2b1b02ca7535f35}} 
+bool {\bfseries is\+Available}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class build towers to place in acceptable coordinates using builder design pattern. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tower_builder_acb80e724ca35b8d74a759263d8e30694}\label{class_tower_builder_acb80e724ca35b8d74a759263d8e30694}} 
+\index{TowerBuilder@{TowerBuilder}!TowerBuilder@{TowerBuilder}}
+\index{TowerBuilder@{TowerBuilder}!TowerBuilder@{TowerBuilder}}
+\doxysubsubsection{\texorpdfstring{TowerBuilder()}{TowerBuilder()}}
+{\footnotesize\ttfamily Tower\+Builder\+::\+Tower\+Builder (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+Constructor that sets up values for the attributes 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tower_builder_a66691a9e0ed093db6b0c50f6b6771a05}\label{class_tower_builder_a66691a9e0ed093db6b0c50f6b6771a05}} 
+\index{TowerBuilder@{TowerBuilder}!buildBombTower@{buildBombTower}}
+\index{buildBombTower@{buildBombTower}!TowerBuilder@{TowerBuilder}}
+\doxysubsubsection{\texorpdfstring{buildBombTower()}{buildBombTower()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tower}{Tower}} $\ast$ Tower\+Builder\+::build\+Bomb\+Tower (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b,  }\item[{\mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&}]{coins }\end{DoxyParamCaption})}
+
+builds bomb tower \mbox{\Hypertarget{class_tower_builder_ad120b5a22f49d2d263a9d982b6720e74}\label{class_tower_builder_ad120b5a22f49d2d263a9d982b6720e74}} 
+\index{TowerBuilder@{TowerBuilder}!buildFireTower@{buildFireTower}}
+\index{buildFireTower@{buildFireTower}!TowerBuilder@{TowerBuilder}}
+\doxysubsubsection{\texorpdfstring{buildFireTower()}{buildFireTower()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tower}{Tower}} $\ast$ Tower\+Builder\+::build\+Fire\+Tower (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b,  }\item[{\mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&}]{coins }\end{DoxyParamCaption})}
+
+builds fire tower \mbox{\Hypertarget{class_tower_builder_a88de6370bcd7b050e35fdebace1faecb}\label{class_tower_builder_a88de6370bcd7b050e35fdebace1faecb}} 
+\index{TowerBuilder@{TowerBuilder}!buildGoldTower@{buildGoldTower}}
+\index{buildGoldTower@{buildGoldTower}!TowerBuilder@{TowerBuilder}}
+\doxysubsubsection{\texorpdfstring{buildGoldTower()}{buildGoldTower()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tower}{Tower}} $\ast$ Tower\+Builder\+::build\+Gold\+Tower (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b,  }\item[{\mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&}]{coins }\end{DoxyParamCaption})}
+
+builds gold tower \mbox{\Hypertarget{class_tower_builder_ae07762a22c8bf79da34079524b024fab}\label{class_tower_builder_ae07762a22c8bf79da34079524b024fab}} 
+\index{TowerBuilder@{TowerBuilder}!buildIceTower@{buildIceTower}}
+\index{buildIceTower@{buildIceTower}!TowerBuilder@{TowerBuilder}}
+\doxysubsubsection{\texorpdfstring{buildIceTower()}{buildIceTower()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tower}{Tower}} $\ast$ Tower\+Builder\+::build\+Ice\+Tower (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b,  }\item[{\mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&}]{coins }\end{DoxyParamCaption})}
+
+builds ice tower \mbox{\Hypertarget{class_tower_builder_ab245ecd7e90dd5ec95aebb9232d8c207}\label{class_tower_builder_ab245ecd7e90dd5ec95aebb9232d8c207}} 
+\index{TowerBuilder@{TowerBuilder}!buildLongBowTower@{buildLongBowTower}}
+\index{buildLongBowTower@{buildLongBowTower}!TowerBuilder@{TowerBuilder}}
+\doxysubsubsection{\texorpdfstring{buildLongBowTower()}{buildLongBowTower()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tower}{Tower}} $\ast$ Tower\+Builder\+::build\+Long\+Bow\+Tower (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b,  }\item[{\mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&}]{coins }\end{DoxyParamCaption})}
+
+builds longbow tower \mbox{\Hypertarget{class_tower_builder_a332142fbd1c3f20e7cb282208ca08f6a}\label{class_tower_builder_a332142fbd1c3f20e7cb282208ca08f6a}} 
+\index{TowerBuilder@{TowerBuilder}!buildRepairTower@{buildRepairTower}}
+\index{buildRepairTower@{buildRepairTower}!TowerBuilder@{TowerBuilder}}
+\doxysubsubsection{\texorpdfstring{buildRepairTower()}{buildRepairTower()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tower}{Tower}} $\ast$ Tower\+Builder\+::build\+Repair\+Tower (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b,  }\item[{\mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&}]{coins }\end{DoxyParamCaption})}
+
+builds repair tower \mbox{\Hypertarget{class_tower_builder_a9b34acdc8600eaded0cfb49d31076859}\label{class_tower_builder_a9b34acdc8600eaded0cfb49d31076859}} 
+\index{TowerBuilder@{TowerBuilder}!checkRange@{checkRange}}
+\index{checkRange@{checkRange}!TowerBuilder@{TowerBuilder}}
+\doxysubsubsection{\texorpdfstring{checkRange()}{checkRange()}}
+{\footnotesize\ttfamily bool Tower\+Builder\+::check\+Range (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+checks if user clicked on acceptable space to place tower \mbox{\Hypertarget{class_tower_builder_a971659da15ca66bb3542b15a7041ce7b}\label{class_tower_builder_a971659da15ca66bb3542b15a7041ce7b}} 
+\index{TowerBuilder@{TowerBuilder}!isClicked@{isClicked}}
+\index{isClicked@{isClicked}!TowerBuilder@{TowerBuilder}}
+\doxysubsubsection{\texorpdfstring{isClicked()}{isClicked()}}
+{\footnotesize\ttfamily void Tower\+Builder\+::is\+Clicked (\begin{DoxyParamCaption}\item[{std\+::list$<$ \mbox{\hyperlink{class_tower}{Tower}} $\ast$ $>$ \&}]{towers,  }\item[{int}]{tower\+Selected,  }\item[{int}]{x\+\_\+,  }\item[{int}]{y\+\_\+,  }\item[{\mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&}]{coins }\end{DoxyParamCaption})}
+
+checks if user has made a click on relevant pixels \mbox{\Hypertarget{class_tower_builder_ab9055f6bbcdb7cf09baa8675e2eecc44}\label{class_tower_builder_ab9055f6bbcdb7cf09baa8675e2eecc44}} 
+\index{TowerBuilder@{TowerBuilder}!location@{location}}
+\index{location@{location}!TowerBuilder@{TowerBuilder}}
+\doxysubsubsection{\texorpdfstring{location()}{location()}}
+{\footnotesize\ttfamily std\+::tuple$<$ int, int $>$ Tower\+Builder\+::location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+return tower location 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/tower\+Builder.\+hpp\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/tower\+Builder.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,127 @@
+\hypertarget{class_repair_tower}{}\doxysection{Repair\+Tower Class Reference}
+\label{class_repair_tower}\index{RepairTower@{RepairTower}}
+
+
+This class stores the attributes and methods specific to the repair tower.  
+
+
+
+
+{\ttfamily \#include $<$repairtower.\+hpp$>$}
+
+Inheritance diagram for Repair\+Tower\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_repair_tower}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_repair_tower_afa410ec697d2ee302c87a1c59cf6d741}{Repair\+Tower}} ()
+\item 
+\mbox{\hyperlink{class_repair_tower_ad736705666373d06b59d8d3ce2c43fea}{Repair\+Tower}} (int x, int y)
+\item 
+void \mbox{\hyperlink{class_repair_tower_af2d896bd9b5cba2365f538244a208572}{fire\+Projectile}} ()
+\item 
+void \mbox{\hyperlink{class_repair_tower_a93bbe7348e8ccfbaa92c2bf0b7d4e26e}{build\+Damage}} ()
+\item 
+void \mbox{\hyperlink{class_repair_tower_ac4b543f2799b2da8e76a51dc50e1aef2}{build\+Reload\+Time}} ()
+\item 
+void \mbox{\hyperlink{class_repair_tower_a30ce64c77637030afe84b955ec92d3a6}{build\+Range}} ()
+\item 
+void \mbox{\hyperlink{class_repair_tower_a3000aea434ed0008e4e2e582bb4dccbf}{gold\+Add}} (\mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&)
+\item 
+void \mbox{\hyperlink{class_repair_tower_ab5c18c1814656083343e7389b21efda3}{repair\+Base}} (\mbox{\hyperlink{class_base}{Base}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class stores the attributes and methods specific to the repair tower. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_repair_tower_afa410ec697d2ee302c87a1c59cf6d741}\label{class_repair_tower_afa410ec697d2ee302c87a1c59cf6d741}} 
+\index{RepairTower@{RepairTower}!RepairTower@{RepairTower}}
+\index{RepairTower@{RepairTower}!RepairTower@{RepairTower}}
+\doxysubsubsection{\texorpdfstring{RepairTower()}{RepairTower()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Repair\+Tower\+::\+Repair\+Tower (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple Constructor \mbox{\Hypertarget{class_repair_tower_ad736705666373d06b59d8d3ce2c43fea}\label{class_repair_tower_ad736705666373d06b59d8d3ce2c43fea}} 
+\index{RepairTower@{RepairTower}!RepairTower@{RepairTower}}
+\index{RepairTower@{RepairTower}!RepairTower@{RepairTower}}
+\doxysubsubsection{\texorpdfstring{RepairTower()}{RepairTower()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Repair\+Tower\+::\+Repair\+Tower (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Simple constructor that initilizes the x and y locations of the tower 
+\begin{DoxyParams}{Parameters}
+{\em x} & is tower\textquotesingle{}s x location \\
+\hline
+{\em y} & is tower\textquotesingle{}s y location \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_repair_tower_a93bbe7348e8ccfbaa92c2bf0b7d4e26e}\label{class_repair_tower_a93bbe7348e8ccfbaa92c2bf0b7d4e26e}} 
+\index{RepairTower@{RepairTower}!buildDamage@{buildDamage}}
+\index{buildDamage@{buildDamage}!RepairTower@{RepairTower}}
+\doxysubsubsection{\texorpdfstring{buildDamage()}{buildDamage()}}
+{\footnotesize\ttfamily void Repair\+Tower\+::build\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+sets damage of the tower 
+
+Implements \mbox{\hyperlink{class_tower_a8db8451d87bbdfcce27856327265f679}{Tower}}.
+
+\mbox{\Hypertarget{class_repair_tower_a30ce64c77637030afe84b955ec92d3a6}\label{class_repair_tower_a30ce64c77637030afe84b955ec92d3a6}} 
+\index{RepairTower@{RepairTower}!buildRange@{buildRange}}
+\index{buildRange@{buildRange}!RepairTower@{RepairTower}}
+\doxysubsubsection{\texorpdfstring{buildRange()}{buildRange()}}
+{\footnotesize\ttfamily void Repair\+Tower\+::build\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+sets range of the tower 
+
+Implements \mbox{\hyperlink{class_tower_ac1584a44211342cf2f2b48756543337c}{Tower}}.
+
+\mbox{\Hypertarget{class_repair_tower_ac4b543f2799b2da8e76a51dc50e1aef2}\label{class_repair_tower_ac4b543f2799b2da8e76a51dc50e1aef2}} 
+\index{RepairTower@{RepairTower}!buildReloadTime@{buildReloadTime}}
+\index{buildReloadTime@{buildReloadTime}!RepairTower@{RepairTower}}
+\doxysubsubsection{\texorpdfstring{buildReloadTime()}{buildReloadTime()}}
+{\footnotesize\ttfamily void Repair\+Tower\+::build\+Reload\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+sets reload time of the tower 
+
+Implements \mbox{\hyperlink{class_tower_a79e03d9d3e01a7c73c518bafdd8aa888}{Tower}}.
+
+\mbox{\Hypertarget{class_repair_tower_af2d896bd9b5cba2365f538244a208572}\label{class_repair_tower_af2d896bd9b5cba2365f538244a208572}} 
+\index{RepairTower@{RepairTower}!fireProjectile@{fireProjectile}}
+\index{fireProjectile@{fireProjectile}!RepairTower@{RepairTower}}
+\doxysubsubsection{\texorpdfstring{fireProjectile()}{fireProjectile()}}
+{\footnotesize\ttfamily void Repair\+Tower\+::fire\+Projectile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+fires projectiles \mbox{\Hypertarget{class_repair_tower_a3000aea434ed0008e4e2e582bb4dccbf}\label{class_repair_tower_a3000aea434ed0008e4e2e582bb4dccbf}} 
+\index{RepairTower@{RepairTower}!goldAdd@{goldAdd}}
+\index{goldAdd@{goldAdd}!RepairTower@{RepairTower}}
+\doxysubsubsection{\texorpdfstring{goldAdd()}{goldAdd()}}
+{\footnotesize\ttfamily void Repair\+Tower\+::gold\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&}]{coins }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+adds gold every few seconds 
+
+Implements \mbox{\hyperlink{class_tower_a8996d9f9f03d792071bec859eb82f310}{Tower}}.
+
+\mbox{\Hypertarget{class_repair_tower_ab5c18c1814656083343e7389b21efda3}\label{class_repair_tower_ab5c18c1814656083343e7389b21efda3}} 
+\index{RepairTower@{RepairTower}!repairBase@{repairBase}}
+\index{repairBase@{repairBase}!RepairTower@{RepairTower}}
+\doxysubsubsection{\texorpdfstring{repairBase()}{repairBase()}}
+{\footnotesize\ttfamily void Repair\+Tower\+::repair\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_base}{Base}} \&}]{base }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+does nothing 
+
+Implements \mbox{\hyperlink{class_tower_ab90a0ace16186db5d3b6e7aa8cbb5ada}{Tower}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/repairtower.\+hpp\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/repairtower.\+cpp\end{DoxyCompactItemize}

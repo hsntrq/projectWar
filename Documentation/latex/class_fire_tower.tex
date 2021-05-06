@@ -1,0 +1,127 @@
+\hypertarget{class_fire_tower}{}\doxysection{Fire\+Tower Class Reference}
+\label{class_fire_tower}\index{FireTower@{FireTower}}
+
+
+This class stores the attributes and methods specific to the fire tower.  
+
+
+
+
+{\ttfamily \#include $<$firetower.\+hpp$>$}
+
+Inheritance diagram for Fire\+Tower\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_fire_tower}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_fire_tower_a8db779d1426ff111b18008000db43396}{Fire\+Tower}} ()
+\item 
+\mbox{\hyperlink{class_fire_tower_a61540fa4a9cb3b7861aef464a6134f2c}{Fire\+Tower}} (int x, int y)
+\item 
+void \mbox{\hyperlink{class_fire_tower_adf1d5ebbf353364f83c25368d57f3bb3}{fire\+Projectile}} ()
+\item 
+void \mbox{\hyperlink{class_fire_tower_a65c433c1b2bba2d088f3a9e61896f0d6}{build\+Damage}} ()
+\item 
+void \mbox{\hyperlink{class_fire_tower_a87f0f519a21aa95511d3a2cb610e7f24}{build\+Reload\+Time}} ()
+\item 
+void \mbox{\hyperlink{class_fire_tower_a215f0ea821b5a5382ee63670a042723e}{build\+Range}} ()
+\item 
+void \mbox{\hyperlink{class_fire_tower_a08f51e085051ee7b95e9412d7a80a7ca}{gold\+Add}} (\mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&)
+\item 
+void \mbox{\hyperlink{class_fire_tower_a0cbdf1c7ea5293125cf99d615fe602d5}{repair\+Base}} (\mbox{\hyperlink{class_base}{Base}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class stores the attributes and methods specific to the fire tower. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_fire_tower_a8db779d1426ff111b18008000db43396}\label{class_fire_tower_a8db779d1426ff111b18008000db43396}} 
+\index{FireTower@{FireTower}!FireTower@{FireTower}}
+\index{FireTower@{FireTower}!FireTower@{FireTower}}
+\doxysubsubsection{\texorpdfstring{FireTower()}{FireTower()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Fire\+Tower\+::\+Fire\+Tower (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple Constructor \mbox{\Hypertarget{class_fire_tower_a61540fa4a9cb3b7861aef464a6134f2c}\label{class_fire_tower_a61540fa4a9cb3b7861aef464a6134f2c}} 
+\index{FireTower@{FireTower}!FireTower@{FireTower}}
+\index{FireTower@{FireTower}!FireTower@{FireTower}}
+\doxysubsubsection{\texorpdfstring{FireTower()}{FireTower()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Fire\+Tower\+::\+Fire\+Tower (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Simple constructor that initilizes the x and y locations of the tower 
+\begin{DoxyParams}{Parameters}
+{\em x} & is tower\textquotesingle{}s x location \\
+\hline
+{\em y} & is tower\textquotesingle{}s y location \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_fire_tower_a65c433c1b2bba2d088f3a9e61896f0d6}\label{class_fire_tower_a65c433c1b2bba2d088f3a9e61896f0d6}} 
+\index{FireTower@{FireTower}!buildDamage@{buildDamage}}
+\index{buildDamage@{buildDamage}!FireTower@{FireTower}}
+\doxysubsubsection{\texorpdfstring{buildDamage()}{buildDamage()}}
+{\footnotesize\ttfamily void Fire\+Tower\+::build\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+sets damage of the tower 
+
+Implements \mbox{\hyperlink{class_tower_a8db8451d87bbdfcce27856327265f679}{Tower}}.
+
+\mbox{\Hypertarget{class_fire_tower_a215f0ea821b5a5382ee63670a042723e}\label{class_fire_tower_a215f0ea821b5a5382ee63670a042723e}} 
+\index{FireTower@{FireTower}!buildRange@{buildRange}}
+\index{buildRange@{buildRange}!FireTower@{FireTower}}
+\doxysubsubsection{\texorpdfstring{buildRange()}{buildRange()}}
+{\footnotesize\ttfamily void Fire\+Tower\+::build\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+sets range of the tower 
+
+Implements \mbox{\hyperlink{class_tower_ac1584a44211342cf2f2b48756543337c}{Tower}}.
+
+\mbox{\Hypertarget{class_fire_tower_a87f0f519a21aa95511d3a2cb610e7f24}\label{class_fire_tower_a87f0f519a21aa95511d3a2cb610e7f24}} 
+\index{FireTower@{FireTower}!buildReloadTime@{buildReloadTime}}
+\index{buildReloadTime@{buildReloadTime}!FireTower@{FireTower}}
+\doxysubsubsection{\texorpdfstring{buildReloadTime()}{buildReloadTime()}}
+{\footnotesize\ttfamily void Fire\+Tower\+::build\+Reload\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+sets reload time of the tower 
+
+Implements \mbox{\hyperlink{class_tower_a79e03d9d3e01a7c73c518bafdd8aa888}{Tower}}.
+
+\mbox{\Hypertarget{class_fire_tower_adf1d5ebbf353364f83c25368d57f3bb3}\label{class_fire_tower_adf1d5ebbf353364f83c25368d57f3bb3}} 
+\index{FireTower@{FireTower}!fireProjectile@{fireProjectile}}
+\index{fireProjectile@{fireProjectile}!FireTower@{FireTower}}
+\doxysubsubsection{\texorpdfstring{fireProjectile()}{fireProjectile()}}
+{\footnotesize\ttfamily void Fire\+Tower\+::fire\+Projectile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+fires projectiles \mbox{\Hypertarget{class_fire_tower_a08f51e085051ee7b95e9412d7a80a7ca}\label{class_fire_tower_a08f51e085051ee7b95e9412d7a80a7ca}} 
+\index{FireTower@{FireTower}!goldAdd@{goldAdd}}
+\index{goldAdd@{goldAdd}!FireTower@{FireTower}}
+\doxysubsubsection{\texorpdfstring{goldAdd()}{goldAdd()}}
+{\footnotesize\ttfamily void Fire\+Tower\+::gold\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coin_digits}{Coin\+Digits}} \&}]{coins }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+does nothing 
+
+Implements \mbox{\hyperlink{class_tower_a8996d9f9f03d792071bec859eb82f310}{Tower}}.
+
+\mbox{\Hypertarget{class_fire_tower_a0cbdf1c7ea5293125cf99d615fe602d5}\label{class_fire_tower_a0cbdf1c7ea5293125cf99d615fe602d5}} 
+\index{FireTower@{FireTower}!repairBase@{repairBase}}
+\index{repairBase@{repairBase}!FireTower@{FireTower}}
+\doxysubsubsection{\texorpdfstring{repairBase()}{repairBase()}}
+{\footnotesize\ttfamily void Fire\+Tower\+::repair\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_base}{Base}} \&}]{base }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+does nothing 
+
+Implements \mbox{\hyperlink{class_tower_ab90a0ace16186db5d3b6e7aa8cbb5ada}{Tower}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/firetower.\+hpp\item 
+C\+:/\+Users/siddi/\+Desktop/\+Project War/\+For Doxygen/firetower.\+cpp\end{DoxyCompactItemize}

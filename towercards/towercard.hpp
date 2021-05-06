@@ -12,14 +12,25 @@ public: //function declarations
     int cardID;
     bool isSelected;
 
+    /**
+     * Simple Constructor
+     */
     TowerCard(); // constructors (overloaded)
+    
     /**
      * Simple constructor that initilizes the x and y locations of the tower
      * \param x is tower's x location
      * \param y is tower's y location
      */
     TowerCard(int x, int y);
+
+    /**
+     * checks if card is clicked
+     */
     bool isClicked(int, int);
 
+    /**
+     * draws card to screen
+     */
     void draw(SDL_Renderer *gRenderer, SDL_Texture *assets);
 };

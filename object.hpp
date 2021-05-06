@@ -19,13 +19,19 @@ public:
      * Simple Default Constructor
      */
     Object();
+    
     /**
-     * Overloaded Constructor
+     * Constructor that initializes attributes in response to paramter
      */
     Object(SDL_Rect m);
-    Object(SDL_Rect s, SDL_Rect m); //function for the child class if the object is to be deleted
+
     /**
-     * Function to draw object on screen, overwritten where defined
+     * function for the child class if the object is to be deleted
+     */
+    Object(SDL_Rect s, SDL_Rect m);
+    
+    /**
+     * Function to draw object on screen, overwritten where redefined
      */
     virtual void draw(SDL_Renderer *gRenderer, SDL_Texture *assets) = 0; //function for child class to draw the object
 };
