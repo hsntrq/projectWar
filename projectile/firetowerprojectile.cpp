@@ -8,6 +8,7 @@ FireTowerProjectile::FireTowerProjectile(int x, int y, int tx, int ty, int tower
     srcRect = {634, 222, 15, 15};
     targetX = tx;
     targetY = ty;
+    reachedTarget = false;
 }
 
 FireTowerProjectile::~FireTowerProjectile() {}

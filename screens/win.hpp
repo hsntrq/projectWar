@@ -2,7 +2,7 @@
 
 class Win : public Screen
 {
-public:
+private:
     Button continueButton;
 
 public:
