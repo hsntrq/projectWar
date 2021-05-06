@@ -19,7 +19,7 @@ public:
      * Simple Default Constructor
      */
     Object();
-    
+
     /**
      * Constructor that initializes attributes in response to paramter
      */
@@ -29,7 +29,7 @@ public:
      * function for the child class if the object is to be deleted
      */
     Object(SDL_Rect s, SDL_Rect m);
-    
+
     /**
      * Function to draw object on screen, overwritten where redefined
      */
